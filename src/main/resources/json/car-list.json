@@ -1,0 +1,6864 @@
+[
+  {
+    "brandName": "Seat",
+    "models": [
+      {
+        "name": "Alhambra",
+        "category": "SUV",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.0,
+              "horsePower": 150
+            },
+            "performance": {
+              "acceleration": 10.0,
+              "topSpeed": 130
+            }
+          }
+        ]
+      },
+      {
+        "name": "Altea",
+        "category": "Sedan"
+      },
+      {
+        "name": "Altea XL",
+        "category": "SUV"
+      },
+      {
+        "name": "Arosa",
+        "category": "Compact"
+      },
+      {
+        "name": "Cordoba",
+        "category": "Sedan"
+      },
+      {
+        "name": "Cordoba Vario",
+        "category": "Sedan"
+      },
+      {
+        "name": "Exeo",
+        "category": "Sedan",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 1.8,
+              "horsePower": 120
+            },
+            "performance": {
+              "acceleration": 12.0,
+              "topSpeed": 120
+            }
+          }
+        ]
+      },
+      {
+        "name": "Ibiza",
+        "category": "Compact"
+      },
+      {
+        "name": "Ibiza ST",
+        "category": "Compact"
+      },
+      {
+        "name": "Exeo ST",
+        "category": "Sedan"
+      },
+      {
+        "name": "Leon",
+        "category": "Sedan",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 1.6,
+              "horsePower": 110
+            },
+            "performance": {
+              "acceleration": 11.5,
+              "topSpeed": 125
+            }
+          }
+        ]
+      },
+      {
+        "name": "Leon ST",
+        "category": "Sedan",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.0,
+              "horsePower": 140
+            }
+          }
+        ]
+      },
+      {
+        "name": "Inca",
+        "category": "Van"
+      },
+      {
+        "name": "Mii",
+        "category": "Compact",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 3,
+              "size": 1.0,
+              "horsePower": 75
+            },
+            "performance": {
+              "acceleration": 14.0,
+              "topSpeed": 110
+            }
+          }
+        ]
+      },
+      {
+        "name": "Toledo",
+        "category": "Sedan"
+      }
+    ]
+  },
+  {
+    "brandName": "Renault",
+    "models": [
+      {
+        "name": "Captur",
+        "category": "SUV"
+      },
+      {
+        "name": "Clio",
+        "category": "Compact"
+      },
+      {
+        "name": "Clio Grandtour",
+        "category": "Compact"
+      },
+      {
+        "name": "Espace",
+        "category": "Minivan"
+      },
+      {
+        "name": "Express",
+        "category": "Van"
+      },
+      {
+        "name": "Fluence",
+        "category": "Sedan"
+      },
+      {
+        "name": "Grand Espace",
+        "category": "Minivan"
+      },
+      {
+        "name": "Grand Modus",
+        "category": "Compact"
+      },
+      {
+        "name": "Grand Scenic",
+        "category": "Minivan"
+      },
+      {
+        "name": "Kadjar",
+        "category": "SUV"
+      },
+      {
+        "name": "Kangoo",
+        "category": "Van"
+      },
+      {
+        "name": "Kangoo Express",
+        "category": "Van"
+      },
+      {
+        "name": "Koleos",
+        "category": "SUV",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.5,
+              "horsePower": 170
+            },
+            "performance": {
+              "acceleration": 9.0,
+              "topSpeed": 160
+            }
+          }
+        ]
+      },
+      {
+        "name": "Laguna",
+        "category": "Sedan"
+      },
+      {
+        "name": "Laguna Grandtour",
+        "category": "Sedan"
+      },
+      {
+        "name": "Latitude",
+        "category": "Sedan"
+      },
+      {
+        "name": "Mascott",
+        "category": "Van"
+      },
+      {
+        "name": "Mégane",
+        "category": "Compact"
+      },
+      {
+        "name": "Mégane CC",
+        "category": "Convertible"
+      },
+      {
+        "name": "Mégane Combi",
+        "category": "Compact"
+      },
+      {
+        "name": "Mégane Grandtour",
+        "category": "Compact"
+      },
+      {
+        "name": "Mégane Coupé",
+        "category": "Compact"
+      },
+      {
+        "name": "Mégane Scénic",
+        "category": "Minivan"
+      },
+      {
+        "name": "Scénic",
+        "category": "Minivan"
+      },
+      {
+        "name": "Talisman",
+        "category": "Sedan"
+      },
+      {
+        "name": "Talisman Grandtour",
+        "category": "Sedan"
+      },
+      {
+        "name": "Thalia",
+        "category": "Sedan"
+      },
+      {
+        "name": "Twingo",
+        "category": "Compact"
+      },
+      {
+        "name": "Wind",
+        "category": "Convertible"
+      },
+      {
+        "name": "Zoé",
+        "category": "Compact"
+      }
+    ]
+  },
+  {
+    "brandName": "Peugeot",
+    "models": [
+      {
+        "name": "1007",
+        "category": "Compact"
+      },
+      {
+        "name": "107",
+        "category": "Compact"
+      },
+      {
+        "name": "106",
+        "category": "Compact",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 1.4,
+              "horsePower": 75
+            },
+            "performance": {
+              "acceleration": 12.5,
+              "topSpeed": 100
+            }
+          }
+        ]
+      },
+      {
+        "name": "108",
+        "category": "Compact"
+      },
+      {
+        "name": "2008",
+        "category": "SUV",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 3,
+              "size": 1.2,
+              "horsePower": 110
+            },
+            "performance": {
+              "acceleration": 11.0,
+              "topSpeed": 120
+            }
+          }
+        ]
+      },
+      {
+        "name": "205",
+        "category": "Compact"
+      },
+      {
+        "name": "205 Cabrio",
+        "category": "Convertible"
+      },
+      {
+        "name": "206",
+        "category": "Compact"
+      },
+      {
+        "name": "206 CC",
+        "category": "Convertible"
+      },
+      {
+        "name": "206 SW",
+        "category": "Compact"
+      },
+      {
+        "name": "207",
+        "category": "Compact"
+      },
+      {
+        "name": "207 CC",
+        "category": "Convertible"
+      },
+      {
+        "name": "207 SW",
+        "category": "Compact"
+      },
+      {
+        "name": "306",
+        "category": "Compact"
+      },
+      {
+        "name": "307",
+        "category": "Compact"
+      },
+      {
+        "name": "307 CC",
+        "category": "Convertible"
+      },
+      {
+        "name": "307 SW",
+        "category": "Compact"
+      },
+      {
+        "name": "308",
+        "category": "Compact"
+      },
+      {
+        "name": "308 CC",
+        "category": "Convertible"
+      },
+      {
+        "name": "308 SW",
+        "category": "Compact"
+      },
+      {
+        "name": "309",
+        "category": "Compact"
+      },
+      {
+        "name": "4007",
+        "category": "SUV"
+      },
+      {
+        "name": "4008",
+        "category": "SUV"
+      },
+      {
+        "name": "405",
+        "category": "Sedan"
+      },
+      {
+        "name": "406",
+        "category": "Sedan",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 1.8,
+              "horsePower": 110
+            },
+            "performance": {
+              "acceleration": 11.8,
+              "topSpeed": 130
+            }
+          }
+        ]
+      },
+      {
+        "name": "407",
+        "category": "Sedan",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.0,
+              "horsePower": 140
+            },
+            "performance": {
+              "acceleration": 10.5,
+              "topSpeed": 150
+            }
+          }
+        ]
+      },
+      {
+        "name": "407 SW",
+        "category": "Sedan"
+      },
+      {
+        "name": "5008",
+        "category": "SUV"
+      },
+      {
+        "name": "508",
+        "category": "Sedan"
+      },
+      {
+        "name": "508 SW",
+        "category": "Sedan"
+      },
+      {
+        "name": "605",
+        "category": "Sedan"
+      },
+      {
+        "name": "806",
+        "category": "Van"
+      },
+      {
+        "name": "607",
+        "category": "Sedan"
+      },
+      {
+        "name": "807",
+        "category": "Van"
+      },
+      {
+        "name": "Bipper",
+        "category": "Van"
+      },
+      {
+        "name": "RCZ",
+        "category": "Sports Car",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 1.6,
+              "horsePower": 200
+            },
+            "performance": {
+              "acceleration": 7.0,
+              "topSpeed": 160
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "brandName": "Dacia",
+    "models": [
+      {
+        "name": "Dokker",
+        "category": "Van"
+      },
+      {
+        "name": "Duster",
+        "category": "SUV",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 1.6,
+              "horsePower": 115
+            }
+          }
+        ]
+      },
+      {
+        "name": "Lodgy",
+        "category": "Minivan"
+      },
+      {
+        "name": "Logan",
+        "category": "Sedan",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 1.4,
+              "horsePower": 75
+            }
+          }
+        ]
+      },
+      {
+        "name": "Logan MCV",
+        "category": "Sedan"
+      },
+      {
+        "name": "Logan Van",
+        "category": "Van"
+      },
+      {
+        "name": "Sandero",
+        "category": "Compact",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 3,
+              "size": 0.9,
+              "horsePower": 90
+            }
+          }
+        ]
+      },
+      {
+        "name": "Solenza",
+        "category": "Sedan"
+      }
+    ]
+  },
+  {
+    "brandName": "Citroën",
+    "models": [
+      {
+        "name": "Berlingo",
+        "category": "Van"
+      },
+      {
+        "name": "C-Crosser",
+        "category": "SUV"
+      },
+      {
+        "name": "C-Elissée",
+        "category": "Sedan"
+      },
+      {
+        "name": "C-Zero",
+        "category": "Compact"
+      },
+      {
+        "name": "C1",
+        "category": "Compact"
+      },
+      {
+        "name": "C2",
+        "category": "Compact"
+      },
+      {
+        "name": "C3",
+        "category": "Compact"
+      },
+      {
+        "name": "C3 Picasso",
+        "category": "Minivan"
+      },
+      {
+        "name": "C4",
+        "category": "Compact"
+      },
+      {
+        "name": "C4 Aircross",
+        "category": "SUV"
+      },
+      {
+        "name": "C4 Cactus",
+        "category": "Compact",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 3,
+              "size": 1.2,
+              "horsePower": 110
+            },
+            "performance": {
+              "acceleration": 10.5,
+              "topSpeed": 185
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 1.6,
+              "horsePower": 120
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 1.6,
+              "horsePower": 150
+            }
+          }
+        ]
+      },
+      {
+        "name": "C4 Coupé",
+        "category": "Compact"
+      },
+      {
+        "name": "C4 Grand Picasso",
+        "category": "Minivan",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 1.6,
+              "horsePower": 130
+            },
+            "performance": {
+              "acceleration": 11.0,
+              "topSpeed": 175
+            }
+          }
+        ]
+      },
+      {
+        "name": "C4 Sedan",
+        "category": "Sedan"
+      },
+      {
+        "name": "C5",
+        "category": "Sedan"
+      },
+      {
+        "name": "C5 Break",
+        "category": "Sedan"
+      },
+      {
+        "name": "C5 Tourer",
+        "category": "Sedan"
+      },
+      {
+        "name": "C6",
+        "category": "Sedan"
+      },
+      {
+        "name": "C8",
+        "category": "Minivan",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.0,
+              "horsePower": 160
+            }
+          }
+        ]
+      },
+      {
+        "name": "DS3",
+        "category": "Compact"
+      },
+      {
+        "name": "DS4",
+        "category": "Compact"
+      },
+      {
+        "name": "DS5",
+        "category": "Sedan",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.0,
+              "horsePower": 160
+            },
+            "performance": {
+              "acceleration": 9.5,
+              "topSpeed": 185
+            }
+          }
+        ]
+      },
+      {
+        "name": "Evasion",
+        "category": "Minivan"
+      },
+      {
+        "name": "Jumper",
+        "category": "Van"
+      },
+      {
+        "name": "Jumpy",
+        "category": "Van"
+      },
+      {
+        "name": "Saxo",
+        "category": "Compact"
+      },
+      {
+        "name": "Nemo",
+        "category": "Van"
+      },
+      {
+        "name": "Xantia",
+        "category": "Sedan"
+      },
+      {
+        "name": "Xsara",
+        "category": "Compact"
+      }
+    ]
+  },
+  {
+    "brandName": "Opel",
+    "models": [
+      {
+        "name": "Agila",
+        "category": "Compact"
+      },
+      {
+        "name": "Ampera",
+        "category": "Compact"
+      },
+      {
+        "name": "Antara",
+        "category": "SUV"
+      },
+      {
+        "name": "Astra",
+        "category": "Compact"
+      },
+      {
+        "name": "Astra cabrio",
+        "category": "Convertible"
+      },
+      {
+        "name": "Astra caravan",
+        "category": "Compact"
+      },
+      {
+        "name": "Astra coupé",
+        "category": "Compact"
+      },
+      {
+        "name": "Calibra",
+        "category": "Compact"
+      },
+      {
+        "name": "Campo",
+        "category": "Truck"
+      },
+      {
+        "name": "Cascada",
+        "category": "Convertible"
+      },
+      {
+        "name": "Corsa",
+        "category": "Compact"
+      },
+      {
+        "name": "Frontera",
+        "category": "SUV"
+      },
+      {
+        "name": "Insignia",
+        "category": "Sedan"
+      },
+      {
+        "name": "Insignia kombi",
+        "category": "Sedan"
+      },
+      {
+        "name": "Kadett",
+        "category": "Compact"
+      },
+      {
+        "name": "Meriva",
+        "category": "Minivan"
+      },
+      {
+        "name": "Mokka",
+        "category": "SUV"
+      },
+      {
+        "name": "Movano",
+        "category": "Van"
+      },
+      {
+        "name": "Omega",
+        "category": "Sedan"
+      },
+      {
+        "name": "Signum",
+        "category": "Sedan"
+      },
+      {
+        "name": "Vectra",
+        "category": "Compact"
+      },
+      {
+        "name": "Vectra Caravan",
+        "category": "Compact"
+      },
+      {
+        "name": "Vivaro",
+        "category": "Van"
+      },
+      {
+        "name": "Vivaro Kombi",
+        "category": "Van"
+      },
+      {
+        "name": "Zafira",
+        "category": "Minivan",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 1.6,
+              "horsePower": 115
+            },
+            "performance": {
+              "acceleration": 12.5,
+              "topSpeed": 175
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 1.8,
+              "horsePower": 140
+            },
+            "performance": {
+              "acceleration": 11.2,
+              "topSpeed": 190
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.0,
+              "horsePower": 170
+            },
+            "performance": {
+              "acceleration": 9.8,
+              "topSpeed": 205
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "brandName": "Alfa Romeo",
+    "models": [
+      {
+        "name": "145",
+        "category": "Compact"
+      },
+      {
+        "name": "146",
+        "category": "Compact"
+      },
+      {
+        "name": "147",
+        "category": "Compact"
+      },
+      {
+        "name": "155",
+        "category": "Sedan"
+      },
+      {
+        "name": "156",
+        "category": "Sedan"
+      },
+      {
+        "name": "156 Sportwagon",
+        "category": "Wagon"
+      },
+      {
+        "name": "159",
+        "category": "Sedan"
+      },
+      {
+        "name": "159 Sportwagon",
+        "category": "Wagon"
+      },
+      {
+        "name": "164",
+        "category": "Sedan"
+      },
+      {
+        "name": "166",
+        "category": "Sedan"
+      },
+      {
+        "name": "4C",
+        "category": "Sports Car",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 1.8,
+              "horsePower": 150
+            },
+            "performance": {
+              "acceleration": 8.2,
+              "topSpeed": 220
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 2.2,
+              "horsePower": 185
+            },
+            "performance": {
+              "acceleration": 7.0,
+              "topSpeed": 235
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 3.2,
+              "horsePower": 260
+            },
+            "performance": {
+              "acceleration": 5.5,
+              "topSpeed": 260
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 5,
+              "size": 2.4,
+              "horsePower": 200
+            }
+          }
+        ]
+      },
+      {
+        "name": "Brera",
+        "category": "Sports Car",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 1.8,
+              "horsePower": 150
+            },
+            "performance": {
+              "acceleration": 8.2,
+              "topSpeed": 220
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 2.2,
+              "horsePower": 185
+            },
+            "performance": {
+              "acceleration": 7.0,
+              "topSpeed": 235
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 3.2,
+              "horsePower": 260
+            },
+            "performance": {
+              "acceleration": 5.5,
+              "topSpeed": 260
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 5,
+              "size": 2.4,
+              "horsePower": 200
+            }
+          }
+        ]
+      },
+      {
+        "name": "GTV",
+        "category": "Sports Car"
+      },
+      {
+        "name": "MiTo",
+        "category": "Compact"
+      },
+      {
+        "name": "Crosswagon",
+        "category": "Wagon"
+      },
+      {
+        "name": "Spider",
+        "category": "Convertible"
+      },
+      {
+        "name": "GT",
+        "category": "Sports Car"
+      },
+      {
+        "name": "Giulietta",
+        "category": "Compact"
+      },
+      {
+        "name": "Giulia",
+        "category": "Sedan"
+      }
+    ]
+  },
+  {
+    "brandName": "Škoda",
+    "models": [
+      {
+        "name": "Favorit",
+        "category": "Compact"
+      },
+      {
+        "name": "Felicia",
+        "category": "Compact"
+      },
+      {
+        "name": "Citigo",
+        "category": "Compact",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 3,
+              "size": 1.0,
+              "horsePower": 75
+            },
+            "performance": {
+              "acceleration": 13.5,
+              "topSpeed": 165
+            }
+          }
+        ]
+      },
+      {
+        "name": "Fabia",
+        "category": "Compact"
+      },
+      {
+        "name": "Fabia Combi",
+        "category": "Wagon"
+      },
+      {
+        "name": "Fabia Sedan",
+        "category": "Sedan"
+      },
+      {
+        "name": "Felicia Combi",
+        "category": "Wagon"
+      },
+      {
+        "name": "Octavia",
+        "category": "Sedan"
+      },
+      {
+        "name": "Octavia Combi",
+        "category": "Wagon"
+      },
+      {
+        "name": "Roomster",
+        "category": "Minivan"
+      },
+      {
+        "name": "Yeti",
+        "category": "SUV",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 1.4,
+              "horsePower": 125
+            },
+            "performance": {
+              "acceleration": 10.2,
+              "topSpeed": 190
+            }
+          }
+        ]
+      },
+      {
+        "name": "Rapid",
+        "category": "Compact"
+      },
+      {
+        "name": "Rapid Spaceback",
+        "category": "Compact"
+      },
+      {
+        "name": "Superb",
+        "category": "Sedan"
+      },
+      {
+        "name": "Superb Combi",
+        "category": "Wagon"
+      }
+    ]
+  },
+  {
+    "brandName": "Chevrolet",
+    "models": [
+      {
+        "name": "Alero",
+        "category": "Sedan"
+      },
+      {
+        "name": "Aveo",
+        "category": "Compact",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 1.4,
+              "horsePower": 100
+            }
+          }
+        ]
+      },
+      {
+        "name": "Camaro",
+        "category": "Sports Car"
+      },
+      {
+        "name": "Captiva",
+        "category": "SUV"
+      },
+      {
+        "name": "Corvette",
+        "category": "Sports Car",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 8,
+              "size": 6.2,
+              "horsePower": 455
+            },
+            "performance": {
+              "acceleration": 3.8,
+              "topSpeed": 290
+            }
+          }
+        ]
+      },
+      {
+        "name": "Cruze",
+        "category": "Compact"
+      },
+      {
+        "name": "Cruze SW",
+        "category": "Wagon"
+      },
+      {
+        "name": "Epica",
+        "category": "Sedan"
+      },
+      {
+        "name": "Equinox",
+        "category": "SUV"
+      },
+      {
+        "name": "Evanda",
+        "category": "Minivan"
+      },
+      {
+        "name": "HHR",
+        "category": "Compact"
+      },
+      {
+        "name": "Kalos",
+        "category": "Compact"
+      },
+      {
+        "name": "Lacetti",
+        "category": "Sedan",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 1.6,
+              "horsePower": 109
+            }
+          }
+        ]
+      },
+      {
+        "name": "Lacetti SW",
+        "category": "Wagon"
+      },
+      {
+        "name": "Lumina",
+        "category": "Sedan"
+      },
+      {
+        "name": "Malibu",
+        "category": "Sedan",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.0,
+              "horsePower": 163
+            }
+          }
+        ]
+      },
+      {
+        "name": "Matiz",
+        "category": "Compact"
+      },
+      {
+        "name": "Monte Carlo",
+        "category": "Sports Car"
+      },
+      {
+        "name": "Nubira",
+        "category": "Sedan"
+      },
+      {
+        "name": "Orlando",
+        "category": "Minivan"
+      },
+      {
+        "name": "Spark",
+        "category": "Compact",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 1.2,
+              "horsePower": 80
+            }
+          }
+        ]
+      },
+      {
+        "name": "Suburban",
+        "category": "SUV"
+      },
+      {
+        "name": "Tacuma",
+        "category": "Minivan"
+      },
+      {
+        "name": "Tahoe",
+        "category": "SUV",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 8,
+              "size": 5.3,
+              "horsePower": 355
+            }
+          }
+        ]
+      },
+      {
+        "name": "Trax",
+        "category": "SUV"
+      }
+    ]
+  },
+  {
+    "brandName": "Porsche",
+    "models": [
+      {
+        "name": "911 Carrera",
+        "category": "Sports Car",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 3.0,
+              "horsePower": 385
+            },
+            "performance": {
+              "acceleration": 4.2,
+              "topSpeed": 293
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 3.8,
+              "horsePower": 450
+            },
+            "performance": {
+              "acceleration": 3.5,
+              "topSpeed": 308
+            }
+          }
+        ]
+      },
+      {
+        "name": "911 Carrera Cabrio",
+        "category": "Convertible",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 3.0,
+              "horsePower": 385
+            },
+            "performance": {
+              "acceleration": 4.3,
+              "topSpeed": 291
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 3.8,
+              "horsePower": 450
+            },
+            "performance": {
+              "acceleration": 3.6,
+              "topSpeed": 307
+            }
+          }
+        ]
+      },
+      {
+        "name": "911 Targa",
+        "category": "Sports Car",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 3.0,
+              "horsePower": 385
+            },
+            "performance": {
+              "acceleration": 4.2,
+              "topSpeed": 293
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 3.8,
+              "horsePower": 450
+            },
+            "performance": {
+              "acceleration": 3.5,
+              "topSpeed": 308
+            }
+          }
+        ]
+      },
+      {
+        "name": "911 Turbo",
+        "category": "Sports Car",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 3.8,
+              "horsePower": 540
+            },
+            "performance": {
+              "acceleration": 2.9,
+              "topSpeed": 330
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 3.8,
+              "horsePower": 580
+            },
+            "performance": {
+              "acceleration": 2.7,
+              "topSpeed": 335
+            }
+          }
+        ]
+      },
+      {
+        "name": "924",
+        "category": "Sports Car",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.0,
+              "horsePower": 170
+            },
+            "performance": {
+              "acceleration": 8.6,
+              "topSpeed": 140
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.5,
+              "horsePower": 163
+            },
+            "performance": {
+              "acceleration": 9.5,
+              "topSpeed": 144
+            }
+          }
+        ]
+      },
+      {
+        "name": "944",
+        "category": "Sports Car",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.5,
+              "horsePower": 163
+            },
+            "performance": {
+              "acceleration": 8.3,
+              "topSpeed": 138
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 3.0,
+              "horsePower": 211
+            },
+            "performance": {
+              "acceleration": 6.2,
+              "topSpeed": 235
+            }
+          }
+        ]
+      },
+      {
+        "name": "997",
+        "category": "Sports Car",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 3.6,
+              "horsePower": 325
+            },
+            "performance": {
+              "acceleration": 4.6,
+              "topSpeed": 289
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 3.8,
+              "horsePower": 355
+            },
+            "performance": {
+              "acceleration": 4.0,
+              "topSpeed": 304
+            }
+          }
+        ]
+      },
+      {
+        "name": "Boxster",
+        "category": "Convertible",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.0,
+              "horsePower": 300
+            },
+            "performance": {
+              "acceleration": 4.2,
+              "topSpeed": 275
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 3.4,
+              "horsePower": 350
+            },
+            "performance": {
+              "acceleration": 4.2,
+              "topSpeed": 281
+            }
+          }
+        ]
+      },
+      {
+        "name": "Cayenne",
+        "category": "SUV",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 3.0,
+              "horsePower": 340
+            },
+            "performance": {
+              "acceleration": 5.9,
+              "topSpeed": 253
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 3.6,
+              "horsePower": 440
+            },
+            "performance": {
+              "acceleration": 4.1,
+              "topSpeed": 286
+            }
+          }
+        ]
+      },
+      {
+        "name": "Cayman",
+        "category": "Sports Car",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 2.0,
+              "horsePower": 300
+            },
+            "performance": {
+              "acceleration": 4.9,
+              "topSpeed": 275
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 3.4,
+              "horsePower": 385
+            },
+            "performance": {
+              "acceleration": 4.0,
+              "topSpeed": 283
+            }
+          }
+        ]
+      },
+      {
+        "name": "Macan",
+        "category": "SUV",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.0,
+              "horsePower": 252
+            },
+            "performance": {
+              "acceleration": 6.7,
+              "topSpeed": 229
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 3.0,
+              "horsePower": 354
+            },
+            "performance": {
+              "acceleration": 5.1,
+              "topSpeed": 256
+            }
+          }
+        ]
+      },
+      {
+        "name": "Panamera",
+        "category": "Sedan",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 2.9,
+              "horsePower": 325
+            },
+            "performance": {
+              "acceleration": 5.2,
+              "topSpeed": 267
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 3.0,
+              "horsePower": 420
+            },
+            "performance": {
+              "acceleration": 4.2,
+              "topSpeed": 292
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "brandName": "Honda",
+    "models": [
+      {
+        "name": "Accord",
+        "category": "Sedan",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.0,
+              "horsePower": 192
+            },
+            "performance": {
+              "acceleration": 7.3,
+              "topSpeed": 140
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 3.5,
+              "horsePower": 278
+            },
+            "performance": {
+              "acceleration": 6.2,
+              "topSpeed": 155
+            }
+          }
+        ]
+      },
+      {
+        "name": "Civic",
+        "category": "Compact",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 1.5,
+              "horsePower": 174
+            },
+            "performance": {
+              "acceleration": 7.7,
+              "topSpeed": 130
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.0,
+              "horsePower": 306
+            },
+            "performance": {
+              "acceleration": 5.8,
+              "topSpeed": 169
+            }
+          }
+        ]
+      },
+      {
+        "name": "Civic Type R",
+        "category": "Sports Car",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.0,
+              "horsePower": 316
+            },
+            "performance": {
+              "acceleration": 5.7,
+              "topSpeed": 272
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.0,
+              "horsePower": 320
+            },
+            "performance": {
+              "acceleration": 5.7,
+              "topSpeed": 272
+            }
+          }
+        ]
+      },
+      {
+        "name": "CR-Z",
+        "category": "Sports Car",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 1.5,
+              "horsePower": 130
+            },
+            "performance": {
+              "acceleration": 9.7,
+              "topSpeed": 124
+            }
+          }
+        ]
+      },
+      {
+        "name": "S2000",
+        "category": "Sports Car",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.0,
+              "horsePower": 237
+            },
+            "performance": {
+              "acceleration": 5.4,
+              "topSpeed": 240
+            }
+          }
+        ]
+      },
+      {
+        "name": "City",
+        "category": "Compact"
+      },
+      {
+        "name": "Civic Aerodeck",
+        "category": "Compact"
+      },
+      {
+        "name": "Civic Coupé",
+        "category": "Compact"
+      },
+      {
+        "name": "Civic Tourer",
+        "category": "Compact"
+      },
+      {
+        "name": "CR-V",
+        "category": "SUV"
+      },
+      {
+        "name": "CR-X",
+        "category": "Sports Car"
+      },
+      {
+        "name": "FR-V",
+        "category": "Minivan"
+      },
+      {
+        "name": "HR-V",
+        "category": "SUV"
+      },
+      {
+        "name": "Insight",
+        "category": "Compact"
+      },
+      {
+        "name": "Integra",
+        "category": "Compact"
+      },
+      {
+        "name": "Jazz",
+        "category": "Compact"
+      },
+      {
+        "name": "Legend",
+        "category": "Sedan"
+      },
+      {
+        "name": "Prelude",
+        "category": "Sports Car"
+      }
+    ]
+  },
+  {
+    "brandName": "Subaru",
+    "models": [
+      {
+        "name": "BRZ",
+        "category": "Sports Car",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.0,
+              "horsePower": 205
+            },
+            "performance": {
+              "acceleration": 6.2,
+              "topSpeed": 143
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.4,
+              "horsePower": 228
+            },
+            "performance": {
+              "acceleration": 6.0,
+              "topSpeed": 150
+            }
+          }
+        ]
+      },
+      {
+        "name": "Forester",
+        "category": "SUV",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.5,
+              "horsePower": 182
+            },
+            "performance": {
+              "acceleration": 9.4,
+              "topSpeed": 130
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.0,
+              "horsePower": 260
+            },
+            "performance": {
+              "acceleration": 8.4,
+              "topSpeed": 140
+            }
+          }
+        ]
+      },
+      {
+        "name": "Impreza",
+        "category": "Compact"
+      },
+      {
+        "name": "Impreza Wagon",
+        "category": "Wagon"
+      },
+      {
+        "name": "Justy",
+        "category": "Compact"
+      },
+      {
+        "name": "Legacy",
+        "category": "Sedan"
+      },
+      {
+        "name": "Legacy Wagon",
+        "category": "Wagon"
+      },
+      {
+        "name": "Legacy Outback",
+        "category": "Wagon"
+      },
+      {
+        "name": "Levorg",
+        "category": "Wagon"
+      },
+      {
+        "name": "Outback",
+        "category": "SUV"
+      },
+      {
+        "name": "SVX",
+        "category": "Sports Car"
+      },
+      {
+        "name": "Tribeca",
+        "category": "SUV"
+      },
+      {
+        "name": "Tribeca B9",
+        "category": "SUV"
+      },
+      {
+        "name": "XV",
+        "category": "SUV"
+      }
+    ]
+  },
+  {
+    "brandName": "Mazda",
+    "models": [
+      {
+        "name": "121",
+        "category": "Compact"
+      },
+      {
+        "name": "2",
+        "category": "Compact",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 3,
+              "size": 1.5,
+              "horsePower": 90
+            }
+          }
+        ]
+      },
+      {
+        "name": "3",
+        "category": "Compact",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.0,
+              "horsePower": 155
+            },
+            "performance": {
+              "acceleration": 8.1,
+              "topSpeed": 133
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.5,
+              "horsePower": 186
+            },
+            "performance": {
+              "acceleration": 7.5,
+              "topSpeed": 139
+            }
+          }
+        ]
+      },
+      {
+        "name": "323",
+        "category": "Compact"
+      },
+      {
+        "name": "323 Combi",
+        "category": "Wagon"
+      },
+      {
+        "name": "323 Coupé",
+        "category": "Sports Car"
+      },
+      {
+        "name": "323 F",
+        "category": "Compact"
+      },
+      {
+        "name": "5",
+        "category": "Compact"
+      },
+      {
+        "name": "6",
+        "category": "Sedan",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.5,
+              "horsePower": 186
+            }
+          }
+        ]
+      },
+      {
+        "name": "6 Combi",
+        "category": "Wagon"
+      },
+      {
+        "name": "626",
+        "category": "Sedan"
+      },
+      {
+        "name": "626 Combi",
+        "category": "Wagon"
+      },
+      {
+        "name": "B-Fighter",
+        "category": "Compact"
+      },
+      {
+        "name": "B2500",
+        "category": "Truck"
+      },
+      {
+        "name": "BT",
+        "category": "Truck"
+      },
+      {
+        "name": "CX-3",
+        "category": "SUV"
+      },
+      {
+        "name": "CX-5",
+        "category": "SUV",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.5,
+              "horsePower": 187
+            }
+          }
+        ]
+      },
+      {
+        "name": "CX-7",
+        "category": "SUV"
+      },
+      {
+        "name": "CX-9",
+        "category": "SUV"
+      },
+      {
+        "name": "Demio",
+        "category": "Compact"
+      },
+      {
+        "name": "MPV",
+        "category": "Minivan"
+      },
+      {
+        "name": "MX-3",
+        "category": "Compact"
+      },
+      {
+        "name": "MX-5",
+        "category": "Sports Car",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.0,
+              "horsePower": 181
+            }
+          }
+        ]
+      },
+      {
+        "name": "MX-6",
+        "category": "Sports Car"
+      },
+      {
+        "name": "Premacy",
+        "category": "Minivan"
+      },
+      {
+        "name": "RX-7",
+        "category": "Sports Car",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 2,
+              "size": 1.3,
+              "horsePower": 252
+            }
+          }
+        ]
+      },
+      {
+        "name": "RX-8",
+        "category": "Sports Car",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 2,
+              "size": 1.3,
+              "horsePower": 238
+            },
+            "performance": {
+              "acceleration": 6.4,
+              "topSpeed": 145
+            }
+          }
+        ]
+      },
+      {
+        "name": "Xedox 6",
+        "category": "SUV"
+      }
+    ]
+  },
+  {
+    "brandName": "Mitsubishi",
+    "models": [
+      {
+        "name": "3000 GT",
+        "category": "Sports Car",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 3.0,
+              "horsePower": 222
+            },
+            "performance": {
+              "acceleration": 5.9,
+              "topSpeed": 250
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 3.5,
+              "horsePower": 320
+            },
+            "performance": {
+              "acceleration": 4.9,
+              "topSpeed": 280
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 8,
+              "size": 5.0,
+              "horsePower": 400
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 8,
+              "size": 6.0,
+              "horsePower": 500
+            }
+          }
+        ]
+      },
+      {
+        "name": "ASX",
+        "category": "SUV",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.0,
+              "horsePower": 150
+            }
+          }
+        ]
+      },
+      {
+        "name": "Carisma",
+        "category": "Sedan"
+      },
+      {
+        "name": "Colt",
+        "category": "Compact",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 3,
+              "size": 1.2,
+              "horsePower": 80
+            }
+          }
+        ]
+      },
+      {
+        "name": "Colt CC",
+        "category": "Convertible"
+      },
+      {
+        "name": "Eclipse",
+        "category": "Sports Car",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.0,
+              "horsePower": 200
+            },
+            "performance": {
+              "acceleration": 6.5,
+              "topSpeed": 240
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 3.0,
+              "horsePower": 270
+            },
+            "performance": {
+              "acceleration": 5.3,
+              "topSpeed": 280
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 3.8,
+              "horsePower": 320
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 8,
+              "size": 5.0,
+              "horsePower": 500
+            }
+          }
+        ]
+      },
+      {
+        "name": "Fuso canter",
+        "category": "Truck"
+      },
+      {
+        "name": "Galant",
+        "category": "Sedan"
+      },
+      {
+        "name": "Galant Combi",
+        "category": "Wagon"
+      },
+      {
+        "name": "Grandis",
+        "category": "Minivan"
+      },
+      {
+        "name": "L200",
+        "category": "Truck",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.2,
+              "horsePower": 150
+            }
+          }
+        ]
+      },
+      {
+        "name": "L200 Pick up",
+        "category": "Truck"
+      },
+      {
+        "name": "L200 Pick up Allrad",
+        "category": "Truck"
+      },
+      {
+        "name": "L300",
+        "category": "Van"
+      },
+      {
+        "name": "Lancer",
+        "category": "Sedan"
+      },
+      {
+        "name": "Lancer Combi",
+        "category": "Wagon"
+      },
+      {
+        "name": "Lancer Evo",
+        "category": "Sports Car",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.0,
+              "horsePower": 300
+            },
+            "performance": {
+              "acceleration": 4.5,
+              "topSpeed": 260
+            }
+          }
+        ]
+      },
+      {
+        "name": "Lancer Sportback",
+        "category": "Hatchback"
+      },
+      {
+        "name": "Outlander",
+        "category": "SUV",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.4,
+              "horsePower": 166
+            },
+            "performance": {
+              "acceleration": 9.2,
+              "topSpeed": 190
+            }
+          }
+        ]
+      },
+      {
+        "name": "Pajero",
+        "category": "SUV"
+      },
+      {
+        "name": "Pajeto Pinin",
+        "category": "SUV"
+      },
+      {
+        "name": "Pajero Pinin Wagon",
+        "category": "SUV"
+      },
+      {
+        "name": "Pajero Sport",
+        "category": "SUV",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.0,
+              "horsePower": 136
+            },
+            "performance": {
+              "acceleration": 12.5,
+              "topSpeed": 175
+            }
+          }
+        ]
+      },
+      {
+        "name": "Pajero Wagon",
+        "category": "SUV"
+      },
+      {
+        "name": "Space Star",
+        "category": "Compact"
+      }
+    ]
+  },
+  {
+    "brandName": "Lexus",
+    "models": [
+      {
+        "name": "CT",
+        "category": "Compact",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 1.8,
+              "horsePower": 136
+            },
+            "performance": {
+              "acceleration": 10.3,
+              "topSpeed": 180
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.5,
+              "horsePower": 181
+            },
+            "performance": {
+              "acceleration": 8.4,
+              "topSpeed": 180
+            }
+          }
+        ]
+      },
+      {
+        "name": "GS",
+        "category": "Sedan",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 3.5,
+              "horsePower": 311
+            },
+            "performance": {
+              "acceleration": 5.7,
+              "topSpeed": 168
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 3.0,
+              "horsePower": 249
+            },
+            "performance": {
+              "acceleration": 6.9,
+              "topSpeed": 220
+            }
+          }
+        ]
+      },
+      {
+        "name": "GS 300",
+        "category": "Sedan",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 3.5,
+              "horsePower": 245
+            },
+            "performance": {
+              "acceleration": 7.1,
+              "topSpeed": 220
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 2.5,
+              "horsePower": 212
+            }
+          }
+        ]
+      },
+      {
+        "name": "GX",
+        "category": "SUV",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 8,
+              "size": 4.6,
+              "horsePower": 301
+            },
+            "performance": {
+              "acceleration": 7.8,
+              "topSpeed": 165
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 8,
+              "size": 4.7,
+              "horsePower": 329
+            },
+            "performance": {
+              "acceleration": 7.3,
+              "topSpeed": 170
+            }
+          }
+        ]
+      },
+      {
+        "name": "IS",
+        "category": "Sedan",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.5,
+              "horsePower": 204
+            },
+            "performance": {
+              "acceleration": 7.8,
+              "topSpeed": 230
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.0,
+              "horsePower": 241
+            },
+            "performance": {
+              "acceleration": 6.9,
+              "topSpeed": 235
+            }
+          }
+        ]
+      },
+      {
+        "name": "IS 200",
+        "category": "Sedan",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 2.0,
+              "horsePower": 153
+            }
+          }
+        ]
+      },
+      {
+        "name": "IS 250 C",
+        "category": "Convertible",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 2.5,
+              "horsePower": 204
+            },
+            "performance": {
+              "acceleration": 7.8,
+              "topSpeed": 230
+            }
+          }
+        ]
+      },
+      {
+        "name": "IS-F",
+        "category": "Sports Car",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 8,
+              "size": 5.0,
+              "horsePower": 416
+            },
+            "performance": {
+              "acceleration": 4.6,
+              "topSpeed": 270
+            }
+          }
+        ]
+      },
+      {
+        "name": "LS",
+        "category": "Sedan",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 4.6,
+              "horsePower": 386
+            },
+            "performance": {
+              "acceleration": 5.4,
+              "topSpeed": 250
+            }
+          }
+        ]
+      },
+      {
+        "name": "LX",
+        "category": "SUV",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 8,
+              "size": 5.7,
+              "horsePower": 383
+            },
+            "performance": {
+              "acceleration": 6.7,
+              "topSpeed": 220
+            }
+          }
+        ]
+      },
+      {
+        "name": "NX",
+        "category": "SUV",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.0,
+              "horsePower": 235
+            },
+            "performance": {
+              "acceleration": 7.1,
+              "topSpeed": 190
+            }
+          }
+        ]
+      },
+      {
+        "name": "RC F",
+        "category": "Sports Car",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 8,
+              "size": 5.0,
+              "horsePower": 472
+            },
+            "performance": {
+              "acceleration": 4.3,
+              "topSpeed": 270
+            }
+          }
+        ]
+      },
+      {
+        "name": "RX",
+        "category": "SUV",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 3.5,
+              "horsePower": 295
+            },
+            "performance": {
+              "acceleration": 7.7,
+              "topSpeed": 200
+            }
+          }
+        ]
+      },
+      {
+        "name": "RX 300",
+        "category": "SUV",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 3.0,
+              "horsePower": 222
+            },
+            "performance": {
+              "acceleration": 8.3,
+              "topSpeed": 200
+            }
+          }
+        ]
+      },
+      {
+        "name": "RX 400h",
+        "category": "SUV"
+      },
+      {
+        "name": "RX 450h",
+        "category": "SUV"
+      },
+      {
+        "name": "SC 430",
+        "category": "Convertible"
+      }
+    ]
+  },
+  {
+    "brandName": "Toyota",
+    "models": [
+      {
+        "name": "4-Runner",
+        "category": "SUV",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 3.5,
+              "horsePower": 270
+            },
+            "performance": {
+              "acceleration": 7.8,
+              "topSpeed": 180
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 8,
+              "size": 4.0,
+              "horsePower": 400
+            },
+            "performance": {
+              "acceleration": 6.5,
+              "topSpeed": 220
+            }
+          }
+        ]
+      },
+      {
+        "name": "Auris",
+        "category": "Compact"
+      },
+      {
+        "name": "Avensis",
+        "category": "Sedan",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 1.8,
+              "horsePower": 140
+            },
+            "performance": {
+              "acceleration": 9.5,
+              "topSpeed": 200
+            }
+          }
+        ]
+      },
+      {
+        "name": "Avensis Combi",
+        "category": "Wagon"
+      },
+      {
+        "name": "Avensis Van Verso",
+        "category": "Minivan"
+      },
+      {
+        "name": "Aygo",
+        "category": "Compact"
+      },
+      {
+        "name": "Camry",
+        "category": "Sedan",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.5,
+              "horsePower": 178
+            },
+            "performance": {
+              "acceleration": 8.2,
+              "topSpeed": 190
+            }
+          }
+        ]
+      },
+      {
+        "name": "Carina",
+        "category": "Sedan"
+      },
+      {
+        "name": "Celica",
+        "category": "Sports Car",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.0,
+              "horsePower": 189
+            },
+            "performance": {
+              "acceleration": 7.0,
+              "topSpeed": 220
+            }
+          }
+        ]
+      },
+      {
+        "name": "Corolla",
+        "category": "Compact"
+      },
+      {
+        "name": "Corolla Combi",
+        "category": "Wagon"
+      },
+      {
+        "name": "Corolla sedan",
+        "category": "Sedan",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 1.6,
+              "horsePower": 120
+            },
+            "performance": {
+              "acceleration": 10.5,
+              "topSpeed": 180
+            }
+          }
+        ]
+      },
+      {
+        "name": "Corolla Verso",
+        "category": "Minivan"
+      },
+      {
+        "name": "FJ Cruiser",
+        "category": "SUV",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 4.0,
+              "horsePower": 260
+            },
+            "performance": {
+              "acceleration": 8.0,
+              "topSpeed": 190
+            }
+          }
+        ]
+      },
+      {
+        "name": "GT86",
+        "category": "Sports Car",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.0,
+              "horsePower": 200
+            },
+            "performance": {
+              "acceleration": 6.5,
+              "topSpeed": 240
+            }
+          }
+        ]
+      },
+      {
+        "name": "Hiace",
+        "category": "Van"
+      },
+      {
+        "name": "Hiace Van",
+        "category": "Van"
+      },
+      {
+        "name": "Highlander",
+        "category": "SUV",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 3.5,
+              "horsePower": 270
+            },
+            "performance": {
+              "acceleration": 8.5,
+              "topSpeed": 200
+            }
+          }
+        ]
+      },
+      {
+        "name": "Hilux",
+        "category": "Truck",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.4,
+              "horsePower": 150
+            },
+            "performance": {
+              "acceleration": 11.0,
+              "topSpeed": 160
+            }
+          }
+        ]
+      },
+      {
+        "name": "Land Cruiser",
+        "category": "SUV",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 8,
+              "size": 5.7,
+              "horsePower": 381
+            },
+            "performance": {
+              "acceleration": 7.5,
+              "topSpeed": 220
+            }
+          }
+        ]
+      },
+      {
+        "name": "MR2",
+        "category": "Sports Car",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 1.8,
+              "horsePower": 138
+            },
+            "performance": {
+              "acceleration": 7.8,
+              "topSpeed": 130
+            }
+          }
+        ]
+      },
+      {
+        "name": "Paseo",
+        "category": "Compact"
+      },
+      {
+        "name": "Picnic",
+        "category": "Minivan"
+      },
+      {
+        "name": "Prius",
+        "category": "Compact",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 1.8,
+              "horsePower": 121
+            },
+            "performance": {
+              "acceleration": 10.2,
+              "topSpeed": 170
+            }
+          }
+        ]
+      },
+      {
+        "name": "RAV4",
+        "category": "SUV",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.5,
+              "horsePower": 176
+            },
+            "performance": {
+              "acceleration": 9.0,
+              "topSpeed": 200
+            }
+          }
+        ]
+      },
+      {
+        "name": "Sequoia",
+        "category": "SUV",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 8,
+              "size": 5.7,
+              "horsePower": 381
+            },
+            "performance": {
+              "acceleration": 7.5,
+              "topSpeed": 180
+            }
+          }
+        ]
+      },
+      {
+        "name": "Starlet",
+        "category": "Compact"
+      },
+      {
+        "name": "Supra",
+        "category": "Sports Car",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 3.0,
+              "horsePower": 335
+            },
+            "performance": {
+              "acceleration": 5.1,
+              "topSpeed": 260
+            }
+          }
+        ]
+      },
+      {
+        "name": "Tundra",
+        "category": "Truck",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 8,
+              "size": 5.7,
+              "horsePower": 381
+            },
+            "performance": {
+              "acceleration": 6.4,
+              "topSpeed": 180
+            }
+          }
+        ]
+      },
+      {
+        "name": "Urban Cruiser",
+        "category": "Compact"
+      },
+      {
+        "name": "Verso",
+        "category": "Minivan"
+      },
+      {
+        "name": "Yaris",
+        "category": "Compact",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 1.5,
+              "horsePower": 106
+            },
+            "performance": {
+              "acceleration": 11.2,
+              "topSpeed": 170
+            }
+          }
+        ]
+      },
+      {
+        "name": "Yaris Verso",
+        "category": "Minivan"
+      }
+    ]
+  },
+  {
+    "brandName": "BMW",
+    "models": [
+      {
+        "name": "i3",
+        "category": "Compact"
+      },
+      {
+        "name": "i8",
+        "category": "Sports Car"
+      },
+      {
+        "name": "M3",
+        "category": "Sports Car",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 3.0,
+              "horsePower": 425
+            },
+            "performance": {
+              "acceleration": 3.9,
+              "topSpeed": 250
+            }
+          }
+        ]
+      },
+      {
+        "name": "M4",
+        "category": "Sports Car"
+      },
+      {
+        "name": "M5",
+        "category": "Sports Car",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 8,
+              "size": 4.4,
+              "horsePower": 600
+            },
+            "performance": {
+              "acceleration": 3.2,
+              "topSpeed": 190
+            }
+          }
+        ]
+      },
+      {
+        "name": "Rad 1",
+        "category": "Compact"
+      },
+      {
+        "name": "Rad 1 Cabrio",
+        "category": "Convertible"
+      },
+      {
+        "name": "Rad 1 Coupé",
+        "category": "Sports Car"
+      },
+      {
+        "name": "Rad 2",
+        "category": "Compact"
+      },
+      {
+        "name": "Rad 2 Active Tourer",
+        "category": "Compact"
+      },
+      {
+        "name": "Rad 2 Coupé",
+        "category": "Sports Car"
+      },
+      {
+        "name": "Rad 2 Gran Tourer",
+        "category": "Compact"
+      },
+      {
+        "name": "Rad 3",
+        "category": "Sedan",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 3.0,
+              "horsePower": 340
+            },
+            "performance": {
+              "acceleration": 4.2,
+              "topSpeed": 250
+            }
+          }
+        ]
+      },
+      {
+        "name": "Rad 3 Cabrio",
+        "category": "Convertible"
+      },
+      {
+        "name": "Rad 3 Compact",
+        "category": "Compact"
+      },
+      {
+        "name": "Rad 3 Coupé",
+        "category": "Sports Car"
+      },
+      {
+        "name": "Rad 3 GT",
+        "category": "Sedan"
+      },
+      {
+        "name": "Rad 3 Touring",
+        "category": "Wagon"
+      },
+      {
+        "name": "Rad 4",
+        "category": "Sedan",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 3.6,
+              "horsePower": 450
+            },
+            "performance": {
+              "acceleration": 4.0,
+              "topSpeed": 270
+            }
+          }
+        ]
+      },
+      {
+        "name": "Rad 4 Cabrio",
+        "category": "Convertible"
+      },
+      {
+        "name": "Rad 4 Gran Coupé",
+        "category": "Sedan"
+      },
+      {
+        "name": "Rad 5",
+        "category": "Sedan",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 8,
+              "size": 4.8,
+              "horsePower": 600
+            },
+            "performance": {
+              "acceleration": 3.8,
+              "topSpeed": 280
+            }
+          }
+        ]
+      },
+      {
+        "name": "Rad 5 GT",
+        "category": "Hatchback"
+      },
+      {
+        "name": "Rad 5 Touring",
+        "category": "Wagon"
+      },
+      {
+        "name": "Rad 6",
+        "category": "Sedan",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 8,
+              "size": 5.0,
+              "horsePower": 650
+            },
+            "performance": {
+              "acceleration": 3.6,
+              "topSpeed": 290
+            }
+          }
+        ]
+      },
+      {
+        "name": "Rad 6 Cabrio",
+        "category": "Convertible"
+      },
+      {
+        "name": "Rad 6 Coupé",
+        "category": "Sports Car"
+      },
+      {
+        "name": "Rad 6 Gran Coupé",
+        "category": "Sedan"
+      },
+      {
+        "name": "Rad 7",
+        "category": "Sedan"
+      },
+      {
+        "name": "Rad 8 Coupé",
+        "category": "Sports Car"
+      },
+      {
+        "name": "X1",
+        "category": "SUV"
+      },
+      {
+        "name": "X3",
+        "category": "SUV"
+      },
+      {
+        "name": "X4",
+        "category": "SUV"
+      },
+      {
+        "name": "X5",
+        "category": "SUV"
+      },
+      {
+        "name": "X6",
+        "category": "SUV"
+      },
+      {
+        "name": "Z3",
+        "category": "Sports Car"
+      },
+      {
+        "name": "Z3 Coupé",
+        "category": "Sports Car"
+      },
+      {
+        "name": "Z3 Roadster",
+        "category": "Convertible"
+      },
+      {
+        "name": "Z4",
+        "category": "Sports Car"
+      },
+      {
+        "name": "Z4 Roadster",
+        "category": "Convertible"
+      }
+    ]
+  },
+  {
+    "brandName": "Volkswagen",
+    "models": [
+      {
+        "name": "Amarok",
+        "category": "Pickup",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.0,
+              "horsePower": 160
+            }
+          }
+        ]
+      },
+      {
+        "name": "Beetle",
+        "category": "Compact"
+      },
+      {
+        "name": "Bora",
+        "category": "Sedan"
+      },
+      {
+        "name": "Bora Variant",
+        "category": "Wagon"
+      },
+      {
+        "name": "Caddy",
+        "category": "Van"
+      },
+      {
+        "name": "Caddy Van",
+        "category": "Van"
+      },
+      {
+        "name": "Life",
+        "category": "Compact"
+      },
+      {
+        "name": "California",
+        "category": "Van"
+      },
+      {
+        "name": "Caravelle",
+        "category": "Van"
+      },
+      {
+        "name": "CC",
+        "category": "Sedan",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.0,
+              "horsePower": 200
+            },
+            "performance": {
+              "acceleration": 7.5,
+              "topSpeed": 230
+            }
+          }
+        ]
+      },
+      {
+        "name": "Crafter",
+        "category": "Van"
+      },
+      {
+        "name": "Crafter Van",
+        "category": "Van"
+      },
+      {
+        "name": "Crafter Kombi",
+        "category": "Van"
+      },
+      {
+        "name": "CrossTouran",
+        "category": "MPV"
+      },
+      {
+        "name": "Eos",
+        "category": "Convertible",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.0,
+              "horsePower": 200
+            },
+            "performance": {
+              "acceleration": 8.2,
+              "topSpeed": 220
+            }
+          }
+        ]
+      },
+      {
+        "name": "Fox",
+        "category": "Compact",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 3,
+              "size": 1.2,
+              "horsePower": 75
+            }
+          }
+        ]
+      },
+      {
+        "name": "Golf",
+        "category": "Compact",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 1.4,
+              "horsePower": 125
+            },
+            "performance": {
+              "acceleration": 9.1,
+              "topSpeed": 200
+            }
+          }
+        ]
+      },
+      {
+        "name": "Golf Cabrio",
+        "category": "Convertible"
+      },
+      {
+        "name": "Golf Plus",
+        "category": "Compact",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 1.6,
+              "horsePower": 105
+            }
+          }
+        ]
+      },
+      {
+        "name": "Golf Sportvan",
+        "category": "MPV"
+      },
+      {
+        "name": "Golf Variant",
+        "category": "Wagon",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 1.6,
+              "horsePower": 105
+            },
+            "performance": {
+              "acceleration": 10.2,
+              "topSpeed": 190
+            }
+          }
+        ]
+      },
+      {
+        "name": "Jetta",
+        "category": "Sedan",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 1.8,
+              "horsePower": 150
+            },
+            "performance": {
+              "acceleration": 8.4,
+              "topSpeed": 210
+            }
+          }
+        ]
+      },
+      {
+        "name": "LT",
+        "category": "Van"
+      },
+      {
+        "name": "Lupo",
+        "category": "Compact",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 3,
+              "size": 1.0,
+              "horsePower": 50
+            }
+          }
+        ]
+      },
+      {
+        "name": "Multivan",
+        "category": "Van"
+      },
+      {
+        "name": "New Beetle",
+        "category": "Compact",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 1.6,
+              "horsePower": 105
+            },
+            "performance": {
+              "acceleration": 11.2,
+              "topSpeed": 185
+            }
+          }
+        ]
+      },
+      {
+        "name": "New Beetle Cabrio",
+        "category": "Convertible"
+      },
+      {
+        "name": "Passat",
+        "category": "Sedan",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 1.8,
+              "horsePower": 125
+            },
+            "performance": {
+              "acceleration": 9.9,
+              "topSpeed": 200
+            }
+          }
+        ]
+      },
+      {
+        "name": "Passat Alltrack",
+        "category": "Wagon"
+      },
+      {
+        "name": "Passat CC",
+        "category": "Sedan"
+      },
+      {
+        "name": "Passat Variant",
+        "category": "Wagon"
+      },
+      {
+        "name": "Passat Variant Van",
+        "category": "Van"
+      },
+      {
+        "name": "Phaeton",
+        "category": "Sedan",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 8,
+              "size": 4.2,
+              "horsePower": 335
+            },
+            "performance": {
+              "acceleration": 6.4,
+              "topSpeed": 250
+            }
+          }
+        ]
+      },
+      {
+        "name": "Polo",
+        "category": "Compact",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 3,
+              "size": 1.0,
+              "horsePower": 60
+            },
+            "performance": {
+              "acceleration": 14.1,
+              "topSpeed": 160
+            }
+          }
+        ]
+      },
+      {
+        "name": "Polo Van",
+        "category": "Van"
+      },
+      {
+        "name": "Polo Variant",
+        "category": "Wagon",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 1.6,
+              "horsePower": 105
+            },
+            "performance": {
+              "acceleration": 12.0,
+              "topSpeed": 190
+            }
+          }
+        ]
+      },
+      {
+        "name": "Scirocco",
+        "category": "Coupe"
+      },
+      {
+        "name": "Sharan",
+        "category": "MPV",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.0,
+              "horsePower": 140
+            },
+            "performance": {
+              "acceleration": 10.5,
+              "topSpeed": 200
+            }
+          }
+        ]
+      },
+      {
+        "name": "T4",
+        "category": "Van"
+      },
+      {
+        "name": "T4 Caravelle",
+        "category": "Van"
+      },
+      {
+        "name": "T4 Multivan",
+        "category": "Van"
+      },
+      {
+        "name": "T5",
+        "category": "Van"
+      },
+      {
+        "name": "T5 Caravelle",
+        "category": "Van"
+      },
+      {
+        "name": "T5 Multivan",
+        "category": "Van"
+      },
+      {
+        "name": "T5 Transporter Shuttle",
+        "category": "Van"
+      },
+      {
+        "name": "Tiguan",
+        "category": "SUV",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.0,
+              "horsePower": 200
+            },
+            "performance": {
+              "acceleration": 8.5,
+              "topSpeed": 210
+            }
+          }
+        ]
+      },
+      {
+        "name": "Touareg",
+        "category": "SUV",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 3.6,
+              "horsePower": 280
+            },
+            "performance": {
+              "acceleration": 7.2,
+              "topSpeed": 235
+            }
+          }
+        ]
+      },
+      {
+        "name": "Touran",
+        "category": "MPV",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 1.6,
+              "horsePower": 105
+            },
+            "performance": {
+              "acceleration": 11.0,
+              "topSpeed": 190
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "brandName": "Suzuki",
+    "models": [
+      {
+        "name": "Alto",
+        "category": "Compact"
+      },
+      {
+        "name": "Baleno",
+        "category": "Hatchback",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 1.2,
+              "horsePower": 89
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 1.4,
+              "horsePower": 95
+            }
+          }
+        ]
+      },
+      {
+        "name": "Baleno kombi",
+        "category": "Wagon"
+      },
+      {
+        "name": "Grand Vitara",
+        "category": "SUV"
+      },
+      {
+        "name": "Grand Vitara XL-7",
+        "category": "SUV"
+      },
+      {
+        "name": "Ignis",
+        "category": "Compact"
+      },
+      {
+        "name": "Jimny",
+        "category": "SUV"
+      },
+      {
+        "name": "Kizashi",
+        "category": "Sedan"
+      },
+      {
+        "name": "Liana",
+        "category": "Compact"
+      },
+      {
+        "name": "Samurai",
+        "category": "SUV"
+      },
+      {
+        "name": "Splash",
+        "category": "Compact"
+      },
+      {
+        "name": "Swift",
+        "category": "Hatchback"
+      },
+      {
+        "name": "SX4",
+        "category": "Compact"
+      },
+      {
+        "name": "SX4 Sedan",
+        "category": "Sedan",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 1.6,
+              "horsePower": 118
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 1.8,
+              "horsePower": 134
+            },
+            "performance": {
+              "acceleration": 9.0,
+              "topSpeed": 190
+            }
+          }
+        ]
+      },
+      {
+        "name": "Vitara",
+        "category": "SUV"
+      },
+      {
+        "name": "Wagon R+",
+        "category": "Hatchback",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 1.0,
+              "horsePower": 68
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 1.2,
+              "horsePower": 82
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "brandName": "Mercedes-Benz",
+    "models": [
+      {
+        "name": "100 D",
+        "category": "Sedan"
+      },
+      {
+        "name": "115",
+        "category": "Sedan"
+      },
+      {
+        "name": "124",
+        "category": "Sedan"
+      },
+      {
+        "name": "126",
+        "category": "Sedan"
+      },
+      {
+        "name": "190",
+        "category": "Sedan"
+      },
+      {
+        "name": "190 D",
+        "category": "Sedan",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.0,
+              "horsePower": 72
+            },
+            "performance": {
+              "acceleration": 16.5,
+              "topSpeed": 155
+            }
+          }
+        ]
+      },
+      {
+        "name": "190 E",
+        "category": "Sedan",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.3,
+              "horsePower": 132
+            },
+            "performance": {
+              "acceleration": 12.5,
+              "topSpeed": 180
+            }
+          }
+        ]
+      },
+      {
+        "name": "200 - 300",
+        "category": "Sedan"
+      },
+      {
+        "name": "200 D",
+        "category": "Sedan"
+      },
+      {
+        "name": "200 E",
+        "category": "Sedan"
+      },
+      {
+        "name": "210 Van",
+        "category": "Van"
+      },
+      {
+        "name": "210 kombi",
+        "category": "Wagon"
+      },
+      {
+        "name": "310 Van",
+        "category": "Van"
+      },
+      {
+        "name": "310 kombi",
+        "category": "Wagon"
+      },
+      {
+        "name": "230 - 300 CE Coupé",
+        "category": "Coupé"
+      },
+      {
+        "name": "260 - 560 SE",
+        "category": "Sedan"
+      },
+      {
+        "name": "260 - 560 SEL",
+        "category": "Sedan"
+      },
+      {
+        "name": "500 - 600 SEC Coupé",
+        "category": "Coupé"
+      },
+      {
+        "name": "Trieda A",
+        "category": "Hatchback"
+      },
+      {
+        "name": "A",
+        "category": "Hatchback"
+      },
+      {
+        "name": "A L",
+        "category": "Hatchback"
+      },
+      {
+        "name": "AMG GT",
+        "category": "Sports Car"
+      },
+      {
+        "name": "Trieda B",
+        "category": "Hatchback"
+      },
+      {
+        "name": "Trieda C",
+        "category": "Sedan"
+      },
+      {
+        "name": "C",
+        "category": "Sedan"
+      },
+      {
+        "name": "C Sportcoupé",
+        "category": "Coupé"
+      },
+      {
+        "name": "C T",
+        "category": "Estate"
+      },
+      {
+        "name": "Citan",
+        "category": "Van"
+      },
+      {
+        "name": "CL",
+        "category": "Coupé"
+      },
+      {
+        "name": "CLA",
+        "category": "Sedan"
+      },
+      {
+        "name": "CLC",
+        "category": "Coupé"
+      },
+      {
+        "name": "CLK Cabrio",
+        "category": "Convertible"
+      },
+      {
+        "name": "CLK Coupé",
+        "category": "Coupé"
+      },
+      {
+        "name": "CLS",
+        "category": "Sedan"
+      },
+      {
+        "name": "Trieda E",
+        "category": "Sedan"
+      },
+      {
+        "name": "E",
+        "category": "Sedan"
+      },
+      {
+        "name": "E Cabrio",
+        "category": "Convertible"
+      },
+      {
+        "name": "E Coupé",
+        "category": "Coupé"
+      },
+      {
+        "name": "E T",
+        "category": "Estate"
+      },
+      {
+        "name": "Trieda G",
+        "category": "SUV"
+      },
+      {
+        "name": "G Cabrio",
+        "category": "Convertible"
+      },
+      {
+        "name": "GL",
+        "category": "SUV"
+      },
+      {
+        "name": "GLA",
+        "category": "SUV"
+      },
+      {
+        "name": "GLC",
+        "category": "SUV"
+      },
+      {
+        "name": "GLE",
+        "category": "SUV"
+      },
+      {
+        "name": "GLK",
+        "category": "SUV"
+      },
+      {
+        "name": "Trieda M",
+        "category": "SUV"
+      },
+      {
+        "name": "MB 100",
+        "category": "Van"
+      },
+      {
+        "name": "Trieda R",
+        "category": "SUV"
+      },
+      {
+        "name": "Trieda S",
+        "category": "Sedan"
+      },
+      {
+        "name": "S",
+        "category": "Sedan"
+      },
+      {
+        "name": "S Coupé",
+        "category": "Coupé"
+      },
+      {
+        "name": "SL",
+        "category": "Convertible"
+      },
+      {
+        "name": "SLC",
+        "category": "Convertible"
+      },
+      {
+        "name": "SLK",
+        "category": "Convertible"
+      },
+      {
+        "name": "SLR",
+        "category": "Sports Car"
+      },
+      {
+        "name": "Sprinter",
+        "category": "Van",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.2,
+              "horsePower": 130
+            },
+            "performance": {
+              "acceleration": 14.0,
+              "topSpeed": 170
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "brandName": "Saab",
+    "models": [
+      {
+        "name": "9-3",
+        "category": "Sedan",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.0,
+              "horsePower": 170
+            }
+          }
+        ]
+      },
+      {
+        "name": "9-3 Cabriolet",
+        "category": "Convertible",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.0,
+              "horsePower": 190
+            }
+          }
+        ]
+      },
+      {
+        "name": "9-5",
+        "category": "Sedan",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.4,
+              "horsePower": 220
+            }
+          }
+        ]
+      },
+      {
+        "name": "9000",
+        "category": "Sedan",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 3.0,
+              "horsePower": 200
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "brandName": "Audi",
+    "models": [
+      {
+        "name": "100",
+        "category": "Sedan",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.0,
+              "horsePower": 150
+            },
+            "performance": {
+              "acceleration": 11.0,
+              "topSpeed": 180
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 2.5,
+              "horsePower": 200
+            },
+            "performance": {
+              "acceleration": 8.5,
+              "topSpeed": 210
+            }
+          }
+        ]
+      },
+      {
+        "name": "100 Avant",
+        "category": "Wagon"
+      },
+      {
+        "name": "80",
+        "category": "Sedan"
+      },
+      {
+        "name": "80 Avant",
+        "category": "Wagon"
+      },
+      {
+        "name": "80 Cabrio",
+        "category": "Convertible"
+      },
+      {
+        "name": "90",
+        "category": "Sedan"
+      },
+      {
+        "name": "A1",
+        "category": "Compact"
+      },
+      {
+        "name": "A2",
+        "category": "Compact"
+      },
+      {
+        "name": "A3",
+        "category": "Compact",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 3,
+              "size": 1.2,
+              "horsePower": 110
+            },
+            "performance": {
+              "acceleration": 10.5,
+              "topSpeed": 190
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.0,
+              "horsePower": 190
+            },
+            "performance": {
+              "acceleration": 8.0,
+              "topSpeed": 220
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.5,
+              "horsePower": 310
+            },
+            "performance": {
+              "acceleration": 5.5,
+              "topSpeed": 250
+            }
+          }
+        ]
+      },
+      {
+        "name": "A3 Cabriolet",
+        "category": "Convertible"
+      },
+      {
+        "name": "A3 Limuzina",
+        "category": "Sedan"
+      },
+      {
+        "name": "A3 Sportback",
+        "category": "Hatchback"
+      },
+      {
+        "name": "A4",
+        "category": "Sedan"
+      },
+      {
+        "name": "A4 Allroad",
+        "category": "Wagon"
+      },
+      {
+        "name": "A4 Avant",
+        "category": "Wagon"
+      },
+      {
+        "name": "A4 Cabriolet",
+        "category": "Convertible"
+      },
+      {
+        "name": "A5",
+        "category": "Compact"
+      },
+      {
+        "name": "A5 Cabriolet",
+        "category": "Convertible"
+      },
+      {
+        "name": "A5 Sportback",
+        "category": "Hatchback"
+      },
+      {
+        "name": "A6",
+        "category": "Sedan",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.0,
+              "horsePower": 200
+            },
+            "performance": {
+              "acceleration": 8.0,
+              "topSpeed": 230
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 3.0,
+              "horsePower": 340
+            },
+            "performance": {
+              "acceleration": 5.5,
+              "topSpeed": 250
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 8,
+              "size": 4.0,
+              "horsePower": 450
+            },
+            "performance": {
+              "acceleration": 4.0,
+              "topSpeed": 270
+            }
+          }
+        ]
+      },
+      {
+        "name": "A6 Allroad",
+        "category": "Wagon"
+      },
+      {
+        "name": "A6 Avant",
+        "category": "Wagon"
+      },
+      {
+        "name": "A7",
+        "category": "Sedan"
+      },
+      {
+        "name": "A8",
+        "category": "Sedan"
+      },
+      {
+        "name": "A8 Long",
+        "category": "Sedan"
+      },
+      {
+        "name": "Q3",
+        "category": "SUV"
+      },
+      {
+        "name": "Q5",
+        "category": "SUV",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.0,
+              "horsePower": 190
+            },
+            "performance": {
+              "acceleration": 8.5,
+              "topSpeed": 220
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 3.0,
+              "horsePower": 354
+            },
+            "performance": {
+              "acceleration": 6.0,
+              "topSpeed": 240
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 3.0,
+              "horsePower": 400
+            },
+            "performance": {
+              "acceleration": 5.0,
+              "topSpeed": 260
+            }
+          }
+        ]
+      },
+      {
+        "name": "Q7",
+        "category": "SUV"
+      },
+      {
+        "name": "R8",
+        "category": "Sports Car"
+      },
+      {
+        "name": "RS4 Cabriolet",
+        "category": "Convertible"
+      },
+      {
+        "name": "RS4/RS4 Avant",
+        "category": "Wagon"
+      },
+      {
+        "name": "RS5",
+        "category": "Sports Car"
+      },
+      {
+        "name": "RS6 Avant",
+        "category": "Sports Car",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 8,
+              "size": 4.0,
+              "horsePower": 560
+            },
+            "performance": {
+              "acceleration": 3.9,
+              "topSpeed": 280
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 8,
+              "size": 4.0,
+              "horsePower": 600
+            },
+            "performance": {
+              "acceleration": 3.5,
+              "topSpeed": 300
+            }
+          }
+        ]
+      },
+      {
+        "name": "RS7",
+        "category": "Sedan"
+      },
+      {
+        "name": "S3/S3 Sportback",
+        "category": "Compact"
+      },
+      {
+        "name": "S4 Cabriolet",
+        "category": "Convertible"
+      },
+      {
+        "name": "S4/S4 Avant",
+        "category": "Wagon"
+      },
+      {
+        "name": "S5/S5 Cabriolet",
+        "category": "Convertible"
+      },
+      {
+        "name": "S6/RS6",
+        "category": "Sedan"
+      },
+      {
+        "name": "S7",
+        "category": "Sedan"
+      },
+      {
+        "name": "S8",
+        "category": "Sedan"
+      },
+      {
+        "name": "SQ5",
+        "category": "SUV"
+      },
+      {
+        "name": "TT Coupé",
+        "category": "Sports Car"
+      },
+      {
+        "name": "TT Roadster",
+        "category": "Convertible"
+      },
+      {
+        "name": "TTS",
+        "category": "Sports Car"
+      }
+    ]
+  },
+  {
+    "brandName": "Kia",
+    "models": [
+      {
+        "name": "Avella",
+        "category": "Sedan"
+      },
+      {
+        "name": "Besta",
+        "category": "Van"
+      },
+      {
+        "name": "Carens",
+        "category": "MPV"
+      },
+      {
+        "name": "Carnival",
+        "category": "Minivan"
+      },
+      {
+        "name": "Cee'd",
+        "category": "Hatchback"
+      },
+      {
+        "name": "Cee'd SW",
+        "category": "Wagon"
+      },
+      {
+        "name": "Cerato",
+        "category": "Sedan"
+      },
+      {
+        "name": "K 2500",
+        "category": "Truck"
+      },
+      {
+        "name": "Magentis",
+        "category": "Sedan"
+      },
+      {
+        "name": "Opirus",
+        "category": "Sedan"
+      },
+      {
+        "name": "Optima",
+        "category": "Sedan"
+      },
+      {
+        "name": "Picanto",
+        "category": "Compact"
+      },
+      {
+        "name": "Pregio",
+        "category": "Van"
+      },
+      {
+        "name": "Pride",
+        "category": "Hatchback"
+      },
+      {
+        "name": "Pro Cee'd",
+        "category": "Hatchback"
+      },
+      {
+        "name": "Rio",
+        "category": "Compact"
+      },
+      {
+        "name": "Rio Combi",
+        "category": "Compact"
+      },
+      {
+        "name": "Rio Sedan",
+        "category": "Sedan"
+      },
+      {
+        "name": "Sephia",
+        "category": "Sedan"
+      },
+      {
+        "name": "Shuma",
+        "category": "Sedan"
+      },
+      {
+        "name": "Sorento",
+        "category": "SUV"
+      },
+      {
+        "name": "Soul",
+        "category": "Compact"
+      },
+      {
+        "name": "Sportage",
+        "category": "SUV"
+      },
+      {
+        "name": "Venga",
+        "category": "Hatchback"
+      }
+    ]
+  },
+  {
+    "brandName": "Land Rover",
+    "models": [
+      {
+        "name": "109",
+        "category": "SUV"
+      },
+      {
+        "name": "Defender",
+        "category": "SUV",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 3.0,
+              "horsePower": 250
+            },
+            "performance": {
+              "acceleration": 7.5,
+              "topSpeed": 180
+            }
+          }
+        ]
+      },
+      {
+        "name": "Discovery",
+        "category": "SUV"
+      },
+      {
+        "name": "Discovery Sport",
+        "category": "SUV",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.0,
+              "horsePower": 180
+            },
+            "performance": {
+              "acceleration": 8.5,
+              "topSpeed": 170
+            }
+          }
+        ]
+      },
+      {
+        "name": "Freelander",
+        "category": "SUV"
+      },
+      {
+        "name": "Range Rover",
+        "category": "SUV"
+      },
+      {
+        "name": "Range Rover Evoque",
+        "category": "SUV"
+      },
+      {
+        "name": "Range Rover Sport",
+        "category": "SUV",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 3.6,
+              "horsePower": 340
+            },
+            "performance": {
+              "acceleration": 6.0,
+              "topSpeed": 200
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "brandName": "Dodge",
+    "models": [
+      {
+        "name": "Avenger",
+        "category": "Sedan",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.4,
+              "horsePower": 173
+            },
+            "performance": {
+              "acceleration": 9.5,
+              "topSpeed": 120
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 3.6,
+              "horsePower": 283
+            },
+            "performance": {
+              "acceleration": 7.9,
+              "topSpeed": 145
+            }
+          }
+        ]
+      },
+      {
+        "name": "Caliber",
+        "category": "Hatchback",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.0,
+              "horsePower": 158
+            },
+            "performance": {
+              "acceleration": 9.3,
+              "topSpeed": 125
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.4,
+              "horsePower": 172
+            },
+            "performance": {
+              "acceleration": 9.0,
+              "topSpeed": 130
+            }
+          }
+        ]
+      },
+      {
+        "name": "Challenger",
+        "category": "Sports Car",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 3.6,
+              "horsePower": 305
+            },
+            "performance": {
+              "acceleration": 6.3,
+              "topSpeed": 130
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 8,
+              "size": 5.7,
+              "horsePower": 375
+            },
+            "performance": {
+              "acceleration": 4.8,
+              "topSpeed": 155
+            }
+          }
+        ]
+      },
+      {
+        "name": "Charger",
+        "category": "Sedan"
+      },
+      {
+        "name": "Grand Caravan",
+        "category": "Minivan"
+      },
+      {
+        "name": "Journey",
+        "category": "SUV"
+      },
+      {
+        "name": "Magnum",
+        "category": "Wagon"
+      },
+      {
+        "name": "Nitro",
+        "category": "SUV"
+      },
+      {
+        "name": "RAM",
+        "category": "Truck"
+      },
+      {
+        "name": "Stealth",
+        "category": "Sports Car"
+      },
+      {
+        "name": "Viper",
+        "category": "Sports Car"
+      }
+    ]
+  },
+  {
+    "brandName": "Chrysler",
+    "models": [
+      {
+        "name": "300 C",
+        "category": "Sedan",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 2.7,
+              "horsePower": 190
+            },
+            "performance": {
+              "acceleration": 9.0,
+              "topSpeed": 200
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 3.5,
+              "horsePower": 250
+            },
+            "performance": {
+              "acceleration": 7.5,
+              "topSpeed": 220
+            }
+          }
+        ]
+      },
+      {
+        "name": "300 C Touring",
+        "category": "Wagon"
+      },
+      {
+        "name": "300 M",
+        "category": "Sedan"
+      },
+      {
+        "name": "Crossfire",
+        "category": "Sports Car",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 3.2,
+              "horsePower": 215
+            },
+            "performance": {
+              "acceleration": 8.2,
+              "topSpeed": 210
+            }
+          }
+        ]
+      },
+      {
+        "name": "Grand Voyager",
+        "category": "Minivan"
+      },
+      {
+        "name": "LHS",
+        "category": "Sedan"
+      },
+      {
+        "name": "Neon",
+        "category": "Sedan",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.0,
+              "horsePower": 132
+            },
+            "performance": {
+              "acceleration": 10.5,
+              "topSpeed": 185
+            }
+          }
+        ]
+      },
+      {
+        "name": "Pacifica",
+        "category": "SUV"
+      },
+      {
+        "name": "Plymouth",
+        "category": "Sedan"
+      },
+      {
+        "name": "PT Cruiser",
+        "category": "Hatchback"
+      },
+      {
+        "name": "Sebring",
+        "category": "Sedan"
+      },
+      {
+        "name": "Sebring Convertible",
+        "category": "Convertible"
+      },
+      {
+        "name": "Stratus",
+        "category": "Sedan"
+      },
+      {
+        "name": "Stratus Cabrio",
+        "category": "Convertible"
+      },
+      {
+        "name": "Town & Country",
+        "category": "Minivan"
+      },
+      {
+        "name": "Voyager",
+        "category": "Minivan"
+      }
+    ]
+  },
+  {
+    "brandName": "Ford",
+    "models": [
+      {
+        "name": "Aerostar",
+        "category": "Minivan"
+      },
+      {
+        "name": "B-Max",
+        "category": "Compact"
+      },
+      {
+        "name": "C-Max",
+        "category": "Compact"
+      },
+      {
+        "name": "Cortina",
+        "category": "Sedan"
+      },
+      {
+        "name": "Cougar",
+        "category": "Sports Car"
+      },
+      {
+        "name": "Edge",
+        "category": "SUV"
+      },
+      {
+        "name": "Escort",
+        "category": "Sedan"
+      },
+      {
+        "name": "Escort Cabrio",
+        "category": "Convertible"
+      },
+      {
+        "name": "Escort kombi",
+        "category": "Wagon"
+      },
+      {
+        "name": "Explorer",
+        "category": "SUV"
+      },
+      {
+        "name": "F-150",
+        "category": "Truck"
+      },
+      {
+        "name": "F-250",
+        "category": "Truck"
+      },
+      {
+        "name": "Fiesta",
+        "category": "Hatchback"
+      },
+      {
+        "name": "Focus",
+        "category": "Compact",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 3,
+              "size": 1.0,
+              "horsePower": 100
+            },
+            "performance": {
+              "acceleration": 12.0,
+              "topSpeed": 180
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 1.5,
+              "horsePower": 150
+            },
+            "performance": {
+              "acceleration": 10.0,
+              "topSpeed": 200
+            }
+          }
+        ]
+      },
+      {
+        "name": "Focus C-Max",
+        "category": "Compact"
+      },
+      {
+        "name": "Focus CC",
+        "category": "Convertible"
+      },
+      {
+        "name": "Focus kombi",
+        "category": "Wagon"
+      },
+      {
+        "name": "Fusion",
+        "category": "Sedan"
+      },
+      {
+        "name": "Galaxy",
+        "category": "Minivan"
+      },
+      {
+        "name": "Grand C-Max",
+        "category": "Compact"
+      },
+      {
+        "name": "Ka",
+        "category": "Compact"
+      },
+      {
+        "name": "Kuga",
+        "category": "SUV"
+      },
+      {
+        "name": "Maverick",
+        "category": "SUV"
+      },
+      {
+        "name": "Mondeo",
+        "category": "Sedan"
+      },
+      {
+        "name": "Mondeo Combi",
+        "category": "Wagon"
+      },
+      {
+        "name": "Mustang",
+        "category": "Sports Car"
+      },
+      {
+        "name": "Orion",
+        "category": "Sedan"
+      },
+      {
+        "name": "Puma",
+        "category": "Compact"
+      },
+      {
+        "name": "Ranger",
+        "category": "Truck"
+      },
+      {
+        "name": "S-Max",
+        "category": "Minivan"
+      },
+      {
+        "name": "Sierra",
+        "category": "Sedan"
+      },
+      {
+        "name": "Street Ka",
+        "category": "Convertible"
+      },
+      {
+        "name": "Tourneo Connect",
+        "category": "Minivan"
+      },
+      {
+        "name": "Tourneo Custom",
+        "category": "Minivan"
+      },
+      {
+        "name": "Transit",
+        "category": "Van"
+      },
+      {
+        "name": "Transit Bus",
+        "category": "Van"
+      },
+      {
+        "name": "Transit Connect LWB",
+        "category": "Van"
+      },
+      {
+        "name": "Transit Courier",
+        "category": "Van"
+      },
+      {
+        "name": "Transit Custom",
+        "category": "Van"
+      },
+      {
+        "name": "Transit kombi",
+        "category": "Van"
+      },
+      {
+        "name": "Transit Tourneo",
+        "category": "Minivan"
+      },
+      {
+        "name": "Transit Valnik",
+        "category": "Van"
+      },
+      {
+        "name": "Transit Van",
+        "category": "Van"
+      },
+      {
+        "name": "Transit Van 350",
+        "category": "Van"
+      },
+      {
+        "name": "Windstar",
+        "category": "Minivan"
+      }
+    ]
+  },
+  {
+    "brandName": "Hummer",
+    "models": [
+      {
+        "name": "H2",
+        "category": "SUV",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 8,
+              "size": 6.0,
+              "horsePower": 325
+            },
+            "performance": {
+              "acceleration": 10.0,
+              "topSpeed": 160
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 8,
+              "size": 6.2,
+              "horsePower": 393
+            },
+            "performance": {
+              "acceleration": 9.0,
+              "topSpeed": 170
+            }
+          }
+        ]
+      },
+      {
+        "name": "H3",
+        "category": "SUV",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 5,
+              "size": 3.7,
+              "horsePower": 242
+            },
+            "performance": {
+              "acceleration": 11.0,
+              "topSpeed": 140
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 5,
+              "size": 3.5,
+              "horsePower": 300
+            },
+            "performance": {
+              "acceleration": 9.0,
+              "topSpeed": 160
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "brandName": "Hyundai",
+    "models": [
+      {
+        "name": "Accent",
+        "category": "Sedan"
+      },
+      {
+        "name": "Atos",
+        "category": "Hatchback"
+      },
+      {
+        "name": "Atos Prime",
+        "category": "Hatchback"
+      },
+      {
+        "name": "Coupé",
+        "category": "Sports Car",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.0,
+              "horsePower": 140
+            },
+            "performance": {
+              "acceleration": 7.8,
+              "topSpeed": 210
+            }
+          }
+        ]
+      },
+      {
+        "name": "Elantra",
+        "category": "Sedan"
+      },
+      {
+        "name": "Galloper",
+        "category": "SUV"
+      },
+      {
+        "name": "Genesis",
+        "category": "Sedan"
+      },
+      {
+        "name": "Getz",
+        "category": "Hatchback"
+      },
+      {
+        "name": "Grandeur",
+        "category": "Sedan"
+      },
+      {
+        "name": "H 350",
+        "category": "Van"
+      },
+      {
+        "name": "H1",
+        "category": "Van"
+      },
+      {
+        "name": "H1 Bus",
+        "category": "Van"
+      },
+      {
+        "name": "H1 Van",
+        "category": "Van"
+      },
+      {
+        "name": "H200",
+        "category": "Van"
+      },
+      {
+        "name": "i10",
+        "category": "Hatchback"
+      },
+      {
+        "name": "i20",
+        "category": "Hatchback"
+      },
+      {
+        "name": "i30",
+        "category": "Hatchback"
+      },
+      {
+        "name": "i30 CW",
+        "category": "Wagon"
+      },
+      {
+        "name": "i40",
+        "category": "Sedan"
+      },
+      {
+        "name": "i40 CW",
+        "category": "Wagon"
+      },
+      {
+        "name": "ix20",
+        "category": "Hatchback"
+      },
+      {
+        "name": "ix35",
+        "category": "SUV"
+      },
+      {
+        "name": "ix55",
+        "category": "SUV"
+      },
+      {
+        "name": "Lantra",
+        "category": "Sedan"
+      },
+      {
+        "name": "Matrix",
+        "category": "Compact"
+      },
+      {
+        "name": "Santa Fe",
+        "category": "SUV"
+      },
+      {
+        "name": "Sonata",
+        "category": "Sedan"
+      },
+      {
+        "name": "Tucson",
+        "category": "SUV"
+      },
+      {
+        "name": "Veloster",
+        "category": "Hatchback"
+      }
+    ]
+  },
+  {
+    "brandName": "Infiniti",
+    "models": [
+      {
+        "name": "EX",
+        "category": "SUV",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.0,
+              "horsePower": 150
+            },
+            "performance": {
+              "acceleration": 10.5,
+              "topSpeed": 190
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 3.0,
+              "horsePower": 260
+            },
+            "performance": {
+              "acceleration": 7.0,
+              "topSpeed": 230
+            }
+          }
+        ]
+      },
+      {
+        "name": "FX",
+        "category": "SUV",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 3.5,
+              "horsePower": 300
+            },
+            "performance": {
+              "acceleration": 6.0,
+              "topSpeed": 240
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 8,
+              "size": 5.0,
+              "horsePower": 400
+            },
+            "performance": {
+              "acceleration": 5.0,
+              "topSpeed": 270
+            }
+          }
+        ]
+      },
+      {
+        "name": "G",
+        "category": "Sedan",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.0,
+              "horsePower": 180
+            },
+            "performance": {
+              "acceleration": 8.5,
+              "topSpeed": 210
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 3.0,
+              "horsePower": 280
+            },
+            "performance": {
+              "acceleration": 6.5,
+              "topSpeed": 240
+            }
+          }
+        ]
+      },
+      {
+        "name": "G Coupé",
+        "category": "Coupe",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 3.7,
+              "horsePower": 330
+            },
+            "performance": {
+              "acceleration": 5.5,
+              "topSpeed": 250
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 8,
+              "size": 5.0,
+              "horsePower": 420
+            },
+            "performance": {
+              "acceleration": 4.0,
+              "topSpeed": 280
+            }
+          }
+        ]
+      },
+      {
+        "name": "M",
+        "category": "Sedan",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 3.5,
+              "horsePower": 330
+            },
+            "performance": {
+              "acceleration": 5.5,
+              "topSpeed": 250
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 8,
+              "size": 5.6,
+              "horsePower": 420
+            },
+            "performance": {
+              "acceleration": 4.0,
+              "topSpeed": 280
+            }
+          }
+        ]
+      },
+      {
+        "name": "Q",
+        "category": "Sedan",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.0,
+              "horsePower": 160
+            },
+            "performance": {
+              "acceleration": 9.0,
+              "topSpeed": 200
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 3.5,
+              "horsePower": 300
+            },
+            "performance": {
+              "acceleration": 6.0,
+              "topSpeed": 240
+            }
+          }
+        ]
+      },
+      {
+        "name": "QX",
+        "category": "SUV",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 3.7,
+              "horsePower": 330
+            },
+            "performance": {
+              "acceleration": 6.0,
+              "topSpeed": 250
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 8,
+              "size": 5.6,
+              "horsePower": 420
+            },
+            "performance": {
+              "acceleration": 4.5,
+              "topSpeed": 270
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "brandName": "Jaguar",
+    "models": [
+      {
+        "name": "Daimler",
+        "category": "Sedan",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 3.0,
+              "horsePower": 250
+            },
+            "performance": {
+              "acceleration": 7.5,
+              "topSpeed": 220
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 8,
+              "size": 4.0,
+              "horsePower": 350
+            },
+            "performance": {
+              "acceleration": 6.0,
+              "topSpeed": 260
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 12,
+              "size": 6.0,
+              "horsePower": 500
+            },
+            "performance": {
+              "acceleration": 4.0,
+              "topSpeed": 280
+            }
+          }
+        ]
+      },
+      {
+        "name": "F-Pace",
+        "category": "SUV"
+      },
+      {
+        "name": "F-Type",
+        "category": "Sports Car"
+      },
+      {
+        "name": "S-Type",
+        "category": "Sedan"
+      },
+      {
+        "name": "Sovereign",
+        "category": "Sedan"
+      },
+      {
+        "name": "X-Type",
+        "category": "Sedan"
+      },
+      {
+        "name": "X-type Estate",
+        "category": "Wagon"
+      },
+      {
+        "name": "XE",
+        "category": "Sedan"
+      },
+      {
+        "name": "XF",
+        "category": "Sedan"
+      },
+      {
+        "name": "XJ",
+        "category": "Sedan"
+      },
+      {
+        "name": "XJ12",
+        "category": "Sedan"
+      },
+      {
+        "name": "XJ6",
+        "category": "Sedan"
+      },
+      {
+        "name": "XJ8",
+        "category": "Sedan"
+      },
+      {
+        "name": "XJ8",
+        "category": "Sedan"
+      },
+      {
+        "name": "XJR",
+        "category": "Sedan"
+      },
+      {
+        "name": "XK",
+        "category": "Sports Car"
+      },
+      {
+        "name": "XK8 Convertible",
+        "category": "Convertible"
+      },
+      {
+        "name": "XKR",
+        "category": "Sports Car"
+      },
+      {
+        "name": "XKR Convertible",
+        "category": "Convertible"
+      }
+    ]
+  },
+  {
+    "brandName": "Jeep",
+    "models": [
+      {
+        "name": "Cherokee",
+        "category": "SUV"
+      },
+      {
+        "name": "Commander",
+        "category": "SUV"
+      },
+      {
+        "name": "Compass",
+        "category": "SUV"
+      },
+      {
+        "name": "Grand Cherokee",
+        "category": "SUV"
+      },
+      {
+        "name": "Patriot",
+        "category": "SUV"
+      },
+      {
+        "name": "Renegade",
+        "category": "SUV"
+      },
+      {
+        "name": "Wrangler",
+        "category": "SUV"
+      }
+    ]
+  },
+  {
+    "brandName": "Nissan",
+    "models": [
+      {
+        "name": "100 NX",
+        "category": "Compact",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 1.6,
+              "horsePower": 90
+            },
+            "performance": {
+              "acceleration": 10.5,
+              "topSpeed": 175
+            }
+          }
+        ]
+      },
+      {
+        "name": "200 SX",
+        "category": "Sports Car",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.0,
+              "horsePower": 150
+            },
+            "performance": {
+              "acceleration": 8.5,
+              "topSpeed": 210
+            }
+          }
+        ]
+      },
+      {
+        "name": "350 Z",
+        "category": "Sports Car",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 3.5,
+              "horsePower": 280
+            },
+            "performance": {
+              "acceleration": 6.0,
+              "topSpeed": 250
+            }
+          }
+        ]
+      },
+      {
+        "name": "350 Z Roadster",
+        "category": "Convertible"
+      },
+      {
+        "name": "370 Z",
+        "category": "Sports Car",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 3.7,
+              "horsePower": 332
+            },
+            "performance": {
+              "acceleration": 5.2,
+              "topSpeed": 250
+            }
+          }
+        ]
+      },
+      {
+        "name": "Almera",
+        "category": "Sedan"
+      },
+      {
+        "name": "Almera Tino",
+        "category": "Minivan"
+      },
+      {
+        "name": "Cabstar E - T",
+        "category": "Truck"
+      },
+      {
+        "name": "Cabstar TL2 Valnik",
+        "category": "Truck"
+      },
+      {
+        "name": "e-NV200",
+        "category": "Van"
+      },
+      {
+        "name": "GT-R",
+        "category": "Sports Car",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 3.8,
+              "horsePower": 570
+            },
+            "performance": {
+              "acceleration": 2.9,
+              "topSpeed": 330
+            }
+          }
+        ]
+      },
+      {
+        "name": "Insterstar",
+        "category": "Van"
+      },
+      {
+        "name": "Juke",
+        "category": "SUV"
+      },
+      {
+        "name": "King Cab",
+        "category": "Truck"
+      },
+      {
+        "name": "Leaf",
+        "category": "Hatchback"
+      },
+      {
+        "name": "Maxima",
+        "category": "Sedan"
+      },
+      {
+        "name": "Maxima QX",
+        "category": "Sedan"
+      },
+      {
+        "name": "Micra",
+        "category": "Hatchback"
+      },
+      {
+        "name": "Murano",
+        "category": "SUV"
+      },
+      {
+        "name": "Navara",
+        "category": "Truck"
+      },
+      {
+        "name": "Note",
+        "category": "Compact"
+      },
+      {
+        "name": "NP300 Pickup",
+        "category": "Truck"
+      },
+      {
+        "name": "NV200",
+        "category": "Van"
+      },
+      {
+        "name": "NV400",
+        "category": "Van"
+      },
+      {
+        "name": "Pathfinder",
+        "category": "SUV"
+      },
+      {
+        "name": "Patrol",
+        "category": "SUV"
+      },
+      {
+        "name": "Patrol GR",
+        "category": "SUV"
+      },
+      {
+        "name": "Pickup",
+        "category": "Truck"
+      },
+      {
+        "name": "Pixo",
+        "category": "Hatchback"
+      },
+      {
+        "name": "Primastar",
+        "category": "Van"
+      },
+      {
+        "name": "Primastar Combi",
+        "category": "Minivan"
+      },
+      {
+        "name": "Primera",
+        "category": "Sedan"
+      },
+      {
+        "name": "Primera Combi",
+        "category": "Wagon"
+      },
+      {
+        "name": "Pulsar",
+        "category": "Compact"
+      },
+      {
+        "name": "Qashqai",
+        "category": "SUV"
+      },
+      {
+        "name": "Serena",
+        "category": "Minivan"
+      },
+      {
+        "name": "Sunny",
+        "category": "Compact"
+      },
+      {
+        "name": "Terrano",
+        "category": "SUV"
+      },
+      {
+        "name": "Tiida",
+        "category": "Compact"
+      },
+      {
+        "name": "Trade",
+        "category": "Van"
+      },
+      {
+        "name": "Vanette Cargo",
+        "category": "Van"
+      },
+      {
+        "name": "X-Trail",
+        "category": "SUV"
+      }
+    ]
+  },
+  {
+    "brandName": "Volvo",
+    "models": [
+      {
+        "name": "240",
+        "category": "Sedan",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.0,
+              "horsePower": 110
+            },
+            "performance": {
+              "acceleration": 12.0,
+              "topSpeed": 170
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 2.5,
+              "horsePower": 160
+            },
+            "performance": {
+              "acceleration": 9.5,
+              "topSpeed": 190
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 6,
+              "size": 2.3,
+              "horsePower": 230
+            },
+            "performance": {
+              "acceleration": 8.0,
+              "topSpeed": 220
+            }
+          }
+        ]
+      },
+      {
+        "name": "340",
+        "category": "Sedan",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 1.7,
+              "horsePower": 90
+            },
+            "performance": {
+              "acceleration": 15.0,
+              "topSpeed": 160
+            }
+          }
+        ]
+      },
+      {
+        "name": "360",
+        "category": "Sedan",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.0,
+              "horsePower": 118
+            },
+            "performance": {
+              "acceleration": 13.5,
+              "topSpeed": 170
+            }
+          }
+        ]
+      },
+      {
+        "name": "460",
+        "category": "Sedan",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 1.8,
+              "horsePower": 90
+            },
+            "performance": {
+              "acceleration": 15.5,
+              "topSpeed": 155
+            }
+          }
+        ]
+      },
+      {
+        "name": "850",
+        "category": "Sedan",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 5,
+              "size": 2.5,
+              "horsePower": 140
+            },
+            "performance": {
+              "acceleration": 11.0,
+              "topSpeed": 190
+            }
+          }
+        ]
+      },
+      {
+        "name": "850 kombi",
+        "category": "Wagon",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 5,
+              "size": 2.5,
+              "horsePower": 140
+            },
+            "performance": {
+              "acceleration": 11.5,
+              "topSpeed": 190
+            }
+          }
+        ]
+      },
+      {
+        "name": "C30",
+        "category": "Hatchback"
+      },
+      {
+        "name": "C70",
+        "category": "Convertible"
+      },
+      {
+        "name": "C70 Cabrio",
+        "category": "Convertible"
+      },
+      {
+        "name": "C70 Coupé",
+        "category": "Coupe"
+      },
+      {
+        "name": "S40",
+        "category": "Sedan"
+      },
+      {
+        "name": "S60",
+        "category": "Sedan"
+      },
+      {
+        "name": "S70",
+        "category": "Sedan"
+      },
+      {
+        "name": "S80",
+        "category": "Sedan"
+      },
+      {
+        "name": "S90",
+        "category": "Sedan"
+      },
+      {
+        "name": "V40",
+        "category": "Hatchback"
+      },
+      {
+        "name": "V50",
+        "category": "Wagon"
+      },
+      {
+        "name": "V60",
+        "category": "Wagon"
+      },
+      {
+        "name": "V70",
+        "category": "Wagon"
+      },
+      {
+        "name": "V90",
+        "category": "Wagon"
+      },
+      {
+        "name": "XC60",
+        "category": "SUV"
+      },
+      {
+        "name": "XC70",
+        "category": "SUV"
+      },
+      {
+        "name": "XC90",
+        "category": "SUV"
+      }
+    ]
+  },
+  {
+    "brandName": "Daewoo",
+    "models": [
+      {
+        "name": "Espero",
+        "category": "Sedan",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 1.5,
+              "horsePower": 90
+            },
+            "performance": {
+              "acceleration": 14.5,
+              "topSpeed": 165
+            }
+          }
+        ]
+      },
+      {
+        "name": "Kalos",
+        "category": "Hatchback",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 1.4,
+              "horsePower": 72
+            },
+            "performance": {
+              "acceleration": 15.0,
+              "topSpeed": 155
+            }
+          }
+        ]
+      },
+      {
+        "name": "Lacetti",
+        "category": "Sedan"
+      },
+      {
+        "name": "Lanos",
+        "category": "Hatchback"
+      },
+      {
+        "name": "Leganza",
+        "category": "Sedan"
+      },
+      {
+        "name": "Lublin",
+        "category": "Van"
+      },
+      {
+        "name": "Matiz",
+        "category": "Hatchback"
+      },
+      {
+        "name": "Nexia",
+        "category": "Sedan"
+      },
+      {
+        "name": "Nubira",
+        "category": "Sedan"
+      },
+      {
+        "name": "Nubira kombi",
+        "category": "Wagon"
+      },
+      {
+        "name": "Racer",
+        "category": "Hatchback"
+      },
+      {
+        "name": "Tacuma",
+        "category": "Minivan"
+      },
+      {
+        "name": "Tico",
+        "category": "Hatchback"
+      }
+    ]
+  },
+  {
+    "brandName": "Fiat",
+    "models": [
+      {
+        "name": "1100",
+        "category": "Sedan"
+      },
+      {
+        "name": "126",
+        "category": "Hatchback",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 2,
+              "size": 0.6,
+              "horsePower": 23
+            },
+            "performance": {
+              "acceleration": 34.0,
+              "topSpeed": 95
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 2,
+              "size": 0.7,
+              "horsePower": 24
+            },
+            "performance": {
+              "acceleration": 31.0,
+              "topSpeed": 100
+            }
+          }
+        ]
+      },
+      {
+        "name": "500",
+        "category": "Hatchback"
+      },
+      {
+        "name": "500L",
+        "category": "Compact MPV"
+      },
+      {
+        "name": "500X",
+        "category": "SUV"
+      },
+      {
+        "name": "850",
+        "category": "Sedan"
+      },
+      {
+        "name": "Barchetta",
+        "category": "Convertible"
+      },
+      {
+        "name": "Brava",
+        "category": "Sedan"
+      },
+      {
+        "name": "Cinquecento",
+        "category": "Hatchback"
+      },
+      {
+        "name": "Coupé",
+        "category": "Coupe"
+      },
+      {
+        "name": "Croma",
+        "category": "Sedan"
+      },
+      {
+        "name": "Doblo",
+        "category": "Compact MPV"
+      },
+      {
+        "name": "Doblo Cargo",
+        "category": "Van"
+      },
+      {
+        "name": "Doblo Cargo Combi",
+        "category": "Van"
+      },
+      {
+        "name": "Ducato",
+        "category": "Van"
+      },
+      {
+        "name": "Ducato Van",
+        "category": "Van"
+      },
+      {
+        "name": "Ducato Kombi",
+        "category": "Van"
+      },
+      {
+        "name": "Ducato Podvozok",
+        "category": "Van"
+      },
+      {
+        "name": "Florino",
+        "category": "Van"
+      },
+      {
+        "name": "Florino Combi",
+        "category": "Compact MPV"
+      },
+      {
+        "name": "Freemont",
+        "category": "SUV"
+      },
+      {
+        "name": "Grande Punto",
+        "category": "Hatchback"
+      },
+      {
+        "name": "Idea",
+        "category": "Compact MPV"
+      },
+      {
+        "name": "Linea",
+        "category": "Sedan"
+      },
+      {
+        "name": "Marea",
+        "category": "Sedan"
+      },
+      {
+        "name": "Marea Weekend",
+        "category": "Wagon"
+      },
+      {
+        "name": "Multipla",
+        "category": "Compact MPV"
+      },
+      {
+        "name": "Palio Weekend",
+        "category": "Wagon"
+      },
+      {
+        "name": "Panda",
+        "category": "Hatchback"
+      },
+      {
+        "name": "Panda Van",
+        "category": "Van"
+      },
+      {
+        "name": "Punto",
+        "category": "Hatchback"
+      },
+      {
+        "name": "Punto Cabriolet",
+        "category": "Convertible"
+      },
+      {
+        "name": "Punto Evo",
+        "category": "Hatchback"
+      },
+      {
+        "name": "Punto Van",
+        "category": "Van"
+      },
+      {
+        "name": "Qubo",
+        "category": "Compact MPV"
+      },
+      {
+        "name": "Scudo",
+        "category": "Van"
+      },
+      {
+        "name": "Scudo Van",
+        "category": "Van"
+      },
+      {
+        "name": "Scudo Kombi",
+        "category": "Van"
+      },
+      {
+        "name": "Sedici",
+        "category": "SUV"
+      },
+      {
+        "name": "Seicento",
+        "category": "Hatchback"
+      },
+      {
+        "name": "Stilo",
+        "category": "Hatchback"
+      },
+      {
+        "name": "Stilo Multiwagon",
+        "category": "Wagon"
+      },
+      {
+        "name": "Strada",
+        "category": "Pickup"
+      },
+      {
+        "name": "Talento",
+        "category": "Van"
+      },
+      {
+        "name": "Tipo",
+        "category": "Sedan"
+      },
+      {
+        "name": "Ulysse",
+        "category": "MPV"
+      },
+      {
+        "name": "Uno",
+        "category": "Hatchback"
+      },
+      {
+        "name": "X1/9",
+        "category": "Sports Car"
+      }
+    ]
+  },
+  {
+    "brandName": "MINI",
+    "models": [
+      {
+        "name": "Cooper",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 3,
+              "size": 1.5,
+              "horsePower": 134
+            },
+            "performance": {
+              "acceleration": 7.9,
+              "topSpeed": 129
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.0,
+              "horsePower": 189
+            },
+            "performance": {
+              "acceleration": 6.7,
+              "topSpeed": 146
+            }
+          }
+        ]
+      },
+      {
+        "name": "Cooper Cabrio",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 3,
+              "size": 1.5,
+              "horsePower": 134
+            },
+            "performance": {
+              "acceleration": 8.2,
+              "topSpeed": 128
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.0,
+              "horsePower": 189
+            },
+            "performance": {
+              "acceleration": 7.1,
+              "topSpeed": 143
+            }
+          }
+        ]
+      },
+      {
+        "name": "Cooper Clubman",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 3,
+              "size": 1.5,
+              "horsePower": 134
+            },
+            "performance": {
+              "acceleration": 8.4,
+              "topSpeed": 131
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.0,
+              "horsePower": 189
+            },
+            "performance": {
+              "acceleration": 7.2,
+              "topSpeed": 147
+            }
+          }
+        ]
+      },
+      {
+        "name": "Cooper D",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 3,
+              "size": 2.0,
+              "horsePower": 148
+            },
+            "performance": {
+              "acceleration": 7.5,
+              "topSpeed": 132
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.0,
+              "horsePower": 188
+            },
+            "performance": {
+              "acceleration": 6.9,
+              "topSpeed": 134
+            }
+          }
+        ]
+      },
+      {
+        "name": "Cooper D Clubman",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 3,
+              "size": 2.0,
+              "horsePower": 148
+            },
+            "performance": {
+              "acceleration": 7.7,
+              "topSpeed": 133
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.0,
+              "horsePower": 187
+            },
+            "performance": {
+              "acceleration": 7.0,
+              "topSpeed": 135
+            }
+          }
+        ]
+      },
+      {
+        "name": "Cooper S",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.0,
+              "horsePower": 189
+            },
+            "performance": {
+              "acceleration": 6.6,
+              "topSpeed": 145
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.0,
+              "horsePower": 231
+            },
+            "performance": {
+              "acceleration": 6.2,
+              "topSpeed": 153
+            }
+          }
+        ]
+      },
+      {
+        "name": "Cooper S Cabrio",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.0,
+              "horsePower": 189
+            },
+            "performance": {
+              "acceleration": 7.0,
+              "topSpeed": 142
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.0,
+              "horsePower": 231
+            },
+            "performance": {
+              "acceleration": 6.7,
+              "topSpeed": 149
+            }
+          }
+        ]
+      },
+      {
+        "name": "Cooper S Clubman",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.0,
+              "horsePower": 189
+            },
+            "performance": {
+              "acceleration": 7.2,
+              "topSpeed": 144
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.0,
+              "horsePower": 231
+            },
+            "performance": {
+              "acceleration": 6.9,
+              "topSpeed": 151
+            }
+          }
+        ]
+      },
+      {
+        "name": "Countryman",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 3,
+              "size": 1.5,
+              "horsePower": 134
+            },
+            "performance": {
+              "acceleration": 8.5,
+              "topSpeed": 125
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.0,
+              "horsePower": 189
+            },
+            "performance": {
+              "acceleration": 7.3,
+              "topSpeed": 140
+            }
+          }
+        ]
+      },
+      {
+        "name": "Mini One",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 3,
+              "size": 1.2,
+              "horsePower": 102
+            },
+            "performance": {
+              "acceleration": 9.9,
+              "topSpeed": 121
+            }
+          }
+        ]
+      },
+      {
+        "name": "One D",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 3,
+              "size": 1.5,
+              "horsePower": 95
+            },
+            "performance": {
+              "acceleration": 10.8,
+              "topSpeed": 121
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 3,
+              "size": 1.5,
+              "horsePower": 116
+            },
+            "performance": {
+              "acceleration": 9.8,
+              "topSpeed": 130
+            }
+          },
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 2.0,
+              "horsePower": 141
+            },
+            "performance": {
+              "acceleration": 8.7,
+              "topSpeed": 140
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "brandName": "Rover",
+    "models": [
+      {
+        "name": "200",
+        "category": "Sedan",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 4,
+              "size": 1.4,
+              "horsePower": 103
+            },
+            "performance": {
+              "acceleration": 11.0,
+              "topSpeed": 180
+            }
+          }
+        ]
+      },
+      {
+        "name": "214",
+        "category": "Sedan"
+      },
+      {
+        "name": "218",
+        "category": "Sedan"
+      },
+      {
+        "name": "25",
+        "category": "Sedan"
+      },
+      {
+        "name": "400",
+        "category": "Sedan"
+      },
+      {
+        "name": "414",
+        "category": "Sedan"
+      },
+      {
+        "name": "416",
+        "category": "Sedan"
+      },
+      {
+        "name": "620",
+        "category": "Sedan"
+      },
+      {
+        "name": "75",
+        "category": "Sedan"
+      }
+    ]
+  },
+  {
+    "brandName": "Smart",
+    "models": [
+      {
+        "name": "Cabrio",
+        "category": "Convertible",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 3,
+              "size": 0.9,
+              "horsePower": 71
+            },
+            "performance": {
+              "acceleration": 14.4,
+              "topSpeed": 145
+            }
+          }
+        ]
+      },
+      {
+        "name": "City-Coupé",
+        "category": "Hatchback",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 3,
+              "size": 0.6,
+              "horsePower": 45
+            },
+            "performance": {
+              "acceleration": 19.8,
+              "topSpeed": 135
+            }
+          }
+        ]
+      },
+      {
+        "name": "Compact Pulse",
+        "category": "Hatchback",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 3,
+              "size": 0.7,
+              "horsePower": 61
+            },
+            "performance": {
+              "acceleration": 15.5,
+              "topSpeed": 135
+            }
+          }
+        ]
+      },
+      {
+        "name": "Forfour",
+        "category": "Hatchback",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 3,
+              "size": 0.9,
+              "horsePower": 90
+            },
+            "performance": {
+              "acceleration": 10.5,
+              "topSpeed": 165
+            }
+          }
+        ]
+      },
+      {
+        "name": "Fortwo cabrio",
+        "category": "Convertible",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 3,
+              "size": 0.9,
+              "horsePower": 89
+            },
+            "performance": {
+              "acceleration": 10.8,
+              "topSpeed": 155
+            }
+          }
+        ]
+      },
+      {
+        "name": "Fortwo coupé",
+        "category": "Coupe",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 3,
+              "size": 0.9,
+              "horsePower": 89
+            },
+            "performance": {
+              "acceleration": 10.4,
+              "topSpeed": 155
+            }
+          }
+        ]
+      },
+      {
+        "name": "Roadster",
+        "category": "Sports Car",
+        "carData": [
+          {
+            "engine": {
+              "cylinders": 3,
+              "size": 0.7,
+              "horsePower": 81
+            },
+            "performance": {
+              "acceleration": 10.7,
+              "topSpeed": 185
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

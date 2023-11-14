@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/commons::head}"></head>
+<body>
+<header th:replace="~{fragments/commons::nav}"></header>
+<main>
+    <div class="container bg-blur2 rounded mt-5 ">
+        <div class="col-12">
+            <h1 class="font-weight-bold spaced-words-welcome fade-in">Welcome to Cars Heaven</h1>
+        </div>
+        <hr class="my-3 bg-white w-50 fade-in-down"/>
+
+        <p class="h4 font-weight-light spaced-words fade-in-down">
+            Cars Heaven is your ultimate destination for automotive enthusiasts and
+            individuals looking to dive into the world of non-electric cars, their specifications,
+            and powerful engines.
+            This website offers a user-friendly platform with a comprehensive database that enables
+            users to explore various car models and their specifications.
+        <hr class="my-3 bg-white w-75 fade-in-down"/>
+
+        <h3 class="spaced-words fade-in">
+            <a class="my-login-register-color" th:href="@{/login}">Login</a>
+             <a class="h4 font-weight-light spaced-words">or</a>
+            <a class="my-login-register-color" th:href="@{/register}">Register</a>
+        </h3>
+    </div>
+</main>
+<footer th:replace="~{fragments/commons::footer}"></footer>
+</body>
+</html>
