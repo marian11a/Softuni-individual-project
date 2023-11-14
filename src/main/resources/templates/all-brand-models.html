@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="~{fragments/commons::head}"></head>
+<body>
+<header th:replace="~{fragments/commons::nav}"></header>
+
+<div class="container">
+    <div class="my-spacing"></div>
+    <h1 class="font-weight-bold spaced-words-welcome fade-in-up text-center text-white"
+        th:text="${brandName} + ' Models'">All Brand Models: </h1>
+    <div class="my-spacing"></div>
+
+    <ul class="font-weight-bold spaced-words-welcome bg-blur3 rounded fade-in-down">
+        <li th:each="model : ${allModelsByBrand}" th:id="'model_' + ${model.id}">
+            <div class="row">
+                <div class="my-spacing col-12"></div>
+                <div class="col-12 d-flex justify-content-end">
+                    <a th:href="@{/home}" class="edit-button">
+                        <button type="button" class="btn btn-success">Favorites</button>
+                    </a>
+                    <a th:href="@{/models/edit/{brandId}/{modelId}(brandId=${brandId1}, modelId=${model.id})}"
+                       class="edit-button mx-3">
+                        <button type="button" class="btn btn-warning">Edit</button>
+                    </a>
+                    <!--                    <a th:href="@{/models/remove/{brandId}/{modelId}(brandId=${brandId1}, modelId=${model.id})}" class="edit-button">-->
+                    <!--                        <button type="button" class="btn btn-danger">Remove</button>-->
+                    <!--                    </a>-->
+
+                    <a class="edit-button" th:attr="onclick='removeModel(\'' + ${model.id} + '\')'">
+                        <button type="button" class="btn btn-danger">Remove</button>
+                    </a>
+
+                </div>
+            </div>
+            <a class="brand-item col-12 row my-3 bg-lightgrey-custom  rounded mx-auto"
+               th:href="@{/details/{modelId}(modelId=${model.id})}">
+
+                <div class="col-3">
+                    <img class="img-fluid image-fixed-size" th:unless="${#strings.isEmpty(model.imageUrl)}"
+                         th:src="*{model.imageUrl}" alt="Car image">
+                    <img class="img-fluid image-fixed-size" th:if="${#strings.isEmpty(model.imageUrl)}"
+                         th:src="@{/img/no-image.jpg}" alt="Car image">
+                </div>
+
+                <span class="col-9 text-left w-100 h1 font-weight-light spaced-words-welcome d-flex align-items-center my-text-color"
+                      th:text="${brandName} + ': ' +${model.name}">
+                </span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<footer th:replace="~{fragments/commons::footer}"></footer>
+
+<script th:src="@{/js/removeModel.js}"></script>
+</body>
+</html>
+
