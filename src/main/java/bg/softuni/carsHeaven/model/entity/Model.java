@@ -2,6 +2,7 @@ package bg.softuni.carsHeaven.model.entity;
 
 import bg.softuni.carsHeaven.model.enums.CarCategory;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Size;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,6 +18,7 @@ public class Model extends BaseEntity{
     private Brand brand;
 
     @Column(nullable = false)
+    @Size(min = 1)
     private String name;
 
     private String imageUrl;

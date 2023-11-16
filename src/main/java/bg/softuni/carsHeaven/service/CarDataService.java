@@ -14,4 +14,6 @@ public interface CarDataService {
     boolean addDetailsForModel(Long modelId, ReadCarDataDTO readCarDataDTO);
 
     void removeById(Long detailId);
+
+    boolean editDetail(Long detailId, ReadCarDataDTO readCarDataDTO);
 }

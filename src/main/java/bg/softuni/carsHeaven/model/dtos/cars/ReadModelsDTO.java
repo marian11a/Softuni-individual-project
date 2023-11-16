@@ -1,15 +1,22 @@
 package bg.softuni.carsHeaven.model.dtos.cars;
 
 import com.google.gson.annotations.SerializedName;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 
 import java.util.List;
 
 public class ReadModelsDTO {
 
     @SerializedName("name")
+    @Size(min = 1, message = "You must add a model name!")
+    @NotNull
     private String name;
 
     private Long id;
+
+    @Size(min = 1, message = "Please choose a car brand!")
+    @NotNull
     private String brandName;
 
     @SerializedName("category")

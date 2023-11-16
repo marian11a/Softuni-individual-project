@@ -5,9 +5,7 @@
 <header th:replace="~{fragments/commons::nav}"></header>
 
 <div class="container">
-    <div class="my-spacing"></div>
-    <h1 class="font-weight-bold spaced-words-welcome fade-in-up text-center text-white">All Brands</h1>
-    <div class="my-spacing"></div>
+    <h1 class="font-weight-bold spaced-words fade-in-up text-center text-white" style="padding-top: 4%; padding-bottom: 4%;">All Brands</h1>
 
     <div class="row fade-in-up">
         <div th:each="brand, rowStat : ${allBrands}"

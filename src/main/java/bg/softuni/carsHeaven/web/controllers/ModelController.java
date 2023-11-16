@@ -15,7 +15,6 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -48,15 +47,10 @@ public class ModelController {
         //todo ako brand nqma modeli da go opravq da pishe che nqma
 
         List<ReadModelsDTO> allModelsByBrand = this.modelService.getAllModelsByBrand(brandId);
-        if (allModelsByBrand.isEmpty()) {
-            modelAndView.addObject("allModelsByBrand" , new ArrayList<ReadModelsDTO>());
-            modelAndView.addObject("brandId1" , brandId);
+        ReadBrandsDTO brandById = this.brandService.getBrandById(brandId);
 
-            return modelAndView;
-        }
         modelAndView.addObject("allModelsByBrand" , allModelsByBrand);
-        modelAndView.addObject("brandId1" , brandId);
-        modelAndView.addObject("brandName" , allModelsByBrand.get(0).getBrandName());
+        modelAndView.addObject("brand" , brandById);
 
         return modelAndView;
     }
@@ -66,15 +60,7 @@ public class ModelController {
         if (!loggedUser.isLogged()) {
             return new ModelAndView("redirect:/");
         }
-        ModelAndView modelAndView = new ModelAndView("add-car");
-        List<ReadBrandsDTO> allBrands = this.brandService.getAllBrands();
-
-        modelAndView.addObject("allBrands", allBrands);
-        modelAndView.addObject("allCategories", CarCategory.values());
-        modelAndView.addObject("allFuels", FuelType.values());
-        modelAndView.addObject("allTransmissionTypes", TransmissionType.values());
-        modelAndView.addObject("allDriveTypes", DriveType.values());
-        return modelAndView;
+        return getParametersForAddingACar();
     }
 
     @PostMapping("/add-car")
@@ -85,11 +71,11 @@ public class ModelController {
             return new ModelAndView("redirect:/");
         }
         if (bindingResult.hasErrors()) {
-            return new ModelAndView("add-car");
+            return getParametersForAddingACar();
         }
         boolean addedSuccessfully = modelService.add(readModelsDTO);
         if (!addedSuccessfully) {
-            ModelAndView modelAndView = new ModelAndView("add-car");
+            ModelAndView modelAndView = getParametersForAddingACar();
             modelAndView.addObject("hasAddError", true);
             return modelAndView;
         }
@@ -116,14 +102,17 @@ public class ModelController {
         ReadModelsDTO readModelsDTO = this.modelService.getModelById(modelId);
 
         modelAndView.addObject("readModelsDTO", readModelsDTO);
+        modelAndView.addObject("allCategories", CarCategory.values());
         modelAndView.addObject("brandId1" , brandId);
         return modelAndView;
     }
 
+    //todo fix the edit model kat dvaputi cukna save changes bez da populvam nishto gurmi vij shto taka
 
     @PostMapping("/edit/{brandId}/{modelId}")
     public ModelAndView editModel(
             @PathVariable("modelId") Long modelId,
+            @PathVariable("brandId") Long brandId,
             @ModelAttribute("readModelsDTO") @Valid ReadModelsDTO readModelsDTO,
             BindingResult bindingResult) {
         if (!loggedUser.isLogged()) {
@@ -133,6 +122,8 @@ public class ModelController {
         if (bindingResult.hasErrors()) {
             ModelAndView modelAndView = new ModelAndView("edit-model");
             modelAndView.addObject("modelId", modelId);
+            modelAndView.addObject("brandId1" , brandId);
+            modelAndView.addObject("allCategories", CarCategory.values());
             return modelAndView;
         }
 
@@ -142,10 +133,23 @@ public class ModelController {
             ModelAndView modelAndView = new ModelAndView("edit-model");
             modelAndView.addObject("hasEditErrors", true);
             modelAndView.addObject("modelId", modelId);
+            modelAndView.addObject("brandId1" , brandId);
+            modelAndView.addObject("allCategories", CarCategory.values());
             return modelAndView;
         }
 
         return new ModelAndView("redirect:/models/{brandId}");
     }
 
+    private ModelAndView getParametersForAddingACar() {
+        ModelAndView modelAndView = new ModelAndView("add-car");
+        List<ReadBrandsDTO> allBrands = this.brandService.getAllBrands();
+
+        modelAndView.addObject("allBrands", allBrands);
+        modelAndView.addObject("allCategories", CarCategory.values());
+        modelAndView.addObject("allFuels", FuelType.values());
+        modelAndView.addObject("allTransmissionTypes", TransmissionType.values());
+        modelAndView.addObject("allDriveTypes", DriveType.values());
+        return modelAndView;
+    }
 }

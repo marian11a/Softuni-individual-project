@@ -11,70 +11,8 @@
 
     <form class="mx-auto w-75 bg-blur rounded"
           th:method="POST"
-          th:action="@{/models/add-car}"
-          th:object="${readModelsDTO}">
-
-        <div class="form-group">
-            <div class="text-white label-holder d-flex justify-content-start">
-                <label for="brandName" class="h4 mb-2">Brand</label>
-            </div>
-            <div class="row mx-auto">
-                <select class="browser-default custom-select col-10" id="brandName"
-                        th:field="*{brandName}"
-                        th:errorClass="bg-danger">
-                    <option value="">Select Brand:</option>
-                    <option th:each="brand : ${allBrands}"
-                            th:value="${brand.name}"
-                            th:text="${brand.name}"></option>
-                </select>
-
-                <a th:href="@{/brands/add}" class="edit-button col-2 ">
-                    <button type="button" class="btn btn-warning">Add new brand</button>
-                </a>
-            </div>
-
-        </div>
-        <small th:if="${#fields.hasErrors('brandName')}"
-               th:errors="*{brandName}" class="text-danger">Brand error message</small>
-
-
-        <div class="my-spacing col-12"></div>
-        <div class="form-group">
-            <div class="label-holder text-white textCol d-flex justify-content-start">
-                <label for="name" class="h4 mb-2">Model</label>
-            </div>
-            <textarea type="text" class="form-control" id="name"
-                      th:field="*{name}"
-                      th:errorClass="bg-danger"></textarea>
-            <small th:if="${#fields.hasErrors('name')}"
-                   th:errors="*{name}" class="text-danger">Model error message</small>
-        </div>
-
-        <div class="my-spacing col-12"></div>
-        <div class="form-group">
-            <div class="label-holder text-white textCol d-flex justify-content-start">
-                <label for="imageUrl" class="h4 mb-2">Image URL:</label>
-            </div>
-            <textarea type="text" class="form-control" id="imageUrl"
-                      th:field="*{imageUrl}"
-                      th:errorClass="bg-danger"></textarea>
-        </div>
-
-
-        <div class="my-spacing col-12"></div>
-        <div class="form-group">
-            <div class="text-white label-holder d-flex justify-content-start">
-                <label for="category" class="h4 mb-2">Category</label>
-            </div>
-            <select class="browser-default custom-select" id="category"
-                    th:field="*{category}"
-                    th:errorClass="bg-danger">
-                <option value="">Select Category:</option>
-                <option th:each="category : ${allCategories}"
-                        th:value="${category.displayName}"
-                        th:text="${category.displayName}"></option>
-            </select>
-        </div>
+          th:action="@{/details/{modelId}/edit-detail/{detailId}(modelId=${readCarDataDTO.modelId}, detailId=${readCarDataDTO.id})}"
+          th:object="${readCarDataDTO}">
 
         <div class="my-spacing col-12"></div>
         <div class="form-group">
@@ -83,7 +21,7 @@
             </div>
             <div>
                 <input type="number" class="form-control" id="engineCylinders"
-                       th:field="*{carData[0].engine.cylinders}" pattern="[0-9]*"
+                       th:field="*{engine.cylinders}" pattern="[0-9]*"
                        oninput="this.value=this.value.replace(/[^0-9]/g,'')"/>
             </div>
         </div>
@@ -95,10 +33,9 @@
             </div>
             <div>
                 <input type="number" class="form-control" id="engineSize"
-                       th:field="*{carData[0].engine.size}" step="0.1"/>
+                       th:field="*{engine.size}" step="0.1"/>
             </div>
         </div>
-
 
         <div class="my-spacing col-12"></div>
         <div class="form-group">
@@ -107,7 +44,7 @@
             </div>
             <div>
                 <input type="number" class="form-control" id="engineHorsepower"
-                       th:field="*{carData[0].engine.horsePower}" pattern="[0-9]*"
+                       th:field="*{engine.horsePower}" pattern="[0-9]*"
                        oninput="this.value=this.value.replace(/[^0-9]/g,'')"/>
             </div>
         </div>
@@ -118,7 +55,7 @@
                 <label for="fuel" class="h4 mb-2">Engine fuel:</label>
             </div>
             <select class="browser-default custom-select" id="fuel"
-                    th:field="*{carData[0].engine.fuel}"
+                    th:field="*{engine.fuel}"
                     th:errorClass="bg-danger">
                 <option value="">Select fuel:</option>
                 <option th:each="fuel : ${allFuels}"
@@ -127,22 +64,20 @@
             </select>
         </div>
 
-
         <div class="my-spacing col-12"></div>
         <div class="form-group">
             <div class="label-holder text-white textCol d-flex justify-content-start">
                 <label for="performanceAcceleration" class="h4 mb-2">Acceleration from 0-100km/h</label>
             </div>
             <input type="number" class="form-control" id="performanceAcceleration"
-                   th:field="*{carData[0].performance.acceleration}" step="0.1"/>
-
+                   th:field="*{performance.acceleration}" step="0.1"/>
 
             <div class="my-spacing col-12"></div>
             <div class="label-holder text-white textCol d-flex justify-content-start">
                 <label for="performanceTopSpeed" class="h4 mb-2">Top Speed:</label>
             </div>
             <input type="number" class="form-control" id="performanceTopSpeed"
-                   th:field="*{carData[0].performance.topSpeed}" pattern="[0-9]*"
+                   th:field="*{performance.topSpeed}" pattern="[0-9]*"
                    oninput="this.value=this.value.replace(/[^0-9]/g,'')"/>
         </div>
 
@@ -152,7 +87,7 @@
                 <label for="transmissionType" class="h4 mb-2">Transmission type:</label>
             </div>
             <select class="browser-default custom-select" id="transmissionType"
-                    th:field="*{carData[0].transmission.transmissionType}"
+                    th:field="*{transmission.transmissionType}"
                     th:errorClass="bg-danger">
                 <option value="">Select transmission type:</option>
                 <option th:each="transmission : ${allTransmissionTypes}"
@@ -168,7 +103,7 @@
             </div>
             <div>
                 <input type="number" class="form-control" id="numberOfGears"
-                       th:field="*{carData[0].transmission.numberOfGears}" pattern="[0-9]*"
+                       th:field="*{transmission.numberOfGears}" pattern="[0-9]*"
                        oninput="this.value=this.value.replace(/[^0-9]/g,'')"/>
             </div>
         </div>
@@ -179,7 +114,7 @@
                 <label for="driveType" class="h4 mb-2">Drive:</label>
             </div>
             <select class="browser-default custom-select" id="driveType"
-                    th:field="*{carData[0].transmission.driveType}"
+                    th:field="*{transmission.driveType}"
                     th:errorClass="bg-danger">
                 <option value="">Select drive type:</option>
                 <option th:each="drive : ${allDriveTypes}"

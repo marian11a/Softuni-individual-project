@@ -6,7 +6,7 @@
 
 <div class="container">
     <div class="my-spacing"></div>
-    <h1 class="font-weight-bold spaced-words-welcome fade-in-up text-center text-white"
+    <h1 class="font-weight-bold spaced-words fade-in-up text-center text-white"
         th:text="${model.brandName} + ' ' + ${model.name}">Brand and model</h1>
     <div class="my-spacing"></div>
     <ul th:each="detail : ${details}" class="font-weight-bold spaced-words-welcome bg-blur rounded fade-in-down">
@@ -16,7 +16,7 @@
                 <a th:href="@{/home}" class="edit-button">
                     <button type="button" class="btn btn-success">Favorites</button>
                 </a>
-                <a th:href="@{/details/{modelId}/add-detail(modelId=${model.id})}" class="edit-button mx-3">
+                <a th:href="@{/details/{modelId}/edit-detail/{detailId}(modelId=${detail.modelId}, detailId=${detail.id})}" class="edit-button mx-3">
                     <button type="button" class="btn btn-warning">Edit</button>
                 </a>
                 <a th:href="@{/details/remove/{modelId}/{detailId}(modelId=${model.id}, detailId=${detail.id})}" class="edit-button">

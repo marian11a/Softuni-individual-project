@@ -1,6 +1,5 @@
 package bg.softuni.carsHeaven.service.impl;
 
-import bg.softuni.carsHeaven.model.dtos.cars.ReadBrandsDTO;
 import bg.softuni.carsHeaven.model.dtos.cars.ReadCarDataDTO;
 import bg.softuni.carsHeaven.model.dtos.cars.ReadModelsDTO;
 import bg.softuni.carsHeaven.model.entity.*;
@@ -42,6 +41,7 @@ public class ModelServiceImpl implements ModelService {
         this.modelMapper = modelMapper;
     }
 
+    //todo ne moje da ima koli s 2 imena ednakvi modeli po tochni i brandove ako iskash
     @Override
     public List<ReadModelsDTO> getAllModelsByBrand(Long brandId) {
         Optional<Brand> byId = this.brandRepository.findById(brandId);
@@ -84,6 +84,8 @@ public class ModelServiceImpl implements ModelService {
             Arrays.stream(CarCategory.values())
                     .filter(value -> value.getDisplayName().toLowerCase().equals(readModelsDTO.getCategory().toLowerCase().trim()))
                     .forEach(model::setCategory);
+        } else {
+            model.setCategory(null);
         }
         this.modelRepository.save(model);
 

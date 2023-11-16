@@ -43,6 +43,11 @@ public class CarDataServiceImpl implements CarDataService {
     }
 
     @Override
+    public void removeById(Long detailId) {
+        this.carDataRepository.deleteById(detailId);
+    }
+
+    @Override
     public List<ReadCarDataDTO> getAllDetailsForModel(Long modelId) {
         Optional<Model> byId = this.modelRepository.findById(modelId);
         if (byId.isEmpty()) {
@@ -96,45 +101,115 @@ public class CarDataServiceImpl implements CarDataService {
         }
         Model model = byId.get();
 
-        Engine engine = this.modelMapper.map(readCarDataDTO.getEngine(), Engine.class);
-        if (engine.getFuel() == null && engine.getSize() == null && engine.getCylinders() == null && engine.getHorsePower() == null) {
+        if (readCarDataDTO.getEngine().getFuel() == null
+                && readCarDataDTO.getEngine().getSize() == null
+                && readCarDataDTO.getEngine().getCylinders() == null
+                && readCarDataDTO.getEngine().getHorsePower() == null) {
             return false;
         } else {
-            if (readCarDataDTO.getEngine().getFuel() != null) {
-                Arrays.stream(FuelType.values())
-                        .filter(fuel -> fuel.getDisplayName().equals(readCarDataDTO.getEngine().getFuel()))
-                        .forEach(engine::setFuel);
-            }
+            Engine engine = new Engine();
+            mapToEngine(readCarDataDTO, engine);
 
             Performance performance = new Performance();
             if (readCarDataDTO.getPerformance() != null) {
-                performance = this.modelMapper.map(readCarDataDTO.getPerformance(), Performance.class);
+                mapToPerformance(readCarDataDTO, performance);
             }
 
             Transmission transmission = new Transmission();
             if (readCarDataDTO.getTransmission() != null) {
-                Arrays.stream(DriveType.values())
-                        .filter(value -> value.toString().equals(readCarDataDTO.getTransmission().getDriveType()))
-                        .forEach(transmission::setDriveType);
-
-                Arrays.stream(TransmissionType.values())
-                        .filter(value -> value.getDisplayName().equals(readCarDataDTO.getTransmission().getTransmissionType()))
-                        .forEach(transmission::setTransmissionType);
-
-                transmission.setNumberOfGears(readCarDataDTO.getTransmission().getNumberOfGears());
+                mapToTransmission(readCarDataDTO, transmission);
             }
 
             CarData carData = new CarData(engine, performance, transmission, model);
-            this.engineRepository.save(engine);
-            this.performanceRepository.save(performance);
-            this.transmissionRepository.save(transmission);
-            this.carDataRepository.save(carData);
+            saveAll(engine, performance, transmission, carData);
             return true;
         }
     }
 
+    private void saveAll(Engine engine,
+                         Performance performance,
+                         Transmission transmission,
+                         CarData carData) {
+        this.engineRepository.save(engine);
+        this.performanceRepository.save(performance);
+        this.transmissionRepository.save(transmission);
+        this.carDataRepository.save(carData);
+    }
+
     @Override
-    public void removeById(Long detailId) {
-        this.carDataRepository.deleteById(detailId);
+    public boolean editDetail(Long detailId, ReadCarDataDTO readCarDataDTO) {
+        Optional<CarData> byId = this.carDataRepository.findById(detailId);
+        if (byId.isEmpty()) {
+            return false;
+        }
+        CarData carData = byId.get();
+
+        if (readCarDataDTO.getEngine().getFuel() == null
+                && readCarDataDTO.getEngine().getSize() == null
+                && readCarDataDTO.getEngine().getCylinders() == null
+                && readCarDataDTO.getEngine().getHorsePower() == null) {
+            return false;
+        } else {
+            Engine engine = carData.getEngine();
+            mapToEngine(readCarDataDTO, engine);
+
+            Performance performance = carData.getPerformance();
+            if (readCarDataDTO.getPerformance() != null) {
+                mapToPerformance(readCarDataDTO, performance);
+            }
+
+            Transmission transmission = carData.getTransmission();
+            if (readCarDataDTO.getTransmission() != null) {
+                mapToTransmission(readCarDataDTO, transmission);
+            }
+
+            carData.setEngine(engine);
+            carData.setPerformance(performance);
+            carData.setTransmission(transmission);
+            saveAll(engine, performance, transmission, carData);
+            return true;
+        }
+    }
+
+    private void mapToEngine(ReadCarDataDTO readCarDataDTO, Engine engine) {
+        if (readCarDataDTO.getEngine().getFuel() != null) {
+            Arrays.stream(FuelType.values())
+                    .filter(fuel -> fuel.getDisplayName().equals(readCarDataDTO.getEngine().getFuel()))
+                    .forEach(engine::setFuel);
+        } else {
+            engine.setFuel(null);
+        }
+        engine.setCylinders(readCarDataDTO.getEngine().getCylinders());
+        engine.setSize(readCarDataDTO.getEngine().getSize());
+        engine.setHorsePower(readCarDataDTO.getEngine().getHorsePower());
+    }
+
+    private void mapToPerformance(ReadCarDataDTO readCarDataDTO, Performance performance) {
+        performance.setTopSpeed(readCarDataDTO.getPerformance().getTopSpeed());
+        performance.setAcceleration(readCarDataDTO.getPerformance().getAcceleration());
+    }
+
+    private void mapToTransmission(ReadCarDataDTO readCarDataDTO, Transmission transmission) {
+        Arrays.stream(DriveType.values())
+                .filter(value -> value
+                        .toString()
+                        .equals(readCarDataDTO.getTransmission().getDriveType()))
+                .forEach(transmission::setDriveType);
+        if (readCarDataDTO.getTransmission().getDriveType().isEmpty() ||
+                readCarDataDTO.getTransmission().getDriveType() == null) {
+            transmission.setDriveType(null);
+        }
+
+        Arrays.stream(TransmissionType.values())
+                .filter(value -> value
+                        .getDisplayName()
+                        .equals(readCarDataDTO.getTransmission().getTransmissionType()))
+                .forEach(transmission::setTransmissionType);
+        if (readCarDataDTO.getTransmission().getTransmissionType().isEmpty() ||
+                readCarDataDTO.getTransmission().getTransmissionType() == null) {
+            transmission.setTransmissionType(null);
+        }
+
+        transmission.setNumberOfGears(readCarDataDTO.getTransmission().getNumberOfGears());
     }
 }

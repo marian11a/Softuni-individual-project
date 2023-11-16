@@ -10,6 +10,21 @@
     <div class="row d-flex justify-content-center">
 
         <div class="col-md-3 fade-in-up">
+            <a th:href="@{/brands/all-brands}" class="card-link">
+                <div class="custom-card bg-all-brands-home my-text-color spaced-words">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">All Brands</h5>
+                        <p class="card-text font-weight-light">All brands and their models</p>
+                        <img th:src="@{/img/favicon.png}"
+                             alt="Favorites Icon"
+                             class="img-fluid my-home-card-img"
+                             style="padding-top: 20%;">
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-md-3 fade-in-up">
             <a th:href="@{/home}" class="card-link">
                 <div class="custom-card bg-favorites my-text-color spaced-words">
                     <div class="card-body text-center">
@@ -25,7 +40,7 @@
         </div>
 
         <div class="col-md-3 fade-in-up">
-            <a th:href="@{/home}" class="card-link">
+            <a th:href="@{/compare}" class="card-link">
                 <div class="custom-card bg-compare my-text-color spaced-words">
                     <div class="card-body text-center">
                         <h5 class="card-title">Compare</h5>
@@ -46,21 +61,6 @@
                         <h5 class="card-title">Profile</h5>
                         <p class="card-text font-weight-light">NickName</p>
                         <img th:src="@{/img/profile.png}"
-                             alt="Favorites Icon"
-                             class="img-fluid my-home-card-img"
-                             style="padding-top: 30%;">
-                    </div>
-                </div>
-            </a>
-        </div>
-
-        <div class="col-md-3 fade-in-up">
-            <a th:href="@{/home}" class="card-link">
-                <div class="custom-card bg-users my-text-color spaced-words">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">All users</h5>
-                        <p class="card-text font-weight-light">Only for admins</p>
-                        <img th:src="@{/img/users.png}"
                              alt="Favorites Icon"
                              class="img-fluid my-home-card-img"
                              style="padding-top: 30%;">

@@ -1,5 +1,6 @@
 package bg.softuni.carsHeaven.web.controllers;
 
+import bg.softuni.carsHeaven.model.dtos.cars.ReadBrandsDTO;
 import bg.softuni.carsHeaven.model.dtos.cars.ReadCarDataDTO;
 import bg.softuni.carsHeaven.model.dtos.cars.ReadModelsDTO;
 import bg.softuni.carsHeaven.model.enums.DriveType;
@@ -82,8 +83,8 @@ public class DetailsController {
     }
 
     @GetMapping("/{modelId}/{detailId}")
-    public ModelAndView details(@PathVariable("modelId") Long modelId,
-                                @PathVariable("detailId") Long detailId) {
+    public ModelAndView detail(@PathVariable("modelId") Long modelId,
+                               @PathVariable("detailId") Long detailId) {
         if (!loggedUser.isLogged()) {
             return new ModelAndView("redirect:/");
         }
@@ -105,5 +106,46 @@ public class DetailsController {
 
         this.carDataService.removeById(detailId);
         return new ModelAndView("redirect:/details/{modelId}");
+    }
+
+    @GetMapping("/{modelId}/edit-detail/{detailId}")
+    public ModelAndView editDetail(@PathVariable("detailId") Long detailId,
+                                   @PathVariable("modelId") Long modelId) {
+        if (!loggedUser.isLogged()) {
+            return new ModelAndView("redirect:/");
+        }
+        ModelAndView modelAndView = new ModelAndView("edit-detail");
+        ReadCarDataDTO readCarDataDTO = this.carDataService.getDetailsForModelByDetailId(modelId, detailId);
+
+        modelAndView.addObject("readCarDataDTO", readCarDataDTO);
+        modelAndView.addObject("allFuels", FuelType.values());
+        modelAndView.addObject("allTransmissionTypes", TransmissionType.values());
+        modelAndView.addObject("allDriveTypes", DriveType.values());
+        return modelAndView;
+    }
+
+    @PostMapping("/{modelId}/edit-detail/{detailId}")
+    public ModelAndView editDetail(@PathVariable("modelId") Long modelId,
+                                   @PathVariable("detailId") Long detailId,
+                                   @ModelAttribute("readCarDataDTO") @Valid ReadCarDataDTO readCarDataDTO,
+                                   BindingResult bindingResult) {
+        if (!loggedUser.isLogged()) {
+            return new ModelAndView("redirect:/");
+        }
+        if (bindingResult.hasErrors()) {
+            ModelAndView modelAndView = new ModelAndView("edit-detail");
+            modelAndView.addObject("modelId", modelId);
+            modelAndView.addObject("detailId", detailId);
+            return modelAndView;
+        }
+        boolean editedSuccessfully = this.carDataService.editDetail(detailId, readCarDataDTO);
+        if (!editedSuccessfully) {
+            ModelAndView modelAndView = new ModelAndView("edit-detail");
+            modelAndView.addObject("modelId", modelId);
+            modelAndView.addObject("detailId", detailId);
+            modelAndView.addObject("hasEditErrors", true);
+            return modelAndView;
+        }
+        return new ModelAndView("redirect:/details/{modelId}/{detailId}");
     }
 }

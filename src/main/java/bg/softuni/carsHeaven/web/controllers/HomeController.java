@@ -29,10 +29,14 @@ public class HomeController {
         if (!loggedUser.isLogged()) {
             return new ModelAndView("redirect:/");
         }
-
-//        HomeDTO homeData = this.wordService.getHomeData();
-//        return new ModelAndView("home", "homeDTO" , homeData);
-
         return new ModelAndView("home");
+    }
+
+    @GetMapping("/compare")
+    public ModelAndView compare() {
+        if (!loggedUser.isLogged()) {
+            return new ModelAndView("redirect:/");
+        }
+        return new ModelAndView("compare");
     }
 }

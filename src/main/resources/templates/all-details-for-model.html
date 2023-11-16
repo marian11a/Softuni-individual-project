@@ -5,11 +5,9 @@
 <header th:replace="~{fragments/commons::nav}"></header>
 
 <div class="container">
-    <div class="my-spacing"></div>
-    <h1 class="font-weight-bold spaced-words-welcome fade-in-up text-center text-white"
-        th:text="${model.brandName} + ' ' + ${model.name}">Brand and model</h1>
-    <div class="my-spacing"></div>
-
+    <h1 class="font-weight-bold spaced-words fade-in-up text-center text-white" style="padding-top: 4%; padding-bottom: 4%;"
+        th:text="${model.brandName} + ' ' + ${model.name}">Brand and model
+    </h1>
     <ul class="font-weight-bold spaced-words-welcome bg-blur3 rounded fade-in-down">
         <div class="row">
             <div class="col-12 d-flex justify-content-end">
@@ -33,9 +31,9 @@
             <div class="my-spacing col-12"></div>
         </div>
 
-        <div th:if="${#lists.isEmpty(details)}">
-        <span class=" h1 font-weight-light spaced-words-welcome"
-              th:text="'No details found for this model'"></span>
+        <div th:if="${#lists.isEmpty(details)}" style="padding-top: 4%; padding-bottom: 7%;">
+            <span class=" h1 font-weight-light spaced-words"
+              th:text="'There are currently no details for this model'"></span>
         </div>
 
         <div th:unless="${#lists.isEmpty(details)}">
