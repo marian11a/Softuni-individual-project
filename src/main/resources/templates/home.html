@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:sec="http://www.w3.org/1999/xhtml">
 <head th:replace="~{fragments/commons::head}"></head>
 <body>
 <header th:replace="~{fragments/commons::nav}"></header>
@@ -15,7 +15,7 @@
                     <div class="card-body text-center">
                         <h5 class="card-title">All Brands</h5>
                         <p class="card-text font-weight-light">All brands and their models</p>
-                        <img th:src="@{/img/favicon.png}"
+                        <img th:src="@{/images/favicon.png}"
                              alt="Favorites Icon"
                              class="img-fluid my-home-card-img"
                              style="padding-top: 20%;">
@@ -30,7 +30,7 @@
                     <div class="card-body text-center">
                         <h5 class="card-title">Favorites</h5>
                         <p class="card-text font-weight-light">Your favorite car models.</p>
-                        <img th:src="@{/img/favorites.png}"
+                        <img th:src="@{/images/favorites.png}"
                              alt="Favorites Icon"
                              class="img-fluid my-home-card-img"
                              style="padding-top: 20%;">
@@ -45,7 +45,7 @@
                     <div class="card-body text-center">
                         <h5 class="card-title">Compare</h5>
                         <p class="card-text font-weight-light">Choose 2 cars to compare.</p>
-                        <img th:src="@{/img/compare.png}"
+                        <img th:src="@{/images/compare.png}"
                              alt="Favorites Icon"
                              class="img-fluid my-home-card-img"
                              style="padding-top: 20%;">
@@ -59,8 +59,14 @@
                 <div class="custom-card bg-profile my-text-color spaced-words">
                     <div class="card-body text-center">
                         <h5 class="card-title">Profile</h5>
-                        <p class="card-text font-weight-light">NickName</p>
-                        <img th:src="@{/img/profile.png}"
+                        <th:block sec:authorize="isAuthenticated()">
+                            <p class="card-text font-weight-light" sec:authentication='name'>NickName</p>
+                        </th:block>
+                        <th:block sec:authorize="!isAuthenticated()">
+                            <p class="card-text font-weight-light" >NickName</p>
+                        </th:block>
+
+                        <img th:src="@{/images/profile.png}"
                              alt="Favorites Icon"
                              class="img-fluid my-home-card-img"
                              style="padding-top: 30%;">

@@ -1,29 +1,34 @@
 package bg.softuni.carsHeaven.service.impl;
 
-import bg.softuni.carsHeaven.model.dtos.users.UserLoginDTO;
 import bg.softuni.carsHeaven.model.dtos.users.UserRegisterDTO;
+import bg.softuni.carsHeaven.model.entity.Role;
 import bg.softuni.carsHeaven.model.entity.User;
+import bg.softuni.carsHeaven.model.enums.RoleEnum;
+import bg.softuni.carsHeaven.repository.RolesRepository;
 import bg.softuni.carsHeaven.repository.UserRepository;
-import bg.softuni.carsHeaven.security.LoggedUser;
 import bg.softuni.carsHeaven.service.UserService;
 import org.modelmapper.ModelMapper;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class UserServiceImpl implements UserService {
 
     private final UserRepository userRepository;
+    private final RolesRepository rolesRepository;
     private final ModelMapper modelMapper;
     private final PasswordEncoder passwordEncoder;
 
-    private final LoggedUser loggedUser;
-
-    public UserServiceImpl(UserRepository userRepository, ModelMapper modelMapper, PasswordEncoder passwordEncoder, LoggedUser loggedUser) {
+    public UserServiceImpl(UserRepository userRepository,
+                           RolesRepository rolesRepository,
+                           ModelMapper modelMapper,
+                           PasswordEncoder passwordEncoder) {
         this.userRepository = userRepository;
+        this.rolesRepository = rolesRepository;
         this.modelMapper = modelMapper;
         this.passwordEncoder = passwordEncoder;
-        this.loggedUser = loggedUser;
     }
 
 
@@ -43,22 +48,8 @@ public class UserServiceImpl implements UserService {
 
         User user = modelMapper.map(userRegisterDTO, User.class);
         user.setPassword(passwordEncoder.encode(user.getPassword()));
+        user.setRoles(List.of(this.rolesRepository.findByRole(RoleEnum.USER)));
         this.userRepository.save(user);
         return true;
-    }
-
-    @Override
-    public boolean login(UserLoginDTO userLoginDto) {
-        User dbUser = this.userRepository.findByUsername(userLoginDto.getUsername());
-        if (dbUser != null && passwordEncoder.matches(userLoginDto.getPassword(), dbUser.getPassword())) {
-            this.loggedUser.login(userLoginDto.getUsername());
-            return true;
-        }
-        return false;
-    }
-
-    @Override
-    public void logout() {
-        this.loggedUser.logout();
     }
 }

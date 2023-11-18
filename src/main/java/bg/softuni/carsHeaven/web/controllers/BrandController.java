@@ -1,7 +1,6 @@
 package bg.softuni.carsHeaven.web.controllers;
 
 import bg.softuni.carsHeaven.model.dtos.cars.ReadBrandsDTO;
-import bg.softuni.carsHeaven.security.LoggedUser;
 import bg.softuni.carsHeaven.service.BrandService;
 import jakarta.validation.Valid;
 import org.springframework.stereotype.Controller;
@@ -15,20 +14,16 @@ import java.util.List;
 @RequestMapping("/brands")
 public class BrandController {  //todo alt-enter create test
 
-    private final LoggedUser loggedUser;
     private final BrandService brandService;
 
-    public BrandController(LoggedUser loggedUser, BrandService brandService) {
-        this.loggedUser = loggedUser;
+    public BrandController(BrandService brandService) {
         this.brandService = brandService;
     }
 
 
     @GetMapping("/all-brands")
     public ModelAndView allBrands() {
-        if (!loggedUser.isLogged()) {
-            return new ModelAndView("redirect:/");
-        }
+
 
         List<ReadBrandsDTO> allBrands = this.brandService.getAllBrands();
         return new ModelAndView("all-brands", "allBrands", allBrands);
@@ -37,9 +32,7 @@ public class BrandController {  //todo alt-enter create test
 
     @GetMapping("/edit/{brandId}")
     public ModelAndView edit(@PathVariable("brandId") Long brandId) {
-        if (!loggedUser.isLogged()) {
-            return new ModelAndView("redirect:/");
-        }
+
         ModelAndView modelAndView = new ModelAndView("edit-brand");
         ReadBrandsDTO readBrandsDTO = this.brandService.getBrandById(brandId);
 
@@ -53,9 +46,7 @@ public class BrandController {  //todo alt-enter create test
             @PathVariable("brandId") Long brandId,
             @ModelAttribute("readBrandsDTO") @Valid ReadBrandsDTO readBrandsDTO,
             BindingResult bindingResult) {
-        if (!loggedUser.isLogged()) {
-            return new ModelAndView("redirect:/");
-        }
+
 
         if (bindingResult.hasErrors()) {
             ModelAndView modelAndView = new ModelAndView("edit-brand");
@@ -77,9 +68,7 @@ public class BrandController {  //todo alt-enter create test
 
     @GetMapping("/remove/{brandId}")
     public ModelAndView remove(@PathVariable("brandId") Long brandId) {
-        if (!loggedUser.isLogged()) {
-            return new ModelAndView("redirect:/");
-        }
+
 
         this.brandService.remove(brandId);
         return new ModelAndView("redirect:/brands/all-brands");
@@ -87,9 +76,7 @@ public class BrandController {  //todo alt-enter create test
 
     @GetMapping("/add")
     public ModelAndView add(@ModelAttribute("readBrandsDTO") ReadBrandsDTO readBrandsDTO) {
-        if (!loggedUser.isLogged()) {
-            return new ModelAndView("redirect:/");
-        }
+
         return new ModelAndView("add-brand");
     }
 
@@ -98,9 +85,7 @@ public class BrandController {  //todo alt-enter create test
     public ModelAndView add(
             @ModelAttribute("readBrandsDTO") @Valid ReadBrandsDTO readBrandsDTO,
             BindingResult bindingResult) {
-        if (!loggedUser.isLogged()) {
-            return new ModelAndView("redirect:/");
-        }
+
 
         if (bindingResult.hasErrors()) {
             return new ModelAndView("add-brand");

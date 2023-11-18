@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import org.hibernate.validator.constraints.Length;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -24,7 +25,8 @@ public class User extends BaseEntity {
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<Model> favoriteCars;
 
-    private boolean isAdmin;
+    @ManyToMany(fetch = FetchType.EAGER)
+    private List<Role> roles = new ArrayList<>();
 
     public String getUsername() {
         return username;
@@ -58,11 +60,11 @@ public class User extends BaseEntity {
         this.favoriteCars = favoriteCars;
     }
 
-    public boolean isAdmin() {
-        return isAdmin;
+    public List<Role> getRoles() {
+        return roles;
     }
 
-    public void setAdmin(boolean admin) {
-        isAdmin = admin;
+    public void setRoles(List<Role> roles) {
+        this.roles = roles;
     }
 }

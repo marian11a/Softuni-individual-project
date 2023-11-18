@@ -36,3 +36,5 @@ logging:
     blog: WARN
 server:
   port: 8080
+CarsHeaven:
+  remember.me.key: ${REMEMBER_ME_KEY:rememberMeKey}

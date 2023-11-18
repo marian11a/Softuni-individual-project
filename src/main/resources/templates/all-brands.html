@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:sec="http://www.w3.org/1999/xhtml">
 <head th:replace="~{fragments/commons::head}"></head>
 <body>
 <header th:replace="~{fragments/commons::nav}"></header>
@@ -18,10 +18,10 @@
                          th:src="*{brand.imageUrl}" alt="Car image">
                     <img class="card-img-top img-fluid image-fixed-size"
                          th:if="${#strings.isEmpty(brand.imageUrl)}"
-                         th:src="@{/img/no-image.jpg}" alt="Car image">
+                         th:src="@{/images/no-image.jpg}" alt="Car image">
 
-                    <a th:href="@{/brands/edit/{brandId}(brandId=${brand.id})}" class="edit-icon mx-1">
-                        <img th:src="@{/img/edit-icon.png}" alt="Edit Icon" width="16" height="16">
+                    <a th:href="@{/brands/edit/{brandId}(brandId=${brand.id})}" sec:authorize="isAuthenticated() and hasRole('ADMIN')" class="edit-icon mx-1">
+                        <img th:src="@{/images/edit-icon.png}" alt="Edit Icon" width="16" height="16">
                     </a>
                     <div class="card-body text-center text-left h5 font-weight-light spaced-words-welcome my-text-color">
                         <span th:text="${brand.name}"></span>

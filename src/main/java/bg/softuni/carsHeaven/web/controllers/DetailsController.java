@@ -1,12 +1,10 @@
 package bg.softuni.carsHeaven.web.controllers;
 
-import bg.softuni.carsHeaven.model.dtos.cars.ReadBrandsDTO;
 import bg.softuni.carsHeaven.model.dtos.cars.ReadCarDataDTO;
 import bg.softuni.carsHeaven.model.dtos.cars.ReadModelsDTO;
 import bg.softuni.carsHeaven.model.enums.DriveType;
 import bg.softuni.carsHeaven.model.enums.FuelType;
 import bg.softuni.carsHeaven.model.enums.TransmissionType;
-import bg.softuni.carsHeaven.security.LoggedUser;
 import bg.softuni.carsHeaven.service.CarDataService;
 import bg.softuni.carsHeaven.service.ModelService;
 import jakarta.validation.Valid;
@@ -21,21 +19,17 @@ import java.util.List;
 @RequestMapping("/details")
 public class DetailsController {
 
-    private final LoggedUser loggedUser;
     private final CarDataService carDataService;
     private final ModelService modelService;
 
-    public DetailsController(LoggedUser loggedUser, CarDataService carDataService, ModelService modelService) {
-        this.loggedUser = loggedUser;
+    public DetailsController(CarDataService carDataService, ModelService modelService) {
         this.carDataService = carDataService;
         this.modelService = modelService;
     }
 
     @GetMapping("/{modelId}")
     public ModelAndView allDetailsForModel(@PathVariable("modelId") Long modelId) {
-        if (!loggedUser.isLogged()) {
-            return new ModelAndView("redirect:/");
-        }
+
         ModelAndView modelAndView = new ModelAndView("all-details-for-model");
         List<ReadCarDataDTO> allDetailsForModel = this.carDataService.getAllDetailsForModel(modelId);
 
@@ -50,9 +44,7 @@ public class DetailsController {
 
     @GetMapping("/{modelId}/add-detail")
     public ModelAndView addDetailForAModel(@ModelAttribute("readCarDataDTO") ReadCarDataDTO readCarDataDTO) {
-        if (!loggedUser.isLogged()) {
-            return new ModelAndView("redirect:/");
-        }
+
         ModelAndView modelAndView = new ModelAndView("add-details-for-model");
 
         modelAndView.addObject("allFuels", FuelType.values());
@@ -65,9 +57,7 @@ public class DetailsController {
     public ModelAndView addDetailForAModel(@PathVariable("modelId") Long modelId,
             @ModelAttribute("readCarDataDTO") @Valid ReadCarDataDTO readCarDataDTO,
             BindingResult bindingResult) {
-        if (!loggedUser.isLogged()) {
-            return new ModelAndView("redirect:/");
-        }
+
         if (bindingResult.hasErrors()) {
             ModelAndView modelAndView = new ModelAndView("add-details-for-model");
             modelAndView.addObject("modelId", modelId);
@@ -85,9 +75,7 @@ public class DetailsController {
     @GetMapping("/{modelId}/{detailId}")
     public ModelAndView detail(@PathVariable("modelId") Long modelId,
                                @PathVariable("detailId") Long detailId) {
-        if (!loggedUser.isLogged()) {
-            return new ModelAndView("redirect:/");
-        }
+
         ModelAndView modelAndView = new ModelAndView("details");
         ReadCarDataDTO details = this.carDataService.getDetailsForModelByDetailId(modelId, detailId);
 
@@ -100,10 +88,6 @@ public class DetailsController {
 
     @GetMapping("/remove/{modelId}/{detailId}")
     public ModelAndView removeDetail(@PathVariable("detailId") Long detailId) {
-        if (!loggedUser.isLogged()) {
-            return new ModelAndView("redirect:/");
-        }
-
         this.carDataService.removeById(detailId);
         return new ModelAndView("redirect:/details/{modelId}");
     }
@@ -111,9 +95,7 @@ public class DetailsController {
     @GetMapping("/{modelId}/edit-detail/{detailId}")
     public ModelAndView editDetail(@PathVariable("detailId") Long detailId,
                                    @PathVariable("modelId") Long modelId) {
-        if (!loggedUser.isLogged()) {
-            return new ModelAndView("redirect:/");
-        }
+
         ModelAndView modelAndView = new ModelAndView("edit-detail");
         ReadCarDataDTO readCarDataDTO = this.carDataService.getDetailsForModelByDetailId(modelId, detailId);
 
@@ -129,9 +111,7 @@ public class DetailsController {
                                    @PathVariable("detailId") Long detailId,
                                    @ModelAttribute("readCarDataDTO") @Valid ReadCarDataDTO readCarDataDTO,
                                    BindingResult bindingResult) {
-        if (!loggedUser.isLogged()) {
-            return new ModelAndView("redirect:/");
-        }
+
         if (bindingResult.hasErrors()) {
             ModelAndView modelAndView = new ModelAndView("edit-detail");
             modelAndView.addObject("modelId", modelId);

@@ -2,13 +2,11 @@ package bg.softuni.carsHeaven.web.restControllers;
 
 import bg.softuni.carsHeaven.service.ModelService;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api")
+@CrossOrigin(origins = "http://localhost:8080")
 public class ModelRestController {
 
     private final ModelService modelService;

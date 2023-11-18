@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:sec="http://www.w3.org/1999/xhtml">
 <head th:replace="~{fragments/commons::head}"></head>
 <body>
 <header th:replace="~{fragments/commons::nav}"></header>
@@ -16,10 +16,14 @@
                 <a th:href="@{/home}" class="edit-button">
                     <button type="button" class="btn btn-success">Favorites</button>
                 </a>
-                <a th:href="@{/details/{modelId}/edit-detail/{detailId}(modelId=${detail.modelId}, detailId=${detail.id})}" class="edit-button mx-3">
+                <a th:href="@{/details/{modelId}/edit-detail/{detailId}(modelId=${detail.modelId}, detailId=${detail.id})}"
+                   sec:authorize="isAuthenticated() and hasRole('ADMIN')"
+                   class="edit-button mx-3">
                     <button type="button" class="btn btn-warning">Edit</button>
                 </a>
-                <a th:href="@{/details/remove/{modelId}/{detailId}(modelId=${model.id}, detailId=${detail.id})}" class="edit-button">
+                <a th:href="@{/details/remove/{modelId}/{detailId}(modelId=${model.id}, detailId=${detail.id})}"
+                   sec:authorize="isAuthenticated() and hasRole('ADMIN')"
+                   class="edit-button">
                     <button type="button" class="btn btn-danger">Remove</button>
                 </a>
             </div>

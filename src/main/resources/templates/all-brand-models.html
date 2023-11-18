@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:sec="http://www.w3.org/1999/xhtml">
 <head th:replace="~{fragments/commons::head}"></head>
 <body>
 <header th:replace="~{fragments/commons::nav}"></header>
@@ -24,10 +24,13 @@
                         <button type="button" class="btn btn-success">Favorites</button>
                     </a>
                     <a th:href="@{/models/edit/{brandId}/{modelId}(brandId=${brand.id}, modelId=${model.id})}"
+                       sec:authorize="isAuthenticated() and hasRole('ADMIN')"
                        class="edit-button mx-3">
                         <button type="button" class="btn btn-warning">Edit</button>
                     </a>
-                    <a class="edit-button" th:attr="onclick='removeModel(\'' + ${model.id} + '\')'">
+                    <a class="edit-button"
+                       sec:authorize="isAuthenticated() and hasRole('ADMIN')"
+                       th:attr="onclick='removeModel(\'' + ${model.id} + '\')'">
                         <button type="button" class="btn btn-danger">Remove</button>
                     </a>
                 </div>
@@ -42,7 +45,7 @@
                     <img class="img-fluid image-fixed-size" th:unless="${#strings.isEmpty(model.imageUrl)}"
                          th:src="*{model.imageUrl}" alt="Car image">
                     <img class="img-fluid image-fixed-size" th:if="${#strings.isEmpty(model.imageUrl)}"
-                         th:src="@{/img/no-image.jpg}" alt="Car image">
+                         th:src="@{/images/no-image.jpg}" alt="Car image">
                 </div>
                 <span class="col-9 text-left w-100 h1 font-weight-light spaced-words-welcome d-flex align-items-center my-text-color"
                       th:text="${brand.name} + ': ' +${model.name}">
