@@ -22,7 +22,12 @@ public class User extends BaseEntity {
     @Column(nullable = false)
     private String password;
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(
+            name = "user_favorite_cars",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "model_id")
+    )
     private List<Model> favoriteCars;
 
     @ManyToMany(fetch = FetchType.EAGER)

@@ -19,6 +19,13 @@ import java.util.List;
 @RequestMapping("/details")
 public class DetailsController {
 
+    //todo da ne moga da add detailvam bez dvigatel da sloja
+
+    //todo oshte edno todo da dobavq removeFromFavorites buton
+
+    //todo da napravq compare-a
+
+    //todo da moga da si smenqm parolata v saita
     private final CarDataService carDataService;
     private final ModelService modelService;
 

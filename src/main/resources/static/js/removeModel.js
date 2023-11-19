@@ -1,6 +1,4 @@
 function removeModel(modelId) {
-    var csrfToken = $("meta[name='_csrf']").attr("content");
-    var csrfHeader = $("meta[name='_csrf_header']").attr("content");
 
     $.ajax({
         type: "POST",

@@ -13,7 +13,8 @@
 
         <div class="row">
             <div class="col-12 d-flex justify-content-end">
-                <a th:href="@{/home}" class="edit-button">
+                <a th:attr="onclick='addToFavorites(\'' + ${model.id} + '\')'"
+                   class="edit-button">
                     <button type="button" class="btn btn-success">Favorites</button>
                 </a>
                 <a th:href="@{/details/{modelId}/edit-detail/{detailId}(modelId=${detail.modelId}, detailId=${detail.id})}"
@@ -165,5 +166,7 @@
 </div>
 
 <footer th:replace="~{fragments/commons::footer}"></footer>
+
+<script th:src="@{/js/addToFavorites.js}"></script>
 </body>
 </html>

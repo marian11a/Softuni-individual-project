@@ -5,39 +5,27 @@
 <header th:replace="~{fragments/commons::nav}"></header>
 
 <div class="container">
-    <h1 class="font-weight-bold spaced-words fade-in-up text-center text-white" style="padding-top: 4%; padding-bottom: 4%;"
-        th:text="${brand.name}">All Brand Models: </h1>
+    <h1 class="font-weight-bold spaced-words fade-in-up text-center text-white"
+        style="padding-top: 4%; padding-bottom: 4%;">Favorites</h1>
 
     <ul class="font-weight-bold spaced-words-welcome bg-blur3 rounded fade-in-down">
 
-        <div th:if="${#lists.isEmpty(allModelsByBrand)}" style="padding-top: 6%; padding-bottom: 6%;">
-            <span class="h1 font-weight-light spaced-words"
-                      th:text="'There are currently no models for this brand'" >
+        <div th:if="${#lists.isEmpty(userFavoriteModels)}" style="padding-top: 6%; padding-bottom: 6%;">
+            <span class="h1 font-weight-light spaced-words">
+                You haven't added cars yet
             </span>
         </div>
 
-        <li th:each="model : ${allModelsByBrand}" th:id="'model_' + ${model.id}">
+        <li th:each="model : ${userFavoriteModels}" th:id="'model_' + ${model.id}">
             <div class="row">
                 <div class="my-spacing col-12"></div>
                 <div class="col-12 d-flex justify-content-end">
                     <a th:attr="onclick='addToFavorites(\'' + ${model.id} + '\')'"
                        class="edit-button">
-                        <button type="button" class="btn btn-success">Favorites</button>
-                    </a>
-                    <a th:href="@{/models/edit/{brandId}/{modelId}(brandId=${brand.id}, modelId=${model.id})}"
-                       sec:authorize="isAuthenticated() and hasRole('ADMIN')"
-                       class="edit-button mx-3">
-                        <button type="button" class="btn btn-warning">Edit</button>
-                    </a>
-                    <a class="edit-button"
-                       sec:authorize="isAuthenticated() and hasRole('ADMIN')"
-                       th:attr="onclick='removeModel(\'' + ${model.id} + '\')'">
-                        <button type="button" class="btn btn-danger">Remove</button>
+                        <button type="button" class="btn btn-warning">Remove from favorites</button>
                     </a>
                 </div>
             </div>
-
-
 
             <a class="brand-item col-12 row my-3 bg-lightgrey-custom  rounded mx-auto"
                th:href="@{/details/{modelId}(modelId=${model.id})}">
@@ -49,7 +37,7 @@
                          th:src="@{/images/no-image.jpg}" alt="Car image">
                 </div>
                 <span class="col-9 text-left w-100 h1 font-weight-light spaced-words-welcome d-flex align-items-center my-text-color"
-                      th:text="${brand.name} + ': ' +${model.name}">
+                      th:text="${model.brandName} + ': ' +${model.name}">
                 </span>
             </a>
         </li>

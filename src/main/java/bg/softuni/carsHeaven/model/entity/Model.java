@@ -11,8 +11,8 @@ import java.util.List;
 @Table(name = "models")
 public class Model extends BaseEntity{
 
-    @ManyToOne
-    private User user;
+    @ManyToMany(mappedBy = "favoriteCars")
+    private List<User> users;
 
     @ManyToOne
     private Brand brand;
@@ -76,5 +76,13 @@ public class Model extends BaseEntity{
 
     public void setCarData(List<CarData> carData) {
         this.carData = carData;
+    }
+
+    public List<User> getUsers() {
+        return users;
+    }
+
+    public void setUsers(List<User> users) {
+        this.users = users;
     }
 }

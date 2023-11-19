@@ -9,11 +9,13 @@
     <h1 class="text-center mt-2"><span class="badge badge-pill badge-transparent">Edit Model</span></h1>
     <div class="my-spacing"></div>
 
+
     <form class="mx-auto w-75 bg-blur rounded"
           th:method="POST"
           th:action="@{/models/edit/{brandId}/{modelId}(brandId=${brandId1}, modelId=${readModelsDTO.id})}"
           th:object="${readModelsDTO}">
 
+        <input type="hidden" th:field="*{brandName}" th:value="${readModelsDTO.brandName}" />
         <div class="form-group">
             <label for="name" class="text-white h4">Model Name:</label>
             <input type="text" class="form-control" id="name" th:field="*{name}" required />

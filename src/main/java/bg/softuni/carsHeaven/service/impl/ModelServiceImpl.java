@@ -40,8 +40,6 @@ public class ModelServiceImpl implements ModelService {
         this.performanceRepository = performanceRepository;
         this.modelMapper = modelMapper;
     }
-
-    //todo ne moje da ima koli s 2 imena ednakvi modeli po tochni i brandove ako iskash
     @Override
     public List<ReadModelsDTO> getAllModelsByBrand(Long brandId) {
         Optional<Brand> byId = this.brandRepository.findById(brandId);
