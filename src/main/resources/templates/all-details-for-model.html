@@ -13,7 +13,7 @@
             <div class="col-12 d-flex justify-content-end">
                 <a th:attr="onclick='addToFavorites(\'' + ${model.id} + '\')'"
                    class="edit-button">
-                    <button type="button" class="btn btn-success">Favorites</button>
+                    <button type="button" class="btn btn-warning">Add to favorites</button>
                 </a>
                 <a th:href="@{/details/{modelId}/add-detail(modelId=${model.id})}"
                    sec:authorize="isAuthenticated() and hasRole('ADMIN')"

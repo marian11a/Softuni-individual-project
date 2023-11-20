@@ -34,4 +34,13 @@ public class ModelRestController {
         this.userService.addToFavorites(username, modelId);
         return ResponseEntity.ok("Model added to favorites successfully");
     }
+
+    @PostMapping("/remove-from-favorites")
+    public ResponseEntity<String> removeFromFavorites(@RequestParam Long modelId) {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        String username = authentication.getName();
+
+        this.userService.removeFromFavorites(username, modelId);
+        return ResponseEntity.ok("Model removed from favorites successfully");
+    }
 }

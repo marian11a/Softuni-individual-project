@@ -21,6 +21,8 @@ public class DetailsController {
 
     //todo da ne moga da add detailvam bez dvigatel da sloja
 
+    //todo kato imam favorite car i otida v detailite da ne mi pokazva add to favorites a da mi pokazva remove from favorites
+
     //todo oshte edno todo da dobavq removeFromFavorites buton
 
     //todo da napravq compare-a

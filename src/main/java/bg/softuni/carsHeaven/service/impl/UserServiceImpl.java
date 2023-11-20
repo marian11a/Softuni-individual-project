@@ -100,4 +100,13 @@ public class UserServiceImpl implements UserService {
         allModelsDTO.sort(Comparator.comparing(ReadModelsDTO::getName));
         return allModelsDTO;
     }
+
+    @Override
+    public void removeFromFavorites(String username, Long modelId) {
+        User user = this.userRepository.findByUsername(username);
+        List<Model> favoriteCars = user.getFavoriteCars();
+        favoriteCars.removeIf(model -> Objects.equals(model.getId(), modelId));
+        user.setFavoriteCars(favoriteCars);
+        this.userRepository.save(user);
+    }
 }

@@ -18,6 +18,7 @@ import java.util.*;
 public class ModelServiceImpl implements ModelService {
 
     private final ModelRepository modelRepository;
+    private final UserRepository userRepository;
     private final BrandRepository brandRepository;
     private final TransmissionRepository transmissionRepository;
     private final EngineRepository engineRepository;
@@ -26,6 +27,7 @@ public class ModelServiceImpl implements ModelService {
     private final ModelMapper modelMapper;
 
     public ModelServiceImpl(ModelRepository modelRepository,
+                            UserRepository userRepository,
                             BrandRepository brandRepository,
                             TransmissionRepository transmissionRepository,
                             EngineRepository engineRepository,
@@ -33,6 +35,7 @@ public class ModelServiceImpl implements ModelService {
                             PerformanceRepository performanceRepository,
                             ModelMapper modelMapper) {
         this.modelRepository = modelRepository;
+        this.userRepository = userRepository;
         this.brandRepository = brandRepository;
         this.transmissionRepository = transmissionRepository;
         this.engineRepository = engineRepository;
@@ -116,6 +119,12 @@ public class ModelServiceImpl implements ModelService {
 
     @Override
     public void removeModel(Long id) {
+        List<User> users = this.userRepository.findByFavoriteCars_Id(id);
+        for (User user : users) {
+            user.getFavoriteCars().removeIf(model -> model.getId().equals(id));
+            this.userRepository.save(user);
+        }
+
         this.modelRepository.deleteById(id);
     }
 

@@ -12,4 +12,6 @@ public interface UserService {
     void addToFavorites(String username, Long modelId);
 
     List<ReadModelsDTO> getFavorites(String username);
+
+    void removeFromFavorites(String username, Long modelId);
 }
