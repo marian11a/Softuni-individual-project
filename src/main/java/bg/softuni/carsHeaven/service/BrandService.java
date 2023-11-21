@@ -17,4 +17,6 @@ public interface BrandService {
     void remove(Long brandId);
 
     boolean add(ReadBrandsDTO readBrandsDTO);
+
+
 }

@@ -29,6 +29,9 @@
            sec:authorize="isAuthenticated()"
            th:href="@{/brands/all-brands}">All Brands</a>
 
+        <a class="nav-link my-text-color active h6 fade-in-down spaced-letters font-weight-light"
+           sec:authorize="isAuthenticated()"
+           th:href="@{/compare}">Compare</a>
 
         <a class="nav-link my-text-color active h6 fade-in-down spaced-letters font-weight-light"
         sec:authorize="isAuthenticated() and hasRole('ADMIN')"

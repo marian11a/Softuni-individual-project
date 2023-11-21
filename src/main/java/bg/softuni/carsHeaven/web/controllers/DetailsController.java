@@ -19,7 +19,11 @@ import java.util.List;
 @RequestMapping("/details")
 public class DetailsController {
 
-    //todo da ne moga da add detailvam bez dvigatel da sloja
+    //todo da ne moga da add detailvam bez dvigatel da sloja !!!!!!!<-------- VAJNO
+
+    //todo compare butona da go centriram i eventualno po golqm da go napravq
+
+    //todo compare stranicata da q napravq
 
     //todo kato imam favorite car i otida v detailite da ne mi pokazva add to favorites a da mi pokazva remove from favorites
 

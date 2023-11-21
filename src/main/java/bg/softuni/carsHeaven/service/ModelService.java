@@ -2,6 +2,7 @@ package bg.softuni.carsHeaven.service;
 
 
 import bg.softuni.carsHeaven.model.dtos.cars.ReadModelsDTO;
+import bg.softuni.carsHeaven.model.entity.Model;
 
 import java.util.List;
 
@@ -19,4 +20,8 @@ public interface ModelService {
     boolean edit(ReadModelsDTO readModelsDTO);
 
     Long getBrandIdByModelId(Long modelId);
+
+    List<Model> getAllModels();
+
+    List<ReadModelsDTO> getAllModelsWithDetailsByBrand(Long brandId);
 }

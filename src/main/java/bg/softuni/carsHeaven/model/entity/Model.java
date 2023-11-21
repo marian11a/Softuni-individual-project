@@ -26,7 +26,7 @@ public class Model extends BaseEntity{
     @Enumerated(EnumType.STRING)
     private CarCategory category;
 
-    @OneToMany(mappedBy = "model", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "model", cascade = CascadeType.ALL,  fetch = FetchType.EAGER)
     private List<CarData> carData;
 
     public Model() {

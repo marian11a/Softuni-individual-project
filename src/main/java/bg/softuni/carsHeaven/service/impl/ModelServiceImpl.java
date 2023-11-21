@@ -43,6 +43,7 @@ public class ModelServiceImpl implements ModelService {
         this.performanceRepository = performanceRepository;
         this.modelMapper = modelMapper;
     }
+
     @Override
     public List<ReadModelsDTO> getAllModelsByBrand(Long brandId) {
         Optional<Brand> byId = this.brandRepository.findById(brandId);
@@ -153,6 +154,25 @@ public class ModelServiceImpl implements ModelService {
         }
         Model model = byId.get();
         return model.getBrand().getId();
+    }
+
+    @Override
+    public List<Model> getAllModels() {
+        return this.modelRepository.findAll();
+    }
+
+    @Override
+    public List<ReadModelsDTO> getAllModelsWithDetailsByBrand(Long brandId) {
+        List<ReadModelsDTO> allModelsByBrand = getAllModelsByBrand(brandId);
+
+        allModelsByBrand.removeIf(
+                readModelsDTO ->
+                        this.modelRepository.findById(readModelsDTO.getId()).get().getCarData() == null
+                                ||
+                        this.modelRepository.findById(readModelsDTO.getId()).get().getCarData().isEmpty()
+        );
+
+        return allModelsByBrand;
     }
 
     private List<CarData> mapDTODetailsToCarData(ReadModelsDTO readModelsDTO, Model model) {
