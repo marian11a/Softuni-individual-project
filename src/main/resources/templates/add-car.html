@@ -32,10 +32,10 @@
                     <button type="button" class="btn btn-warning">Add new brand</button>
                 </a>
             </div>
-
+            <small th:if="${#fields.hasErrors('brandName')}"
+                   th:errors="*{brandName}" class="text-danger">Brand error message</small>
         </div>
-        <small th:if="${#fields.hasErrors('brandName')}"
-               th:errors="*{brandName}" class="text-danger">Brand error message</small>
+
 
 
         <div class="my-spacing col-12"></div>
@@ -84,8 +84,10 @@
             <div>
                 <input type="number" class="form-control" id="engineCylinders"
                        th:field="*{carData[0].engine.cylinders}" pattern="[0-9]*"
-                       oninput="this.value=this.value.replace(/[^0-9]/g,'')"/>
+                       oninput="this.value=this.value.replace(/[^0-9]/g,'')" th:errorClass="bg-danger"/>
             </div>
+            <small th:if="${#fields.hasErrors('carData[0].engine.cylinders')}"
+                   th:errors="*{carData[0].engine.cylinders}" class="text-danger">Cylinders error message</small>
         </div>
 
         <div class="my-spacing col-12"></div>
@@ -95,8 +97,10 @@
             </div>
             <div>
                 <input type="number" class="form-control" id="engineSize"
-                       th:field="*{carData[0].engine.size}" step="0.1"/>
+                       th:field="*{carData[0].engine.size}" step="0.1" th:errorClass="bg-danger"/>
             </div>
+            <small th:if="${#fields.hasErrors('carData[0].engine.size')}"
+                   th:errors="*{carData[0].engine.size}" class="text-danger">Cylinders error message</small>
         </div>
 
 

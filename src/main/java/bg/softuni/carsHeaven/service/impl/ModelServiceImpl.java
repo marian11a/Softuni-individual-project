@@ -89,7 +89,20 @@ public class ModelServiceImpl implements ModelService {
         } else {
             model.setCategory(null);
         }
-        this.modelRepository.save(model);
+
+        if (readModelsDTO.getCarData() != null || !readModelsDTO.getCarData().isEmpty()) {
+            if (readModelsDTO.getCarData().get(0).getEngine().getCylinders() == null &&
+                    readModelsDTO.getCarData().get(0).getEngine().getSize() == null) {
+                this.modelRepository.save(model);
+            } else if (readModelsDTO.getCarData().get(0).getEngine().getCylinders() != null &&
+                    readModelsDTO.getCarData().get(0).getEngine().getSize() != null) {
+                this.modelRepository.save(model);
+            } else {
+                return false;
+            }
+        } else {
+            this.modelRepository.save(model);
+        }
 
 
         List<CarData> carDataList = mapDTODetailsToCarData(readModelsDTO, model);
@@ -169,7 +182,7 @@ public class ModelServiceImpl implements ModelService {
                 readModelsDTO ->
                         this.modelRepository.findById(readModelsDTO.getId()).get().getCarData() == null
                                 ||
-                        this.modelRepository.findById(readModelsDTO.getId()).get().getCarData().isEmpty()
+                                this.modelRepository.findById(readModelsDTO.getId()).get().getCarData().isEmpty()
         );
 
         return allModelsByBrand;

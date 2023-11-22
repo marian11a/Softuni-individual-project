@@ -1,7 +1,6 @@
 package bg.softuni.carsHeaven.model.dtos.cars;
 
 import com.google.gson.annotations.SerializedName;
-
 import java.util.List;
 
 public class ReadBrandsDTO {

@@ -1,11 +1,13 @@
 package bg.softuni.carsHeaven.model.dtos.cars;
 
 import com.google.gson.annotations.SerializedName;
+import jakarta.validation.Valid;
 
 public class ReadCarDataDTO {
     private Long id;
     private Long modelId;
     @SerializedName("engine")
+    @Valid
     private ReadEngineDTO engine;
 
     @SerializedName("performance")

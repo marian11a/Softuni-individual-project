@@ -18,6 +18,7 @@ import java.util.List;
 
 @Component
 public class BrandsInit implements CommandLineRunner {
+
     private static final String BRANDS_FILE_PATH = "src/main/resources/json/car-list.json";
 
     private final BrandRepository brandRepository;
@@ -32,8 +33,10 @@ public class BrandsInit implements CommandLineRunner {
     public BrandsInit(BrandRepository brandRepository,
                       EngineRepository engineRepository,
                       CarDataRepository carDataRepository,
-                      TransmissionRepository transmissionRepository, PerformanceRepository performanceRepository,
-                      Gson gson, ModelRepository modelRepository) {
+                      TransmissionRepository transmissionRepository,
+                      PerformanceRepository performanceRepository,
+                      Gson gson,
+                      ModelRepository modelRepository) {
         this.brandRepository = brandRepository;
         this.engineRepository = engineRepository;
         this.carDataRepository = carDataRepository;

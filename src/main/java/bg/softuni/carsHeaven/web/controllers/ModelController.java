@@ -52,6 +52,7 @@ public class ModelController {
         if (bindingResult.hasErrors()) {
             return getParametersForAddingACar();
         }
+
         boolean addedSuccessfully = modelService.add(readModelsDTO);
         if (!addedSuccessfully) {
             ModelAndView modelAndView = getParametersForAddingACar();

@@ -4,20 +4,19 @@ import bg.softuni.carsHeaven.model.dtos.cars.ReadBrandsDTO;
 import bg.softuni.carsHeaven.model.entity.Brand;
 import bg.softuni.carsHeaven.repository.BrandRepository;
 import bg.softuni.carsHeaven.service.BrandService;
+import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
-
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 @Service
 public class BrandServiceImpl implements BrandService {
-
     private final BrandRepository brandRepository;
+    private final ModelMapper modelMapper;
 
-    public BrandServiceImpl(BrandRepository brandRepository) {
+    public BrandServiceImpl(BrandRepository brandRepository,
+                            ModelMapper modelMapper) {
         this.brandRepository = brandRepository;
+        this.modelMapper = modelMapper;
     }
 
     @Override
@@ -53,14 +52,12 @@ public class BrandServiceImpl implements BrandService {
     @Override
     public boolean edit(ReadBrandsDTO readBrandsDTO) {
         Optional<Brand> byId = this.brandRepository.findById(readBrandsDTO.getId());
-
         if (byId.isEmpty()) {
             return false;
         }
-
         Brand brand = byId.get();
-        brand.setImageUrl(readBrandsDTO.getImageUrl());
 
+        brand.setImageUrl(readBrandsDTO.getImageUrl());
         if (readBrandsDTO.getName() != null) {
             brand.setName(readBrandsDTO.getName());
         }
@@ -72,7 +69,6 @@ public class BrandServiceImpl implements BrandService {
     @Override
     public String getImageUrlById(Long brandId) {
         Optional<Brand> byId = this.brandRepository.findById(brandId);
-
         if (byId.isEmpty()) {
             return null;
         }
@@ -99,7 +95,8 @@ public class BrandServiceImpl implements BrandService {
     }
 
     @Override
-    public List<Brand> getAll() {
-        return this.brandRepository.findAll();
+    public List<ReadBrandsDTO> getAll() {
+        List<Brand> allBrands = this.brandRepository.findAll();
+        return Arrays.stream(this.modelMapper.map(allBrands, ReadBrandsDTO[].class)).toList();
     }
 }

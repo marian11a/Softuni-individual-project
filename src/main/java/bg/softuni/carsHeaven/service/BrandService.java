@@ -2,7 +2,6 @@ package bg.softuni.carsHeaven.service;
 
 
 import bg.softuni.carsHeaven.model.dtos.cars.ReadBrandsDTO;
-import bg.softuni.carsHeaven.model.entity.Brand;
 
 import java.util.List;
 
@@ -20,6 +19,6 @@ public interface BrandService {
     boolean add(ReadBrandsDTO readBrandsDTO);
 
 
-    List<Brand> getAll();
+    List<ReadBrandsDTO> getAll();
 
 }

@@ -42,9 +42,52 @@ public class CarDataServiceImpl implements CarDataService {
         this.modelMapper = modelMapper;
     }
 
+//    @Override
+//    public void removeById(Long detailId) {
+//        CarData carData = this.carDataRepository.findById(detailId).get();
+//        Long performanceId = carData.getPerformance().getId();
+//        Long engineId = carData.getEngine().getId();
+//        Long transmissionId = carData.getTransmission().getId();
+//        this.carDataRepository.deleteById(detailId);
+//
+//        this.performanceRepository.deleteById(performanceId);
+//        this.transmissionRepository.deleteById(transmissionId);
+//        this.engineRepository.deleteById(engineId);
+//    }
+
     @Override
     public void removeById(Long detailId) {
-        this.carDataRepository.deleteById(detailId);
+        CarData carData = this.carDataRepository.findById(detailId).orElse(null);
+
+        if (carData != null) {
+            Long performanceId = carData.getPerformance().getId();
+            Long engineId = carData.getEngine().getId();
+            Long transmissionId = carData.getTransmission().getId();
+
+            carData.setPerformance(null);
+            carData.setTransmission(null);
+            carData.setEngine(null);
+            carData.setModel(null);
+
+            this.carDataRepository.save(carData);
+
+            deleteAssociatedEntities(performanceId, engineId, transmissionId);
+            this.carDataRepository.deleteById(detailId);
+        }
+    }
+
+    private void deleteAssociatedEntities(Long performanceId, Long engineId, Long transmissionId) {
+        if (transmissionId != null) {
+            this.transmissionRepository.deleteById(transmissionId);
+        }
+
+        if (performanceId != null) {
+            this.performanceRepository.deleteById(performanceId);
+        }
+
+        if (engineId != null) {
+            this.engineRepository.deleteById(engineId);
+        }
     }
 
     @Override
@@ -61,7 +104,7 @@ public class CarDataServiceImpl implements CarDataService {
             detailsDTO.setId(d.getId());
             detailsDTO.setModelId(d.getModel().getId());
             detailsDTO.setEngine(this.modelMapper.map(d.getEngine(), ReadEngineDTO.class));
-            if (detailsDTO.getEngine() != null) {
+            if (d.getEngine() != null) {
                 if (detailsDTO.getEngine().getFuel() != null) {
                     detailsDTO.getEngine().setFuel(d.getEngine().getFuel().getDisplayName());
                 }

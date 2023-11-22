@@ -42,17 +42,15 @@
         </div>
 
         <div th:unless="${#lists.isEmpty(details)}">
-        <span class=" h1 font-weight-light spaced-words-welcome"
+        <span class="h1 font-weight-light spaced-words-welcome"
               th:text="'Engines:'"></span>
         </div>
-
-
 
         <li th:each="detail : ${details}" class="row brand-item my-3 bg-lightgrey-custom  rounded mx-auto">
             <a class="col-9 text-center my-text-color d-flex align-items-center"
                th:href="@{/details/{modelId}/{detailId}(modelId=${detail.modelId}, detailId=${detail.id})}">
                 <span th:unless="${#strings.isEmpty(detail.engine.size)}" class="text-left w-100 h1 font-weight-light spaced-words-welcome"
-                      th:text="${model.brandName} + ' ' + ${model.name} + ': ' + ${detail.engine.size} + 'L'"></span>
+                      th:text="${model.brandName} + ' ' + ${model.name} + ': ' + ${detail.engine.size} + 'L: ' + ${detail.engine.cylinders} + ' Cylinders'"></span>
 
                 <span th:if="${#strings.isEmpty(detail.engine.size)}" class="text-left w-100 h1 font-weight-light spaced-words-welcome"
                       th:text="${model.brandName} + ' ' + ${model.name}"></span>

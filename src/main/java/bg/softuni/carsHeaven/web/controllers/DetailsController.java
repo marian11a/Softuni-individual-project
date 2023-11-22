@@ -20,6 +20,7 @@ import java.util.List;
 public class DetailsController {
 
     //todo da ne moga da add detailvam bez dvigatel da sloja !!!!!!!<-------- VAJNO
+    //todo napravih gornoto sega da naoravq kat advam kola da imam opciqta da ne slagam dvigatl ama ako sloja da e s cilindri
 
     //todo compare butona da go centriram i eventualno po golqm da go napravq
 
@@ -57,7 +58,6 @@ public class DetailsController {
 
     @GetMapping("/{modelId}/add-detail")
     public ModelAndView addDetailForAModel(@ModelAttribute("readCarDataDTO") ReadCarDataDTO readCarDataDTO) {
-
         ModelAndView modelAndView = new ModelAndView("add-details-for-model");
 
         modelAndView.addObject("allFuels", FuelType.values());

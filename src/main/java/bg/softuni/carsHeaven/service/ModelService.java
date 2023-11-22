@@ -1,6 +1,5 @@
 package bg.softuni.carsHeaven.service;
 
-
 import bg.softuni.carsHeaven.model.dtos.cars.ReadModelsDTO;
 import bg.softuni.carsHeaven.model.entity.Model;
 

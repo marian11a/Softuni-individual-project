@@ -25,7 +25,7 @@
                 <a th:href="@{/details/remove/{modelId}/{detailId}(modelId=${model.id}, detailId=${detail.id})}"
                    sec:authorize="isAuthenticated() and hasRole('ADMIN')"
                    class="edit-button">
-                    <button type="button" class="btn btn-danger">Remove</button>
+                    <button type="button" class="btn btn-danger">Remove details</button>
                 </a>
             </div>
         </div>

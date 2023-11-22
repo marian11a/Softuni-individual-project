@@ -22,8 +22,10 @@
             <div>
                 <input type="number" class="form-control" id="engineCylinders"
                        th:field="*{engine.cylinders}" pattern="[0-9]*"
-                       oninput="this.value=this.value.replace(/[^0-9]/g,'')"/>
+                       oninput="this.value=this.value.replace(/[^0-9]/g,'')" th:errorClass="bg-danger"/>
             </div>
+            <small th:if="${#fields.hasErrors('engine.cylinders')}"
+                   th:errors="*{engine.cylinders}" class="text-danger">Cylinders error message</small>
         </div>
 
         <div class="my-spacing col-12"></div>
@@ -33,8 +35,10 @@
             </div>
             <div>
                 <input type="number" class="form-control" id="engineSize"
-                       th:field="*{engine.size}" step="0.1"/>
+                       th:field="*{engine.size}" step="0.1" th:errorClass="bg-danger"/>
             </div>
+            <small th:if="${#fields.hasErrors('engine.size')}"
+                   th:errors="*{engine.size}" class="text-danger">Size error message</small>
         </div>
 
         <div class="my-spacing col-12"></div>
