@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head th:replace="~{fragments/commons::head}"></head>
+<body>
+<header th:replace="~{fragments/commons::nav}"></header>
+
+<div class="row mx-1">
+    <div class="container col-6">
+        <div class="my-spacing"></div>
+        <h1 class="font-weight-bold spaced-words fade-in-up text-center text-white"
+            th:text="${model1.brandName} + ' ' + ${model1.name}">Brand and model</h1>
+        <div class="my-spacing"></div>
+        <ul th:each="detail : ${details1}" class="font-weight-bold spaced-words-welcome bg-blur rounded fade-in-down">
+
+            <div class="col-12" th:unless="${#strings.isEmpty(model1.imageUrl)}">
+                <div class="my-spacing col-12"></div>
+                <img class="img-fluid"
+                     th:src="*{model1.imageUrl}" alt="Car image" style="height: 300px;">
+                <div class="my-spacing col-12"></div>
+                <div class="my-spacing col-12"></div>
+            </div>
+
+            <div class="col-12" th:if="${#strings.isEmpty(model1.imageUrl)}">
+                <div class="my-spacing col-12"></div>
+                <img class="img-fluid"
+                     th:src="@{/images/no-image.jpg}" alt="Car image" style="height: 300px;">
+                <div class="my-spacing col-12"></div>
+                <div class="my-spacing col-12"></div>
+            </div>
+
+            <span class="h1 font-weight-light spaced-words-welcome col-12" th:text="'General information'"></span>
+
+            <li class="row my-3 bg-darkgrey-custom  rounded mx-auto">
+                <div class="col-md-6 text-left">
+                <span class="h3 font-weight-light spaced-words-welcome"
+                      th:text="'Brand name:'"></span>
+                </div>
+                <div class="col-md-6 text-right">
+                <span class="h3 font-weight-light spaced-words-welcome"
+                      th:text="${model1.brandName}"></span>
+                </div>
+                <hr class="my-3 bg-white w-100"/>
+                <div class="col-md-6 text-left">
+                <span class="h3 font-weight-light spaced-words-welcome"
+                      th:text="'Model name:'"></span>
+                </div>
+                <div class="col-md-6 text-right">
+                <span class="h3 font-weight-light spaced-words-welcome"
+                      th:text="${model1.name}"></span>
+                </div>
+                <hr class="my-3 bg-white w-100"/>
+                <div class="col-md-6 text-left">
+                <span class="h3 font-weight-light spaced-words-welcome"
+                      th:text="'Category:'"></span>
+                </div>
+                <div class="col-md-6 text-right">
+                <span class="h3 font-weight-light spaced-words-welcome"
+                      th:text="${model1.category != null ? model1.category : '-'}"></span>
+                </div>
+            </li>
+
+
+            <span class="h1 font-weight-light spaced-words-welcome col-12" th:text="'Engine'"></span>
+
+            <li class="row my-3 bg-darkgrey-custom  rounded mx-auto">
+                <div class="col-md-6 text-left">
+                <span class="h3 font-weight-light spaced-words-welcome"
+                      th:text="'Cylinders:'"></span>
+                </div>
+                <div class="col-md-6 text-right">
+                <span class="h3 font-weight-light spaced-words-welcome"
+                      th:text="${detail.engine.cylinders != null ? detail.engine.cylinders : '-'}"></span>
+                </div>
+                <hr class="my-3 bg-white w-100"/>
+                <div class="col-md-6 text-left">
+                <span class="h3 font-weight-light spaced-words-welcome"
+                      th:text="'Engine size:'"></span>
+                </div>
+                <div class="col-md-6 text-right">
+                <span class="justify-content-start h3 font-weight-light spaced-words-welcome"
+                      th:text="${detail.engine.size != null ? detail.engine.size + 'L' : '-'}"></span>
+                </div>
+                <hr class="my-3 bg-white w-100"/>
+                <div class="col-md-6 text-left">
+                <span class="h3 font-weight-light spaced-words-welcome"
+                      th:text="'Fuel type:'"></span>
+                </div>
+                <div class="col-md-6 text-right">
+                <span class="h3 font-weight-light spaced-words-welcome"
+                      th:text="${detail.engine.fuel != null ? detail.engine.fuel : '-'}"></span>
+                </div>
+                <hr class="my-3 bg-white w-100"/>
+                <div class="col-md-6 text-left">
+                <span class="h3 font-weight-light spaced-words-welcome"
+                      th:text="'Horsepower:'"></span>
+                </div>
+                <div class="col-md-6 text-right">
+                <span class="h3 font-weight-light spaced-words-welcome"
+                      th:text="${detail.engine.horsePower != null ? detail.engine.horsePower +'hp': '-'}"></span>
+                </div>
+            </li>
+
+            <div class="my-spacing col-12"></div>
+            <span class="h1 font-weight-light spaced-words-welcome col-12" th:text="'Transmission'"></span>
+            <li class="row my-3 bg-darkgrey-custom  rounded mx-auto">
+                <div class="col-md-6 text-left">
+                <span class="h3 font-weight-light spaced-words-welcome"
+                      th:text="'Transmission type:'"></span>
+                </div>
+                <div class="col-md-6 text-right">
+                <span class="h3 font-weight-light spaced-words-welcome"
+                      th:text="${detail.transmission.transmissionType != null ? detail.transmission.transmissionType : '-'}"></span>
+                </div>
+                <hr class="my-3 bg-white w-100"/>
+                <div class="col-md-7 text-left">
+                <span class="h3 font-weight-light spaced-words-welcome"
+                      th:text="'Number of gears:'"></span>
+                </div>
+                <div class="col-md-5 text-right">
+                <span class="h3 font-weight-light spaced-words-welcome"
+                      th:text="${detail.transmission.numberOfGears != null ? detail.transmission.numberOfGears : '-'}"></span>
+                </div>
+                <hr class="my-3 bg-white w-100"/>
+                <div class="col-md-6 text-left">
+                <span class="h3 font-weight-light spaced-words-welcome"
+                      th:text="'Drive type:'"></span>
+                </div>
+                <div class="col-md-6 text-right">
+                <span class="h3 font-weight-light spaced-words-welcome"
+                      th:text="${detail.transmission.driveType != null ? detail.transmission.driveType : '-'}"></span>
+                </div>
+            </li>
+
+            <div class="my-spacing col-12"></div>
+            <span class="h1 font-weight-light spaced-words-welcome col-12" th:text="'Performance'"></span>
+            <li class="row my-3 bg-darkgrey-custom  rounded mx-auto">
+                <div class="col-md-6 text-left">
+                <span class="h3 font-weight-light spaced-words-welcome"
+                      th:text="'0 to 100km/h:'"></span>
+                </div>
+                <div class="col-md-6 text-right">
+                <span class="h3 font-weight-light spaced-words-welcome"
+                      th:text="${detail.performance.acceleration != null ? detail.performance.acceleration + 's': '-'}"></span>
+                </div>
+                <hr class="my-3 bg-white w-100"/>
+                <div class="col-md-6 text-left">
+                <span class="h3 font-weight-light spaced-words-welcome"
+                      th:text="'Top Speed:'"></span>
+                </div>
+                <div class="col-md-6 text-right">
+                <span class="h3 font-weight-light spaced-words-welcome"
+                      th:text="${detail.performance.topSpeed != null ? detail.performance.topSpeed + ' km/h': '-'}"></span>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+
+    <div class="container col-6">
+        <div class="my-spacing"></div>
+        <h1 class="font-weight-bold spaced-words fade-in-up text-center text-white"
+            th:text="${model2.brandName} + ' ' + ${model2.name}">Brand and model</h1>
+        <div class="my-spacing"></div>
+        <ul th:each="detail : ${details2}" class="font-weight-bold spaced-words-welcome bg-blur rounded fade-in-down">
+
+            <div class="col-12" th:unless="${#strings.isEmpty(model2.imageUrl)}">
+                <div class="my-spacing col-12"></div>
+                <img class="img-fluid"
+                     th:src="*{model2.imageUrl}" alt="Car image" style="height: 300px;">
+                <div class="my-spacing col-12"></div>
+                <div class="my-spacing col-12"></div>
+            </div>
+
+            <div class="col-12" th:if="${#strings.isEmpty(model2.imageUrl)}">
+                <div class="my-spacing col-12"></div>
+                <img class="img-fluid"
+                     th:src="@{/images/no-image.jpg}" alt="Car image" style="height: 300px;">
+                <div class="my-spacing col-12"></div>
+                <div class="my-spacing col-12"></div>
+            </div>
+
+            <span class="h1 font-weight-light spaced-words-welcome col-12" th:text="'General information'"></span>
+
+            <li class="row my-3 bg-darkgrey-custom  rounded mx-auto">
+                <div class="col-md-6 text-left">
+                <span class="h3 font-weight-light spaced-words-welcome"
+                      th:text="'Brand name:'"></span>
+                </div>
+                <div class="col-md-6 text-right">
+                <span class="h3 font-weight-light spaced-words-welcome"
+                      th:text="${model2.brandName}"></span>
+                </div>
+                <hr class="my-3 bg-white w-100"/>
+                <div class="col-md-6 text-left">
+                <span class="h3 font-weight-light spaced-words-welcome"
+                      th:text="'Model name:'"></span>
+                </div>
+                <div class="col-md-6 text-right">
+                <span class="h3 font-weight-light spaced-words-welcome"
+                      th:text="${model2.name}"></span>
+                </div>
+                <hr class="my-3 bg-white w-100"/>
+                <div class="col-md-6 text-left">
+                <span class="h3 font-weight-light spaced-words-welcome"
+                      th:text="'Category:'"></span>
+                </div>
+                <div class="col-md-6 text-right">
+                <span class="h3 font-weight-light spaced-words-welcome"
+                      th:text="${model2.category != null ? model2.category : '-'}"></span>
+                </div>
+            </li>
+
+
+            <span class="h1 font-weight-light spaced-words-welcome col-12" th:text="'Engine'"></span>
+
+            <li class="row my-3 bg-darkgrey-custom  rounded mx-auto">
+                <div class="col-md-6 text-left">
+                <span class="h3 font-weight-light spaced-words-welcome"
+                      th:text="'Cylinders:'"></span>
+                </div>
+                <div class="col-md-6 text-right">
+                <span class="h3 font-weight-light spaced-words-welcome"
+                      th:text="${detail.engine.cylinders != null ? detail.engine.cylinders : '-'}"></span>
+                </div>
+                <hr class="my-3 bg-white w-100"/>
+                <div class="col-md-6 text-left">
+                <span class="h3 font-weight-light spaced-words-welcome"
+                      th:text="'Engine size:'"></span>
+                </div>
+                <div class="col-md-6 text-right">
+                <span class="justify-content-start h3 font-weight-light spaced-words-welcome"
+                      th:text="${detail.engine.size != null ? detail.engine.size + 'L' : '-'}"></span>
+                </div>
+                <hr class="my-3 bg-white w-100"/>
+                <div class="col-md-6 text-left">
+                <span class="h3 font-weight-light spaced-words-welcome"
+                      th:text="'Fuel type:'"></span>
+                </div>
+                <div class="col-md-6 text-right">
+                <span class="h3 font-weight-light spaced-words-welcome"
+                      th:text="${detail.engine.fuel != null ? detail.engine.fuel : '-'}"></span>
+                </div>
+                <hr class="my-3 bg-white w-100"/>
+                <div class="col-md-6 text-left">
+                <span class="h3 font-weight-light spaced-words-welcome"
+                      th:text="'Horsepower:'"></span>
+                </div>
+                <div class="col-md-6 text-right">
+                <span class="h3 font-weight-light spaced-words-welcome"
+                      th:text="${detail.engine.horsePower != null ? detail.engine.horsePower +'hp': '-'}"></span>
+                </div>
+            </li>
+
+            <div class="my-spacing col-12"></div>
+            <span class="h1 font-weight-light spaced-words-welcome col-12" th:text="'Transmission'"></span>
+            <li class="row my-3 bg-darkgrey-custom  rounded mx-auto">
+                <div class="col-md-6 text-left">
+                <span class="h3 font-weight-light spaced-words-welcome"
+                      th:text="'Transmission type:'"></span>
+                </div>
+                <div class="col-md-6 text-right">
+                <span class="h3 font-weight-light spaced-words-welcome"
+                      th:text="${detail.transmission.transmissionType != null ? detail.transmission.transmissionType : '-'}"></span>
+                </div>
+                <hr class="my-3 bg-white w-100"/>
+                <div class="col-md-7 text-left">
+                <span class="h3 font-weight-light spaced-words-welcome"
+                      th:text="'Number of gears:'"></span>
+                </div>
+                <div class="col-md-5 text-right">
+                <span class="h3 font-weight-light spaced-words-welcome"
+                      th:text="${detail.transmission.numberOfGears != null ? detail.transmission.numberOfGears : '-'}"></span>
+                </div>
+                <hr class="my-3 bg-white w-100"/>
+                <div class="col-md-6 text-left">
+                <span class="h3 font-weight-light spaced-words-welcome"
+                      th:text="'Drive type:'"></span>
+                </div>
+                <div class="col-md-6 text-right">
+                <span class="h3 font-weight-light spaced-words-welcome"
+                      th:text="${detail.transmission.driveType != null ? detail.transmission.driveType : '-'}"></span>
+                </div>
+            </li>
+
+            <div class="my-spacing col-12"></div>
+            <span class="h1 font-weight-light spaced-words-welcome col-12" th:text="'Performance'"></span>
+            <li class="row my-3 bg-darkgrey-custom  rounded mx-auto">
+                <div class="col-md-6 text-left">
+                <span class="h3 font-weight-light spaced-words-welcome"
+                      th:text="'0 to 100km/h:'"></span>
+                </div>
+                <div class="col-md-6 text-right">
+                <span class="h3 font-weight-light spaced-words-welcome"
+                      th:text="${detail.performance.acceleration != null ? detail.performance.acceleration + 's': '-'}"></span>
+                </div>
+                <hr class="my-3 bg-white w-100"/>
+                <div class="col-md-6 text-left">
+                <span class="h3 font-weight-light spaced-words-welcome"
+                      th:text="'Top Speed:'"></span>
+                </div>
+                <div class="col-md-6 text-right">
+                <span class="h3 font-weight-light spaced-words-welcome"
+                      th:text="${detail.performance.topSpeed != null ? detail.performance.topSpeed + ' km/h': '-'}"></span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<footer th:replace="~{fragments/commons::footer}"></footer>
+</body>
+</html>
