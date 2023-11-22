@@ -171,6 +171,16 @@ public class CarDataServiceImpl implements CarDataService {
         }
     }
 
+    @Override
+    public ReadCarDataDTO getDetailsById(Long detail1Id) {
+        Optional<CarData> byId = this.carDataRepository.findById(detail1Id);
+        if (byId.isEmpty()) {
+            return null;
+        }
+        CarData carData = byId.get();
+        return getDetailsForModelByDetailId(carData.getModel().getId(), detail1Id);
+    }
+
     private void mapToEngine(ReadCarDataDTO readCarDataDTO, Engine engine) {
         if (readCarDataDTO.getEngine().getFuel() != null) {
             Arrays.stream(FuelType.values())

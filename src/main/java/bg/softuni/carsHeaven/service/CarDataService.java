@@ -16,4 +16,6 @@ public interface CarDataService {
     void removeById(Long detailId);
 
     boolean editDetail(Long detailId, ReadCarDataDTO readCarDataDTO);
+
+    ReadCarDataDTO getDetailsById(Long detail1Id);
 }

@@ -1,8 +1,10 @@
 package bg.softuni.carsHeaven.service.impl;
 
 import bg.softuni.carsHeaven.model.dtos.cars.ReadModelsDTO;
+import bg.softuni.carsHeaven.model.dtos.users.UserDTO;
 import bg.softuni.carsHeaven.model.dtos.users.UserRegisterDTO;
 import bg.softuni.carsHeaven.model.entity.Model;
+import bg.softuni.carsHeaven.model.entity.Role;
 import bg.softuni.carsHeaven.model.entity.User;
 import bg.softuni.carsHeaven.model.enums.RoleEnum;
 import bg.softuni.carsHeaven.repository.ModelRepository;
@@ -108,5 +110,25 @@ public class UserServiceImpl implements UserService {
         favoriteCars.removeIf(model -> Objects.equals(model.getId(), modelId));
         user.setFavoriteCars(favoriteCars);
         this.userRepository.save(user);
+    }
+
+    @Override
+    public List<UserDTO> getAll() {
+        List<UserDTO> userDTOS = Arrays
+                .stream(this.modelMapper.map(this.userRepository.findAll(), UserDTO[].class))
+                .toList();
+
+        populateRolesColumn(userDTOS);
+        return userDTOS;
+    }
+
+    private void populateRolesColumn(List<UserDTO> userDTOS) {
+        for (UserDTO userDTO : userDTOS) {
+            List<RoleEnum> roles = new ArrayList<>();
+            for (Role role : this.userRepository.findByUsername(userDTO.getUsername()).getRoles()) {
+                roles.add(role.getRole());
+            }
+            userDTO.setRoles(roles);
+        }
     }
 }

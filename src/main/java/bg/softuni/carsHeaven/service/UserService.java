@@ -2,6 +2,7 @@ package bg.softuni.carsHeaven.service;
 
 
 import bg.softuni.carsHeaven.model.dtos.cars.ReadModelsDTO;
+import bg.softuni.carsHeaven.model.dtos.users.UserDTO;
 import bg.softuni.carsHeaven.model.dtos.users.UserRegisterDTO;
 
 import java.util.List;
@@ -14,4 +15,6 @@ public interface UserService {
     List<ReadModelsDTO> getFavorites(String username);
 
     void removeFromFavorites(String username, Long modelId);
+
+    List<UserDTO> getAll();
 }
