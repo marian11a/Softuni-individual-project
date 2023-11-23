@@ -1,5 +1,6 @@
 package bg.softuni.carsHeaven.web.controllers;
 
+import bg.softuni.carsHeaven.model.dtos.users.UserDTO;
 import bg.softuni.carsHeaven.model.dtos.users.UserRegisterDTO;
 import bg.softuni.carsHeaven.service.UserService;
 import jakarta.validation.Valid;
@@ -12,6 +13,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
+
+import java.util.List;
 
 @Controller
 public class UserController {
@@ -71,5 +74,13 @@ public class UserController {
             return new ModelAndView("redirect:/login");
         }
         return new ModelAndView("redirect:/home");
+    }
+
+    @GetMapping("/users/all-users")
+    public ModelAndView allUsers() {
+        List<UserDTO> allUsers = this.userService.getAll();
+        ModelAndView modelAndView = new ModelAndView("all-users");
+        modelAndView.addObject("allUsers", allUsers);
+        return modelAndView;
     }
 }

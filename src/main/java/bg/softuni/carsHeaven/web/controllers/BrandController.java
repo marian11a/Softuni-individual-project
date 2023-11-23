@@ -23,8 +23,6 @@ public class BrandController {  //todo alt-enter create test
 
     @GetMapping("/all-brands")
     public ModelAndView allBrands() {
-
-
         List<ReadBrandsDTO> allBrands = this.brandService.getAllBrands();
         return new ModelAndView("all-brands", "allBrands", allBrands);
     }

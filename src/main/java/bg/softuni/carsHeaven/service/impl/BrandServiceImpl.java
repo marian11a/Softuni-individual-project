@@ -21,17 +21,7 @@ public class BrandServiceImpl implements BrandService {
 
     @Override
     public List<ReadBrandsDTO> getAllBrands() {
-        List<ReadBrandsDTO> allBrandsDTO = new ArrayList<>();
-
-
-        brandRepository.findAll().forEach(brand -> {
-            ReadBrandsDTO readBrandsDTO = new ReadBrandsDTO();
-            readBrandsDTO.setName(brand.getName());
-            readBrandsDTO.setId(brand.getId());
-            readBrandsDTO.setImageUrl(brand.getImageUrl());
-            allBrandsDTO.add(readBrandsDTO);
-        });
-
+        List<ReadBrandsDTO> allBrandsDTO = this.brandRepository.findAllBrands();
         allBrandsDTO.sort(Comparator.comparing(ReadBrandsDTO::getName));
         return allBrandsDTO;
     }
@@ -56,12 +46,10 @@ public class BrandServiceImpl implements BrandService {
             return false;
         }
         Brand brand = byId.get();
-
         brand.setImageUrl(readBrandsDTO.getImageUrl());
         if (readBrandsDTO.getName() != null) {
             brand.setName(readBrandsDTO.getName());
         }
-
         this.brandRepository.save(brand);
         return true;
     }

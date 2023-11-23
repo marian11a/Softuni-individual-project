@@ -1,6 +1,8 @@
 package bg.softuni.carsHeaven.model.dtos.cars;
 
 import com.google.gson.annotations.SerializedName;
+import org.springframework.data.jpa.repository.Query;
+
 import java.util.List;
 
 public class ReadBrandsDTO {
@@ -14,6 +16,15 @@ public class ReadBrandsDTO {
     private List<ReadModelsDTO> models;
 
     private String imageUrl;
+
+    public ReadBrandsDTO() {
+    }
+
+    public ReadBrandsDTO(Long id, String name, String imageUrl) {
+        this.id = id;
+        this.name = name;
+        this.imageUrl = imageUrl;
+    }
 
     public String getImageUrl() {
         return imageUrl;

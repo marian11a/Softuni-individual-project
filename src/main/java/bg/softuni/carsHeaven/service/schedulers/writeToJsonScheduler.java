@@ -12,6 +12,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Component
@@ -29,7 +30,7 @@ public class writeToJsonScheduler {
         this.brandService = brandService;
     }
 
-    @Scheduled(cron = "0 30 13,21 * * *")
+    @Scheduled(cron = "0 30 12,20 * * *")
     public void userScheduler() {
         List<UserDTO> users = this.userService.getAll();
         try {
@@ -42,14 +43,14 @@ public class writeToJsonScheduler {
             Path filePath = jsonFolderPath.resolve("scheduled-users-list.json");
             try (FileWriter writer = new FileWriter(filePath.toFile())) {
                 this.gson.toJson(users, writer);
-                System.out.println("JSON data written to file at: " + System.currentTimeMillis());
+                System.out.println("JSON data written to file at: " + LocalDateTime.now());
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    @Scheduled(cron = "0 30 13,21 * * *")
+    @Scheduled(cron = "0 30 12,20 * * *")
     public void carsScheduler() {
         List<ReadBrandsDTO> brands = this.brandService.getAll();
         try {
@@ -62,7 +63,7 @@ public class writeToJsonScheduler {
             Path filePath = jsonFolderPath.resolve("scheduled-cars-list.json");
             try (FileWriter writer = new FileWriter(filePath.toFile())) {
                 this.gson.toJson(brands, writer);
-                System.out.println("JSON data written to file at: " + System.currentTimeMillis());
+                System.out.println("JSON data written to file at: " + LocalDateTime.now());
             }
         } catch (IOException e) {
             e.printStackTrace();

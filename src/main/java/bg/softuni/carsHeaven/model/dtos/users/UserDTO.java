@@ -1,6 +1,5 @@
 package bg.softuni.carsHeaven.model.dtos.users;
 
-import bg.softuni.carsHeaven.model.entity.Role;
 import bg.softuni.carsHeaven.model.enums.RoleEnum;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
@@ -10,6 +9,7 @@ import java.util.List;
 
 public class UserDTO {
 
+    private Long id;
     @Size(min = 3, max = 20, message = "Username length must be between 3 and 20 characters!")
     private String username;
 
@@ -21,6 +21,14 @@ public class UserDTO {
     private String password;
 
     private List<RoleEnum> roles;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public List<RoleEnum> getRoles() {
         return roles;

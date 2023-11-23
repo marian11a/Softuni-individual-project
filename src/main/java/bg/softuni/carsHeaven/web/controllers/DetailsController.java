@@ -43,26 +43,21 @@ public class DetailsController {
 
     @GetMapping("/{modelId}")
     public ModelAndView allDetailsForModel(@PathVariable("modelId") Long modelId) {
-
         ModelAndView modelAndView = new ModelAndView("all-details-for-model");
         List<ReadCarDataDTO> allDetailsForModel = this.carDataService.getAllDetailsForModel(modelId);
-
         ReadModelsDTO modelById = this.modelService.getModelById(modelId);
         Long brandId = this.modelService.getBrandIdByModelId(modelId);
+
         modelAndView.addObject("model", modelById);
         modelAndView.addObject("brandId1", brandId);
         modelAndView.addObject("details", allDetailsForModel);
-
         return modelAndView;
     }
 
     @GetMapping("/{modelId}/add-detail")
     public ModelAndView addDetailForAModel(@ModelAttribute("readCarDataDTO") ReadCarDataDTO readCarDataDTO) {
         ModelAndView modelAndView = new ModelAndView("add-details-for-model");
-
-        modelAndView.addObject("allFuels", FuelType.values());
-        modelAndView.addObject("allTransmissionTypes", TransmissionType.values());
-        modelAndView.addObject("allDriveTypes", DriveType.values());
+        addFuelTransmissionAndDriveTypesToObjects(modelAndView);
         return modelAndView;
     }
 
@@ -74,6 +69,7 @@ public class DetailsController {
         if (bindingResult.hasErrors()) {
             ModelAndView modelAndView = new ModelAndView("add-details-for-model");
             modelAndView.addObject("modelId", modelId);
+            addFuelTransmissionAndDriveTypesToObjects(modelAndView);
             return modelAndView;
         }
         boolean addedSuccessfully = this.carDataService.addDetailsForModel(modelId, readCarDataDTO);
@@ -88,14 +84,11 @@ public class DetailsController {
     @GetMapping("/{modelId}/{detailId}")
     public ModelAndView detail(@PathVariable("modelId") Long modelId,
                                @PathVariable("detailId") Long detailId) {
-
         ModelAndView modelAndView = new ModelAndView("details");
         ReadCarDataDTO details = this.carDataService.getDetailsForModelByDetailId(modelId, detailId);
-
         ReadModelsDTO readModelsDTO = this.modelService.getModelById(modelId);
         modelAndView.addObject("model", readModelsDTO);
         modelAndView.addObject("details", details);
-
         return modelAndView;
     }
 
@@ -108,14 +101,11 @@ public class DetailsController {
     @GetMapping("/{modelId}/edit-detail/{detailId}")
     public ModelAndView editDetail(@PathVariable("detailId") Long detailId,
                                    @PathVariable("modelId") Long modelId) {
-
         ModelAndView modelAndView = new ModelAndView("edit-detail");
         ReadCarDataDTO readCarDataDTO = this.carDataService.getDetailsForModelByDetailId(modelId, detailId);
 
         modelAndView.addObject("readCarDataDTO", readCarDataDTO);
-        modelAndView.addObject("allFuels", FuelType.values());
-        modelAndView.addObject("allTransmissionTypes", TransmissionType.values());
-        modelAndView.addObject("allDriveTypes", DriveType.values());
+        addFuelTransmissionAndDriveTypesToObjects(modelAndView);
         return modelAndView;
     }
 
@@ -124,9 +114,9 @@ public class DetailsController {
                                    @PathVariable("detailId") Long detailId,
                                    @ModelAttribute("readCarDataDTO") @Valid ReadCarDataDTO readCarDataDTO,
                                    BindingResult bindingResult) {
-
         if (bindingResult.hasErrors()) {
             ModelAndView modelAndView = new ModelAndView("edit-detail");
+            addFuelTransmissionAndDriveTypesToObjects(modelAndView);
             modelAndView.addObject("modelId", modelId);
             modelAndView.addObject("detailId", detailId);
             return modelAndView;
@@ -136,9 +126,16 @@ public class DetailsController {
             ModelAndView modelAndView = new ModelAndView("edit-detail");
             modelAndView.addObject("modelId", modelId);
             modelAndView.addObject("detailId", detailId);
+            addFuelTransmissionAndDriveTypesToObjects(modelAndView);
             modelAndView.addObject("hasEditErrors", true);
             return modelAndView;
         }
         return new ModelAndView("redirect:/details/{modelId}/{detailId}");
+    }
+
+    private void addFuelTransmissionAndDriveTypesToObjects(ModelAndView modelAndView) {
+        modelAndView.addObject("allFuels", FuelType.values());
+        modelAndView.addObject("allTransmissionTypes", TransmissionType.values());
+        modelAndView.addObject("allDriveTypes", DriveType.values());
     }
 }

@@ -8,7 +8,6 @@
         "id": 1,
         "brandName": "Seat",
         "category": "SUV",
-        "imageUrl": "https://cdn3.focus.bg/autodata/i/seat/alhambra/alhambra-7ms/large/bc97db79ee3270f8387462243497a122.jpg",
         "carData": [
           {
             "id": 1,
@@ -16,32 +15,30 @@
             "engine": {
               "cylinders": 4,
               "size": 2.0,
+              "fuel": "DIESEL",
               "horsePower": 150
             },
             "performance": {
               "acceleration": 10.0,
               "topSpeed": 130
             },
-            "transmission": {}
+            "transmission": {
+              "transmissionType": "SEMI_AUTOMATIC",
+              "driveType": "FWD"
+            }
           },
           {
             "id": 269,
             "modelId": 1,
             "engine": {
               "cylinders": 4,
-              "size": 1.9,
-              "fuel": "DIESEL",
-              "horsePower": 101
+              "size": 1.8,
+              "fuel": "GASOLINE"
             },
             "performance": {
-              "acceleration": 8.4,
-              "topSpeed": 250
+              "topSpeed": 180
             },
-            "transmission": {
-              "transmissionType": "MANUAL",
-              "numberOfGears": 5,
-              "driveType": "FWD"
-            }
+            "transmission": {}
           }
         ]
       },

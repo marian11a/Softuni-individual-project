@@ -39,6 +39,18 @@ public class ApiRestController {
         return ResponseEntity.ok("Model removed successfully");
     }
 
+    @PostMapping("/make-admin")
+    public ResponseEntity<String> makeAdmin(@RequestParam Long userId) {
+        this.userService.makeAdmin(userId);
+        return ResponseEntity.ok("User is now ADMIN!");
+    }
+
+    @PostMapping("/remove-admin")
+    public ResponseEntity<String> remove(@RequestParam Long userId) {
+        this.userService.removeAdmin(userId);
+        return ResponseEntity.ok("User is now not an ADMIN!");
+    }
+
     @PostMapping("/add-to-favorites")
     public ResponseEntity<String> addToFavorites(@RequestParam Long modelId) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();

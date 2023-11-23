@@ -122,6 +122,31 @@ public class UserServiceImpl implements UserService {
         return userDTOS;
     }
 
+    @Override
+    public void makeAdmin(Long userId) {
+        Optional<User> byId = this.userRepository.findById(userId);
+        if (byId.isPresent()) {
+            List<Role> roles = byId.get().getRoles();
+            if (roles.size() <= 1) {
+                User user = this.userRepository.findById(userId)
+                        .get();
+                user.setRoles(this.rolesRepository.findAll());
+                this.userRepository.save(user);
+            }
+        }
+    }
+
+    @Override
+    public void removeAdmin(Long userId) {
+        Optional<User> byId = this.userRepository.findById(userId);
+        if (byId.isPresent()) {
+            User user = this.userRepository.findById(userId).get();
+            user.setRoles(List.of(this.rolesRepository.findByRole(RoleEnum.USER)));
+            this.userRepository.save(user);
+
+        }
+    }
+
     private void populateRolesColumn(List<UserDTO> userDTOS) {
         for (UserDTO userDTO : userDTOS) {
             List<RoleEnum> roles = new ArrayList<>();

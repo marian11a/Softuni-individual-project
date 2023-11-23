@@ -5,9 +5,11 @@
 <header th:replace="~{fragments/commons::nav}"></header>
 
 <div class="container">
-    <div class="my-spacing"></div>
-
     <div class="row d-flex justify-content-center">
+
+        <div class="col-12 text-center text-white" style="padding-top: 2%; padding-bottom: 3%;">
+            <h1 class="font-weight-bold spaced-words-welcome fade-in">Welcome to Cars Heaven</h1>
+        </div>
 
         <div class="col-md-3 fade-in-up">
             <a th:href="@{/brands/all-brands}" class="card-link">
@@ -70,6 +72,21 @@
                              alt="Favorites Icon"
                              class="img-fluid my-home-card-img"
                              style="padding-top: 30%;">
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-md-12 fade-in-up" style="padding-top: 2%">
+            <a th:href="@{/users/all-users}" class="card-link">
+                <div class="custom-card bg-all-users-home my-text-color spaced-words">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">All Users</h5>
+                        <p class="card-text font-weight-light">Only for admins</p>
+                        <img th:src="@{/images/users.png}"
+                             alt="Favorites Icon"
+                             class="img-fluid my-home-card-img"
+                             style="padding-top: 5%;">
                     </div>
                 </div>
             </a>

@@ -17,4 +17,8 @@ public interface UserService {
     void removeFromFavorites(String username, Long modelId);
 
     List<UserDTO> getAll();
+
+    void makeAdmin(Long userId);
+
+    void removeAdmin(Long userId);
 }

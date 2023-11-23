@@ -1,8 +1,6 @@
 package bg.softuni.carsHeaven.service;
 
-
 import bg.softuni.carsHeaven.model.dtos.cars.ReadBrandsDTO;
-
 import java.util.List;
 
 public interface BrandService {

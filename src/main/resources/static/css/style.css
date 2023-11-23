@@ -227,7 +227,7 @@ footer {
 }
 
 .bg-all-brands-home {
-    background: linear-gradient(270deg, #088026f7, #000000d6);
+    background: linear-gradient(270deg, #08348ff7, #010118d6);
     -webkit-backdrop-filter: blur(10px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
     border: 1px;
@@ -236,6 +236,20 @@ footer {
 }
 
 .bg-all-brands-home:hover {
+    background: linear-gradient(270deg, #0f47baf7, #010118d6);
+    color: white;
+}
+
+.bg-all-users-home {
+    background: linear-gradient(270deg, #088026f7, #000000d6);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+    border: 1px;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+}
+
+.bg-all-users-home:hover {
     background: linear-gradient(270deg, #069129, #000000d6);
     color: white;
 }
@@ -431,6 +445,13 @@ li:hover {
     width: 100%;
     height: auto;
     filter: brightness(0) invert(1)
+}
+
+.bg-warning {
+    color: #212529;
+    background: linear-gradient(to bottom right, #efa747, #f5843c);
+    border-radius: 6px;
+    border: none;
 }
 
 .btn-warning {
