@@ -24,6 +24,9 @@
            sec:authorize="isAuthenticated()"
            th:href="@{/home}">Cars Heaven</a>
 
+        <a class="nav-link my-text-color active h6 fade-in-down spaced-letters font-weight-light"
+           sec:authorize="isAuthenticated()"
+           th:href="@{/users/profile}">Profile</a>
 
         <a class="nav-link my-text-color active h6 fade-in-down spaced-letters font-weight-light"
            sec:authorize="isAuthenticated()"
@@ -32,6 +35,10 @@
         <a class="nav-link my-text-color active h6 fade-in-down spaced-letters font-weight-light"
            sec:authorize="isAuthenticated()"
            th:href="@{/compare}">Compare</a>
+
+        <a class="nav-link my-text-color active h6 fade-in-down spaced-letters font-weight-light"
+           sec:authorize="isAuthenticated()"
+           th:href="@{/favorites}">Favorites</a>
 
         <a class="nav-link my-text-color active h6 fade-in-down spaced-letters font-weight-light"
         sec:authorize="isAuthenticated() and hasRole('ADMIN')"
