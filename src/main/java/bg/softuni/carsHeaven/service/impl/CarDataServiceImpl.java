@@ -41,20 +41,6 @@ public class CarDataServiceImpl implements CarDataService {
         this.transmissionRepository = transmissionRepository;
         this.modelMapper = modelMapper;
     }
-
-//    @Override
-//    public void removeById(Long detailId) {
-//        CarData carData = this.carDataRepository.findById(detailId).get();
-//        Long performanceId = carData.getPerformance().getId();
-//        Long engineId = carData.getEngine().getId();
-//        Long transmissionId = carData.getTransmission().getId();
-//        this.carDataRepository.deleteById(detailId);
-//
-//        this.performanceRepository.deleteById(performanceId);
-//        this.transmissionRepository.deleteById(transmissionId);
-//        this.engineRepository.deleteById(engineId);
-//    }
-
     @Override
     public void removeById(Long detailId) {
         CarData carData = this.carDataRepository.findById(detailId).orElse(null);
@@ -77,17 +63,9 @@ public class CarDataServiceImpl implements CarDataService {
     }
 
     private void deleteAssociatedEntities(Long performanceId, Long engineId, Long transmissionId) {
-        if (transmissionId != null) {
-            this.transmissionRepository.deleteById(transmissionId);
-        }
-
-        if (performanceId != null) {
-            this.performanceRepository.deleteById(performanceId);
-        }
-
-        if (engineId != null) {
-            this.engineRepository.deleteById(engineId);
-        }
+        if (transmissionId != null) { this.transmissionRepository.deleteById(transmissionId);}
+        if (performanceId != null) { this.performanceRepository.deleteById(performanceId);}
+        if (engineId != null) {this.engineRepository.deleteById(engineId);}
     }
 
     @Override

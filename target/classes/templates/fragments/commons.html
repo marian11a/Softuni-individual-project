@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Cars Heaven</title>
+    <link rel="stylesheet" href="/css/reset-css.css"/>
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/style.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg bg-nav ">
+
+        <a class="nav-link my-text-color active h4 fade-in spaced-words mx-1"
+           sec:authorize="!isAuthenticated()"
+           th:href="@{/}">Cars Heaven</a>
+
+        <a class="nav-link my-text-color active h4 fade-in spaced-words mx-1"
+           sec:authorize="isAuthenticated()"
+           th:href="@{/home}">Cars Heaven</a>
+
+
+        <a class="nav-link my-text-color active h6 fade-in-down spaced-letters font-weight-light"
+           sec:authorize="isAuthenticated()"
+           th:href="@{/brands/all-brands}">All Brands</a>
+
+        <a class="nav-link my-text-color active h6 fade-in-down spaced-letters font-weight-light"
+           sec:authorize="isAuthenticated()"
+           th:href="@{/compare}">Compare</a>
+
+        <a class="nav-link my-text-color active h6 fade-in-down spaced-letters font-weight-light"
+        sec:authorize="isAuthenticated() and hasRole('ADMIN')"
+        th:href="@{/models/add-car}">Add car</a>
+
+        <a class="nav-link my-text-color active h6 fade-in-down spaced-letters font-weight-light"
+           sec:authorize="isAuthenticated() and hasRole('ADMIN')"
+           th:href="@{/users/all-users}">All users</a>
+
+
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
+            <ul class="navbar-nav row">
+                <li class="nav-item col-md-4 fade-in-down spaced-letters mx-3">
+                    <a class="nav-link active h6 my-text-color font-weight-light"
+                       sec:authorize="!isAuthenticated()"
+                       th:href="@{/login}">Login</a>
+                </li>
+
+
+                <li class="nav-item col-md-4 fade-in-down spaced-letters" style="padding-left: 5%;">
+                    <a class="nav-link my-text-color active h6 font-weight-light"
+                       sec:authorize="!isAuthenticated()"
+                       th:href="@{/register}">Register</a>
+                </li>
+
+                <li class="nav-item col-md-4" style="padding-left: 40%;"
+                    sec:authorize="isAuthenticated()">
+                    <form th:action="@{/logout}"
+                          th:method="POST">
+                        <button type="submit"
+                                class="btn-link nav-link my-text-color active h6 logout fade-in-down spaced-words font-weight-light">Logout</button>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<footer class="footer bg-transparent  py-2 fade-in-up">
+    <div class="container-fluid text-center">
+        <div class="footer-background h5 my-text-color h4 font-weight-light spaced-words-footer">
+            &copy;Marian11a-softuni 2023 | All rights reserved.
+        </div>
+    </div>
+</footer>
+</body>
+</html>

@@ -10,7 +10,6 @@ public class CarsHeavenApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(CarsHeavenApplication.class, args);
-		//changed repo test asdfasfdf
 	}
 
 }

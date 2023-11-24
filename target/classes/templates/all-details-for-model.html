@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head th:replace="~{fragments/commons::head}"></head>
+<body>
+<header th:replace="~{fragments/commons::nav}"></header>
+
+<div class="container">
+    <h1 class="font-weight-bold spaced-words fade-in-up text-center text-white" style="padding-top: 4%; padding-bottom: 4%;"
+        th:text="${model.brandName} + ' ' + ${model.name}">Brand and model
+    </h1>
+    <ul class="font-weight-bold spaced-words-welcome bg-blur3 rounded fade-in-down">
+        <div class="row">
+            <div class="col-12 d-flex justify-content-end">
+                <a th:attr="onclick='addToFavorites(\'' + ${model.id} + '\')'"
+                   class="edit-button">
+                    <button type="button" class="btn btn-warning">Add to favorites</button>
+                </a>
+                <a th:href="@{/details/{modelId}/add-detail(modelId=${model.id})}"
+                   sec:authorize="isAuthenticated() and hasRole('ADMIN')"
+                   class="edit-button mx-3">
+                    <button type="button" class="btn btn-warning">Add Details</button>
+                </a>
+                <a th:href="@{/models/remove/{brandId}/{modelId}(brandId=${brandId1}, modelId=${model.id})}"
+                   sec:authorize="isAuthenticated() and hasRole('ADMIN')"
+                   class="edit-button">
+                    <button type="button" class="btn btn-danger">Remove</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-12" th:unless="${#strings.isEmpty(model.imageUrl)}">
+            <div class="my-spacing col-12"></div>
+            <img class="img-fluid"
+                 th:src="*{model.imageUrl}" alt="Car image">
+            <div class="my-spacing col-12"></div>
+            <div class="my-spacing col-12"></div>
+        </div>
+
+        <div th:if="${#lists.isEmpty(details)}" style="padding-top: 4%; padding-bottom: 7%;">
+            <span class=" h1 font-weight-light spaced-words"
+              th:text="'There are currently no details for this model'"></span>
+        </div>
+
+        <div th:unless="${#lists.isEmpty(details)}">
+        <span class="h1 font-weight-light spaced-words-welcome"
+              th:text="'Engines:'"></span>
+        </div>
+
+        <li th:each="detail : ${details}" class="row brand-item my-3 bg-lightgrey-custom  rounded mx-auto">
+            <a class="col-9 text-center my-text-color d-flex align-items-center"
+               th:href="@{/details/{modelId}/{detailId}(modelId=${detail.modelId}, detailId=${detail.id})}">
+                <span th:unless="${#strings.isEmpty(detail.engine.size)}" class="text-left w-100 h1 font-weight-light spaced-words-welcome"
+                      th:text="${model.brandName} + ' ' + ${model.name} + ': ' + ${detail.engine.size} + 'L: ' + ${detail.engine.cylinders} + ' Cylinders'"></span>
+
+                <span th:if="${#strings.isEmpty(detail.engine.size)}" class="text-left w-100 h1 font-weight-light spaced-words-welcome"
+                      th:text="${model.brandName} + ' ' + ${model.name}"></span>
+
+            </a>
+        </li>
+    </ul>
+</div>
+
+<footer th:replace="~{fragments/commons::footer}"></footer>
+
+<script th:src="@{/js/addToFavorites.js}"></script>
+</body>
+</html>

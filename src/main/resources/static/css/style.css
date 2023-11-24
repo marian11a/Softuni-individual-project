@@ -130,6 +130,10 @@ footer {
     height: 400px;
 }
 
+.custom-card-2 {
+    height: 200px;
+}
+
 .card:hover {
     background-color: rgba(0, 0, 0, 0.8);
     transition: 0.5s;
@@ -473,4 +477,8 @@ li:hover {
     background: linear-gradient(to bottom right, #d51123, #a50716);
     border-radius: 6px;
     border: none;
+}
+
+.compare-button-height {
+    height: 80px;
 }

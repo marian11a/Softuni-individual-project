@@ -104,17 +104,14 @@ public class ModelServiceImpl implements ModelService {
             this.modelRepository.save(model);
         }
 
-
         List<CarData> carDataList = mapDTODetailsToCarData(readModelsDTO, model);
         model.setCarData(carDataList);
         this.modelRepository.save(model);
         return true;
     }
 
-
     @Override
     public ReadModelsDTO getModelById(Long modelId) {
-
         Optional<Model> byId = this.modelRepository.findById(modelId);
         if (byId.isPresent()) {
             Model model = byId.get();
@@ -139,7 +136,14 @@ public class ModelServiceImpl implements ModelService {
             this.userRepository.save(user);
         }
 
-        this.modelRepository.deleteById(id);
+        Optional<Model> byId = this.modelRepository.findById(id);
+        if (byId.isPresent()) {
+            Model model = byId.get();
+            model.setCarData(null);
+            model.setBrand(null);
+            this.modelRepository.save(model);
+            this.modelRepository.deleteById(id);
+        }
     }
 
     @Override
@@ -154,6 +158,10 @@ public class ModelServiceImpl implements ModelService {
         if (readModelsDTO.getName() != null) {
             model.setName(readModelsDTO.getName());
         }
+
+        Arrays.stream(CarCategory.values())
+                .filter(value -> value.getDisplayName().equalsIgnoreCase(readModelsDTO.getCategory()))
+                .forEach(model::setCategory);
 
         this.modelRepository.save(model);
         return true;

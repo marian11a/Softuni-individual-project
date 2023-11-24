@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head th:replace="~{fragments/commons::head}"></head>
+<body>
+<header th:replace="~{fragments/commons::nav}"></header>
+
+<div class="container">
+    <h1 class="font-weight-bold spaced-words fade-in-up text-center text-white"
+        style="padding-top: 4%; padding-bottom: 4%;">Favorites</h1>
+
+    <ul class="font-weight-bold spaced-words-welcome bg-blur3 rounded fade-in-down">
+
+        <div th:if="${#lists.isEmpty(userFavoriteModels)}" style="padding-top: 6%; padding-bottom: 6%;">
+            <span class="h1 font-weight-light spaced-words">
+                You haven't added cars yet
+            </span>
+        </div>
+
+        <li th:each="model : ${userFavoriteModels}" th:id="'model_' + ${model.id}">
+            <div class="row">
+                <div class="my-spacing col-12"></div>
+                <div class="col-12 d-flex justify-content-end">
+                    <a th:attr="onclick='removeFromFavorites(\'' + ${model.id} + '\')'"
+                       class="edit-button">
+                        <button type="button" class="btn btn-warning">Remove from favorites</button>
+                    </a>
+                </div>
+            </div>
+
+            <a class="brand-item col-12 row my-3 bg-lightgrey-custom  rounded mx-auto"
+               th:href="@{/details/{modelId}(modelId=${model.id})}">
+
+                <div class="col-3">
+                    <img class="img-fluid image-fixed-size" th:unless="${#strings.isEmpty(model.imageUrl)}"
+                         th:src="*{model.imageUrl}" alt="Car image">
+                    <img class="img-fluid image-fixed-size" th:if="${#strings.isEmpty(model.imageUrl)}"
+                         th:src="@{/images/no-image.jpg}" alt="Car image">
+                </div>
+                <span class="col-9 text-left w-100 h1 font-weight-light spaced-words-welcome d-flex align-items-center my-text-color"
+                      th:text="${model.brandName} + ': ' +${model.name}">
+                </span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<footer th:replace="~{fragments/commons::footer}"></footer>
+
+<script th:src="@{/js/removeModel.js}"></script>
+<script th:src="@{/js/removeFromFavorites.js}"></script>
+</body>
+</html>
+

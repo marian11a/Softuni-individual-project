@@ -9,7 +9,7 @@
 
 
 <div class="container fade-in-up">
-    <form id="compareForm">
+    <form id="compareForm justify-context-center">
         <div class="form-group bg-blur rounded">
             <label for="brand1" class="text-white label-holder d-flex justify-content-start h2 mb-2">Brand</label>
             <select id="brand1" class="custom-select" name="brand1">
@@ -22,7 +22,6 @@
                    style="padding-top: 2%;"
                    class="text-white label-holder d-flex justify-content-start h2 mb-2">Model</label>
             <select id="model1" class="custom-select" name="model1">
-                <!-- Populate with models -->
                 <th:block th:each="model : ${models}">
                     <option th:value="${model.id}" th:text="${model.name}"></option>
                 </th:block>
@@ -32,7 +31,6 @@
                    style="padding-top: 2%;"
                    class="text-white label-holder d-flex justify-content-start h2 mb-2">Engine</label>
             <select id="details1" class="custom-select" name="details1">
-                <!-- Populate with details -->
                 <th:block th:each="detail : ${details}">
                     <option th:value="${detail.id}" th:text="${detail.engine.size} + 'L'"></option>
                 </th:block>
@@ -55,7 +53,6 @@
                    style="padding-top: 2%;"
                    class="text-white label-holder d-flex justify-content-start h2 mb-2">Model</label>
             <select id="model2" class="custom-select" name="model2">
-                <!-- Populate with models -->
                 <th:block th:each="model : ${models}">
                     <option th:value="${model.id}" th:text="${model.name}"></option>
                 </th:block>
@@ -65,19 +62,18 @@
                    style="padding-top: 2%;"
                    class="text-white label-holder d-flex justify-content-start h2 mb-2">Engine</label>
             <select id="details2" class="custom-select" name="details2">
-                <!-- Populate with details -->
                 <th:block th:each="detail : ${details}">
                     <option th:value="${detail.id}" th:text="${detail.engine.size} + 'L'"></option>
                 </th:block>
             </select>
             <div class="my-spacing col-12"></div>
         </div>
-
+        <div class="my-spacing col-12" style="padding-bottom: 1%;"></div>
         <button type="button"
                 id="compareButton"
                 onclick="compareCars()"
-                class="btn btn-warning justify-context-center"
-                style="display: none">Compare</button>
+                class="btn btn-success fade-in-up col-12 compare-button-height"
+                style="display: none"><h2 class="spaced-words">Compare</h2></button>
     </form>
 
     <div id="comparisonResults"></div>

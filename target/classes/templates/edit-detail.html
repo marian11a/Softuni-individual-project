@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/commons::head}"></head>
+<body>
+<header th:replace="~{fragments/commons::nav}"></header>
+<main>
+    <div class="my-spacing"></div>
+    <h1 class="text-center mt-2"><span class="badge badge-pill badge-transparent">Add Car</span></h1>
+    <div class="my-spacing"></div>
+
+    <form class="mx-auto w-75 bg-blur rounded"
+          th:method="POST"
+          th:action="@{/details/{modelId}/edit-detail/{detailId}(modelId=${readCarDataDTO.modelId}, detailId=${readCarDataDTO.id})}"
+          th:object="${readCarDataDTO}">
+
+        <div class="my-spacing col-12"></div>
+        <div class="form-group">
+            <div class="label-holder text-white textCol d-flex justify-content-start">
+                <label for="engineCylinders" class="h4 mb-2">Engine Cylinders:</label>
+            </div>
+            <div>
+                <input type="number" class="form-control" id="engineCylinders"
+                       th:field="*{engine.cylinders}" pattern="[0-9]*"
+                       oninput="this.value=this.value.replace(/[^0-9]/g,'')"/>
+            </div>
+        </div>
+
+        <div class="my-spacing col-12"></div>
+        <div class="form-group">
+            <div class="label-holder text-white textCol d-flex justify-content-start">
+                <label for="engineSize" class="h4 mb-2">Engine size in liters:</label>
+            </div>
+            <div>
+                <input type="number" class="form-control" id="engineSize"
+                       th:field="*{engine.size}" step="0.1"/>
+            </div>
+        </div>
+
+        <div class="my-spacing col-12"></div>
+        <div class="form-group">
+            <div class="label-holder text-white textCol d-flex justify-content-start">
+                <label for="engineHorsepower" class="h4 mb-2">Engine Horsepower:</label>
+            </div>
+            <div>
+                <input type="number" class="form-control" id="engineHorsepower"
+                       th:field="*{engine.horsePower}" pattern="[0-9]*"
+                       oninput="this.value=this.value.replace(/[^0-9]/g,'')"/>
+            </div>
+        </div>
+
+        <div class="my-spacing col-12"></div>
+        <div class="form-group">
+            <div class="text-white label-holder d-flex justify-content-start">
+                <label for="fuel" class="h4 mb-2">Engine fuel:</label>
+            </div>
+            <select class="browser-default custom-select" id="fuel"
+                    th:field="*{engine.fuel}"
+                    th:errorClass="bg-danger">
+                <option value="">Select fuel:</option>
+                <option th:each="fuel : ${allFuels}"
+                        th:value="${fuel.displayName}"
+                        th:text="${fuel.displayName}"></option>
+            </select>
+        </div>
+
+        <div class="my-spacing col-12"></div>
+        <div class="form-group">
+            <div class="label-holder text-white textCol d-flex justify-content-start">
+                <label for="performanceAcceleration" class="h4 mb-2">Acceleration from 0-100km/h</label>
+            </div>
+            <input type="number" class="form-control" id="performanceAcceleration"
+                   th:field="*{performance.acceleration}" step="0.1"/>
+
+            <div class="my-spacing col-12"></div>
+            <div class="label-holder text-white textCol d-flex justify-content-start">
+                <label for="performanceTopSpeed" class="h4 mb-2">Top Speed:</label>
+            </div>
+            <input type="number" class="form-control" id="performanceTopSpeed"
+                   th:field="*{performance.topSpeed}" pattern="[0-9]*"
+                   oninput="this.value=this.value.replace(/[^0-9]/g,'')"/>
+        </div>
+
+        <div class="my-spacing col-12"></div>
+        <div class="form-group">
+            <div class="text-white label-holder d-flex justify-content-start">
+                <label for="transmissionType" class="h4 mb-2">Transmission type:</label>
+            </div>
+            <select class="browser-default custom-select" id="transmissionType"
+                    th:field="*{transmission.transmissionType}"
+                    th:errorClass="bg-danger">
+                <option value="">Select transmission type:</option>
+                <option th:each="transmission : ${allTransmissionTypes}"
+                        th:value="${transmission.displayName}"
+                        th:text="${transmission.displayName}"></option>
+            </select>
+        </div>
+
+        <div class="my-spacing col-12"></div>
+        <div class="form-group">
+            <div class="text-white label-holder d-flex justify-content-start">
+                <label for="numberOfGears" class="h4 mb-2">Number of gears:</label>
+            </div>
+            <div>
+                <input type="number" class="form-control" id="numberOfGears"
+                       th:field="*{transmission.numberOfGears}" pattern="[0-9]*"
+                       oninput="this.value=this.value.replace(/[^0-9]/g,'')"/>
+            </div>
+        </div>
+
+        <div class="my-spacing col-12"></div>
+        <div class="form-group">
+            <div class="text-white label-holder d-flex justify-content-start">
+                <label for="driveType" class="h4 mb-2">Drive:</label>
+            </div>
+            <select class="browser-default custom-select" id="driveType"
+                    th:field="*{transmission.driveType}"
+                    th:errorClass="bg-danger">
+                <option value="">Select drive type:</option>
+                <option th:each="drive : ${allDriveTypes}"
+                        th:value="${drive.name()}"
+                        th:text="${drive.name()}"></option>
+            </select>
+        </div>
+
+        <div class="my-spacing col-12"></div>
+        <div class="button-holder d-flex justify-content-center">
+            <button type="submit" class="btn btn-warning  mb-3" value="Register">Add</button>
+        </div>
+
+    </form>
+</main>
+<footer th:replace="~{fragments/commons::footer}"></footer>
+</body>
+</html>
+
