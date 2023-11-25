@@ -9,11 +9,11 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class WebMvcConfig implements WebMvcConfigurer {
 
     @Autowired
-    private AddCarLoggingInterceptor addCarLoggingInterceptor;
+    private MyInterceptor myInterceptor;
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(addCarLoggingInterceptor)
+        registry.addInterceptor(myInterceptor)
                 .addPathPatterns("/models/add-car");
     }
 }

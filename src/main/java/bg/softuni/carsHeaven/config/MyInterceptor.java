@@ -14,7 +14,7 @@ public class MyInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
             throws Exception {
         System.out.printf("\n\n              ----My Interceptor:---- \n" +
-                "Intercepting request to add a car. Request URL: "
+                "Intercepting request! Request URL: "
                 + request.getRequestURL()
                 + " by ("
                 + SecurityContextHolder.getContext().getAuthentication().getName() +
@@ -27,7 +27,9 @@ public class MyInterceptor implements HandlerInterceptor {
             throws Exception {
         System.out.printf("\n\n" +
                 "               ----My Interceptor:---- \n" +
-                "Request to add a car by ("
+                "Requested URL: "
+                + request.getRequestURL()
+                + " by ("
                 + SecurityContextHolder.getContext().getAuthentication().getName()
                 + ") processed. Response status: " + response.getStatus() +
                 "\n               ----My Interceptor:---- \n\n");
