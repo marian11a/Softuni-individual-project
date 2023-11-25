@@ -11,6 +11,8 @@ public class WebMvcConfig implements WebMvcConfigurer {
     @Autowired
     private MyInterceptor myInterceptor;
 
+
+    //todo purvoto nehsto det da napravq da vzema vsichki neshta ot adminite  i da napisha dali e user ili admin
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(myInterceptor)
