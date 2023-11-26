@@ -12,10 +12,22 @@ public class WebMvcConfig implements WebMvcConfigurer {
     private MyInterceptor myInterceptor;
 
 
-    //todo purvoto nehsto det da napravq da vzema vsichki neshta ot adminite  i da napisha dali e user ili admin
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(myInterceptor)
-                .addPathPatterns("/models/add-car");
+                .addPathPatterns(
+                        "/brands/edit/{brandId}",
+                        "/brands/remove/{brandId}",
+                        "/brands/add",
+                        "/models/add-car",
+                        "/models/remove/{brandId}/{modelId}",
+                        "/models/edit/{brandId}/{modelId}",
+                        "/details/{modelId}/add-detail",
+                        "/details/remove/{modelId}/{detailId}",
+                        "/details/{modelId}/edit-detail/{detailId}",
+                        "/users/all-users",
+                        "/api/remove-model",
+                        "/api/make-admin",
+                        "/api/remove-admin");
     }
 }

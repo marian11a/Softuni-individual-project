@@ -7,31 +7,49 @@ import org.springframework.web.servlet.HandlerInterceptor;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
+import java.time.LocalDateTime;
+
 @Component
 public class MyInterceptor implements HandlerInterceptor {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
             throws Exception {
-        System.out.printf("\n\n              ----My Interceptor:---- \n" +
-                "Intercepting request! Request URL: "
-                + request.getRequestURL()
-                + " by ("
-                + SecurityContextHolder.getContext().getAuthentication().getName() +
-                ")\n              ----My Interceptor:---- \n\n");
+        StringBuilder sb = new StringBuilder();
+        sb.append(System.lineSeparator()).append(System.lineSeparator())
+                .append("              ----My Interceptor:---- ")
+                .append(System.lineSeparator())
+                .append("Intercepting request!")
+                .append(System.lineSeparator())
+                .append("Request URL: ").append(request.getRequestURL())
+                .append(System.lineSeparator())
+                .append("by: (").append(SecurityContextHolder.getContext().getAuthentication().getName()).append(")")
+                .append(System.lineSeparator())
+                .append("at: ").append(LocalDateTime.now())
+                .append(System.lineSeparator())
+                .append("              ----My Interceptor:----")
+                .append(System.lineSeparator()).append(System.lineSeparator());
+
+        System.out.println(sb);
         return true;
     }
 
     @Override
     public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex)
             throws Exception {
-        System.out.printf("\n\n" +
-                "               ----My Interceptor:---- \n" +
-                "Requested URL: "
-                + request.getRequestURL()
-                + " by ("
-                + SecurityContextHolder.getContext().getAuthentication().getName()
-                + ") processed. Response status: " + response.getStatus() +
-                "\n               ----My Interceptor:---- \n\n");
+        StringBuilder sb = new StringBuilder();
+        sb.append(System.lineSeparator()).append(System.lineSeparator())
+                .append("              ----My Interceptor:---- ")
+                .append(System.lineSeparator())
+                .append("Requested URL: ").append(request.getRequestURL())
+                .append(" by (").append(SecurityContextHolder.getContext().getAuthentication().getName()).append(") processed.")
+                .append(System.lineSeparator())
+                .append("Response status: ")
+                .append(response.getStatus())
+                .append(System.lineSeparator())
+                .append("              ----My Interceptor:----")
+                .append(System.lineSeparator()).append(System.lineSeparator());
+
+        System.out.println(sb);
     }
 }
