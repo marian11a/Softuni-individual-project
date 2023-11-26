@@ -21,4 +21,6 @@ public interface UserService {
     void makeAdmin(Long userId);
 
     void removeAdmin(Long userId);
+
+    UserDTO findByName(String name);
 }

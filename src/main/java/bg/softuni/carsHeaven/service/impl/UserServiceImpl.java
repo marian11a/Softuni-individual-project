@@ -147,6 +147,11 @@ public class UserServiceImpl implements UserService {
         }
     }
 
+    @Override
+    public UserDTO findByName(String name) {
+        return this.modelMapper.map(this.userRepository.findByUsername(name), UserDTO.class);
+    }
+
     private void populateRolesColumn(List<UserDTO> userDTOS) {
         for (UserDTO userDTO : userDTOS) {
             List<RoleEnum> roles = new ArrayList<>();

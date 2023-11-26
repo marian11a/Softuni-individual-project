@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head th:replace="~{fragments/commons::head}"></head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+</head>
+<body>
+<header th:replace="~{fragments/commons::nav}"></header>
+
+<div class="my-spacing" style="padding-top: 4%;"></div>
+<div class="container bg-blur3" style="max-width: 50%; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);">
+    <img src="/images/profile.png" alt="Etiquette" width="35px"
+         height="35px" class="my-home-card-img fade-in">
+    <hr class="my-3 bg-white w-100 fade-in-down" style="max-width: 95%;"/>
+    <h3 class="font-weight-bold spaced-words-welcome fade-in my-text-color rounded">Profile</h3>
+    <hr class="my-3 bg-white w-100 fade-in-down" style="max-width: 95%;"/>
+    <p class="font-weight-light spaced-words fade-in-down" style="color: #fff4e7; padding-bottom: 19px;">
+        <span style="float: left;" class="col-6 text-left">Username:</span>
+        <span style="float: right;" class="col-6 text-right" th:text="${userDTO.username}"></span>
+    </p>
+    <p class="font-weight-light spaced-words fade-in-down" style="color: #fff4e7; padding-bottom: 19px;">
+        <span style="float: left;" class="col-6 text-left">Email:</span>
+        <span style="float: right;" class="col-6 text-right" th:text="${userDTO.email}"></span>
+    </p>
+    <p class="font-weight-light spaced-words fade-in-down" style="color: #fff4e7; padding-bottom: 19px;">
+        <span style="float: left;" class="col-6 text-left">Role:</span>
+        <span sec:authorize="isAuthenticated() and hasRole('ADMIN')" style="float: right;" class="col-6 text-right"
+              th:text="ADMIN"></span>
+        <span sec:authorize="isAuthenticated() and !hasRole('ADMIN')" style="float: right;" class="col-6 text-right"
+              th:text="USER"></span>
+    </p>
+
+    <p class="font-weight-light spaced-words fade-in-down" style="color: #fff4e7;">
+        <a th:href="@{/home}"
+           class="edit-button mx-3">
+            <button type="button" class="btn btn-warning fade-in-down rounded"
+                    style="box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);">Go back home
+            </button>
+        </a>
+        <a th:href="@{/users/change-password}"
+           class="edit-button mx-3">
+            <button type="button" class="btn btn-warning fade-in-down rounded"
+                    style="box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);">Change password
+            </button>
+        </a>
+    </p>
+</div>
+
+</body>
+<footer class="footer bg-transparent  py-2 fade-in-up">
+    <div class="container-fluid text-center">
+        <div class="footer-background h5 my-text-color h4 font-weight-light spaced-words-footer">
+            &copy;Marian11a-softuni 2023 | All rights reserved.
+        </div>
+    </div>
+</footer>
+</html>
+
+

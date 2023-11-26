@@ -15,6 +15,12 @@
           th:object="${readModelsDTO}">
 
         <div class="form-group">
+
+            <div th:if="${hasAddError}"
+                 th:text="'Both cylinders and liters are required. You cannot select only one!'"
+                 class="text-danger"></div>
+
+
             <div class="text-white label-holder d-flex justify-content-start">
                 <label for="brandName" class="h4 mb-2">Brand</label>
             </div>
@@ -35,7 +41,6 @@
             <small th:if="${#fields.hasErrors('brandName')}"
                    th:errors="*{brandName}" class="text-danger">Brand error message</small>
         </div>
-
 
 
         <div class="my-spacing col-12"></div>
@@ -86,8 +91,8 @@
                        th:field="*{carData[0].engine.cylinders}" pattern="[0-9]*"
                        oninput="this.value=this.value.replace(/[^0-9]/g,'')" th:errorClass="bg-danger"/>
             </div>
-            <small th:if="${#fields.hasErrors('carData[0].engine.cylinders')}"
-                   th:errors="*{carData[0].engine.cylinders}" class="text-danger">Cylinders error message</small>
+            <div th:if="${hasAddError}"
+                 th:text="'(here)'" class="text-danger h6"></div>
         </div>
 
         <div class="my-spacing col-12"></div>
@@ -99,8 +104,8 @@
                 <input type="number" class="form-control" id="engineSize"
                        th:field="*{carData[0].engine.size}" step="0.1" th:errorClass="bg-danger"/>
             </div>
-            <small th:if="${#fields.hasErrors('carData[0].engine.size')}"
-                   th:errors="*{carData[0].engine.size}" class="text-danger">Cylinders error message</small>
+            <div th:if="${hasAddError}"
+                 th:text="'(here)'" class="text-danger h6"></div>
         </div>
 
 

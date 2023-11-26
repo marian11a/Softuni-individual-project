@@ -1,5 +1,6 @@
 package bg.softuni.carsHeaven.web.controllers;
 
+import bg.softuni.carsHeaven.model.dtos.users.PasswordDTO;
 import bg.softuni.carsHeaven.model.dtos.users.UserDTO;
 import bg.softuni.carsHeaven.model.dtos.users.UserRegisterDTO;
 import bg.softuni.carsHeaven.service.UserService;
@@ -26,7 +27,7 @@ public class UserController {
 
     @GetMapping("/login")
     public ModelAndView login() {
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        Authentication authentication = getAuthentication();
         if (authentication == null || authentication instanceof AnonymousAuthenticationToken) {
             return new ModelAndView("login");
         }
@@ -35,7 +36,7 @@ public class UserController {
 
     @PostMapping("/login-error")
     public ModelAndView loginError() {
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        Authentication authentication = getAuthentication();
         if (authentication == null || authentication instanceof AnonymousAuthenticationToken) {
             ModelAndView modelAndView = new ModelAndView("login");
             modelAndView.addObject("hasLoginError", true);
@@ -47,7 +48,7 @@ public class UserController {
 
     @GetMapping("/register")
     public ModelAndView register(@ModelAttribute("userRegisterDTO") UserRegisterDTO userRegisterDTO) {
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        Authentication authentication = getAuthentication();
         if (authentication == null || authentication instanceof AnonymousAuthenticationToken) {
             return new ModelAndView("register");
         }
@@ -58,7 +59,7 @@ public class UserController {
     public ModelAndView register(
             @ModelAttribute("userRegisterDTO") @Valid UserRegisterDTO userRegisterDTO,
             BindingResult bindingResult) {
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        Authentication authentication = getAuthentication();
         if (authentication == null || authentication instanceof AnonymousAuthenticationToken) {
             if (bindingResult.hasErrors()) {
                 return new ModelAndView("register");
@@ -82,5 +83,42 @@ public class UserController {
         ModelAndView modelAndView = new ModelAndView("all-users");
         modelAndView.addObject("allUsers", allUsers);
         return modelAndView;
+    }
+
+    @GetMapping("/users/profile")
+    public ModelAndView profile() {
+        Authentication authentication = getAuthentication();
+        UserDTO userDTO = this.userService.findByName(authentication.getName());
+        ModelAndView modelAndView = new ModelAndView("profile");
+        modelAndView.addObject("userDTO", userDTO);
+        return modelAndView;
+    }
+
+    @GetMapping("/users/change-password")
+    public ModelAndView changePass(@ModelAttribute("passwordDTO") PasswordDTO passwordDTO) {
+        return new ModelAndView("change-password");
+    }
+
+    @PostMapping("/users/change-password")
+    public ModelAndView changePass(
+            @ModelAttribute("passwordDTO") @Valid PasswordDTO passwordDTO,
+            BindingResult bindingResult) {
+
+        if (bindingResult.hasErrors()) {
+            return new ModelAndView("change-password");
+        }
+
+//        boolean hasSuccessfulChangeOfPassword = userService.changePassword(passwordDTO);
+//        if (!hasSuccessfulChangeOfPassword) {
+//            ModelAndView modelAndView = new ModelAndView("change-password");
+//            modelAndView.addObject("assErrors", true);
+//            return modelAndView;
+//        }
+
+        return new ModelAndView("/users/profile");
+    }
+
+    private Authentication getAuthentication() {
+        return SecurityContextHolder.getContext().getAuthentication();
     }
 }
