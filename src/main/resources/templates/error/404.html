@@ -1,10 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/commons::head}"></head>
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Not Found</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 400px;
+        }
+
+
+    </style>
 </head>
 <body>
-  Oops! object was not found!
+<div class="container" style="max-width: 50%;">
+    <h1 class="font-weight-bold spaced-words-welcome fade-in-up my-text-color rounded" style="box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);">404 Not Found</h1>
+    <p class="font-weight-light spaced-words fade-in-down" style="color: #fff4e7">Sorry, the page you are looking for might be in another universe.</p>
+    <a th:href="@{/home}"
+       class="edit-button mx-3">
+        <button type="button" class="btn btn-warning fade-in-down rounded" style="box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);">Go back home</button>
+    </a>
+</div>
+
 </body>
+<footer class="footer bg-transparent  py-2 fade-in-up">
+    <div class="container-fluid text-center">
+        <div class="footer-background h5 my-text-color h4 font-weight-light spaced-words-footer">
+            &copy;Marian11a-softuni 2023 | All rights reserved.
+        </div>
+    </div>
+</footer>
 </html>
