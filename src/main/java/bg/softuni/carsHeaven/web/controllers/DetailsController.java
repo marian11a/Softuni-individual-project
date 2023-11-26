@@ -18,21 +18,6 @@ import java.util.List;
 @Controller
 @RequestMapping("/details")
 public class DetailsController {
-
-    //todo da ne moga da add detailvam bez dvigatel da sloja !!!!!!!<-------- VAJNO
-    //todo napravih gornoto sega da naoravq kat advam kola da imam opciqta da ne slagam dvigatl ama ako sloja da e s cilindri
-
-    //todo compare butona da go centriram i eventualno po golqm da go napravq
-
-    //todo compare stranicata da q napravq
-
-    //todo kato imam favorite car i otida v detailite da ne mi pokazva add to favorites a da mi pokazva remove from favorites
-
-    //todo oshte edno todo da dobavq removeFromFavorites buton
-
-    //todo da napravq compare-a
-
-    //todo da moga da si smenqm parolata v saita
     private final CarDataService carDataService;
     private final ModelService modelService;
 
@@ -63,8 +48,8 @@ public class DetailsController {
 
     @PostMapping("/{modelId}/add-detail")
     public ModelAndView addDetailForAModel(@PathVariable("modelId") Long modelId,
-            @ModelAttribute("readCarDataDTO") @Valid ReadCarDataDTO readCarDataDTO,
-            BindingResult bindingResult) {
+                                           @ModelAttribute("readCarDataDTO") @Valid ReadCarDataDTO readCarDataDTO,
+                                           BindingResult bindingResult) {
 
         if (bindingResult.hasErrors()) {
             ModelAndView modelAndView = new ModelAndView("add-details-for-model");
