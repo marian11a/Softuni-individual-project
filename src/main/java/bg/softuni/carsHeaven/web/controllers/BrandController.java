@@ -12,7 +12,11 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/brands")
-public class BrandController {  //todo alt-enter create test
+public class BrandController {
+
+    //todo change pass
+    //todo alt-enter create test
+    //todo asdf
 
     private final BrandService brandService;
 
