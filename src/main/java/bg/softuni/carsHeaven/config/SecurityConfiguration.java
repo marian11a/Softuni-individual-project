@@ -36,6 +36,7 @@ public class SecurityConfiguration {
                         .requestMatchers("/models/add-car", "/models/remove/{brandId}/{modelId}", "/models/edit/{brandId}/{modelId}").hasRole(RoleEnum.ADMIN.name())
                         .requestMatchers("/details/{modelId}/add-detail", "/details/remove/{modelId}/{detailId}", "/details/{modelId}/edit-detail/{detailId}").hasRole(RoleEnum.ADMIN.name())
                         .requestMatchers("/users/all-users", "/api/remove-model", "/api/make-admin", "/api/remove-admin").hasRole(RoleEnum.ADMIN.name())
+                        .requestMatchers("/swagger-ui/**", "/v3/api-docs/**").hasRole(RoleEnum.ADMIN.name())
                         .anyRequest().authenticated()
         ).formLogin(
                 formLogin -> formLogin

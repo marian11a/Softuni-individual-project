@@ -1,10 +1,20 @@
 [
   {
+    "id": 1,
     "username": "Marian11a",
     "email": "marian11a@abv.bg",
-    "password": "$2a$10$PJiTTxA7CQsQtM2AX7vPsechJyjZ.iYGG/T2c.7NZJ3lcogZEUhr6",
+    "password": "$2a$10$VMqjJYPBf9mf0/vtltNhFe0D5Om572NFrRWGcNHBtFlM0l7G/955K",
     "roles": [
       "ADMIN",
+      "USER"
+    ]
+  },
+  {
+    "id": 2,
+    "username": "test123",
+    "email": "asdf@gmail.com",
+    "password": "$2a$10$dy.UlLlB78iD2K5BlDisouWSWrRgej86FjvUjUSSD3qsznsC2RgVK",
+    "roles": [
       "USER"
     ]
   }

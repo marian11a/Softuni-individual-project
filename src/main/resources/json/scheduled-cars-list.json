@@ -15,28 +15,11 @@
             "engine": {
               "cylinders": 4,
               "size": 2.0,
-              "fuel": "DIESEL",
               "horsePower": 150
             },
             "performance": {
               "acceleration": 10.0,
               "topSpeed": 130
-            },
-            "transmission": {
-              "transmissionType": "SEMI_AUTOMATIC",
-              "driveType": "FWD"
-            }
-          },
-          {
-            "id": 269,
-            "modelId": 1,
-            "engine": {
-              "cylinders": 4,
-              "size": 1.8,
-              "fuel": "GASOLINE"
-            },
-            "performance": {
-              "topSpeed": 180
             },
             "transmission": {}
           }
@@ -384,13 +367,6 @@
         "id": 39,
         "brandName": "Renault",
         "category": "Minivan",
-        "carData": []
-      },
-      {
-        "name": "Talisman",
-        "id": 40,
-        "brandName": "Renault",
-        "category": "Sedan",
         "carData": []
       },
       {
@@ -1377,27 +1353,6 @@
     "brandName": "Alfa Romeo",
     "id": 7,
     "models": [
-      {
-        "name": "145",
-        "id": 144,
-        "brandName": "Alfa Romeo",
-        "category": "Compact",
-        "carData": []
-      },
-      {
-        "name": "146",
-        "id": 145,
-        "brandName": "Alfa Romeo",
-        "category": "Compact",
-        "carData": []
-      },
-      {
-        "name": "147",
-        "id": 146,
-        "brandName": "Alfa Romeo",
-        "category": "Compact",
-        "carData": []
-      },
       {
         "name": "155",
         "id": 147,

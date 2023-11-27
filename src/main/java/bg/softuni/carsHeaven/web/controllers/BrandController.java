@@ -16,7 +16,6 @@ public class BrandController {
 
     //todo change pass
     //todo alt-enter create test
-    //todo asdf
 
     private final BrandService brandService;
 
