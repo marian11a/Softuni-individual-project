@@ -1,0 +1,25 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    defer-datasource-initialization: true
+    sql:
+      init:
+        mode: never
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: 'true'
+logging:
+  level:
+    org:
+      hibernate:
+        type:
+          descriptor: TRACE
+        SQL: DEBUG
+      nodeValue: WARN
+    blog: WARN
+server:
+  port: 8080
+CarsHeaven:
+  remember.me.key: ${REMEMBER_ME_KEY:rememberMeKey}
