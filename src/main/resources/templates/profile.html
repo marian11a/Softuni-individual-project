@@ -10,7 +10,7 @@
 <header th:replace="~{fragments/commons::nav}"></header>
 
 <div class="my-spacing" style="padding-top: 4%;"></div>
-<div class="container bg-blur3" style="max-width: 50%; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);">
+<div class="container bg-blur3 fade-in-down" style="max-width: 50%; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);">
     <img src="/images/profile.png" alt="Etiquette" width="35px"
          height="35px" class="my-home-card-img fade-in">
     <hr class="my-3 bg-white w-100 fade-in-down" style="max-width: 95%;"/>
@@ -33,16 +33,16 @@
     </p>
 
     <p class="font-weight-light spaced-words fade-in-down" style="color: #fff4e7;">
-        <a th:href="@{/home}"
-           class="edit-button mx-3">
-            <button type="button" class="btn btn-warning fade-in-down rounded"
-                    style="box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);">Go back home
-            </button>
-        </a>
         <a th:href="@{/users/change-password}"
            class="edit-button mx-3">
             <button type="button" class="btn btn-warning fade-in-down rounded"
                     style="box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);">Change password
+            </button>
+        </a>
+        <a th:href="@{/home}"
+           class="edit-button mx-3">
+            <button type="button" class="btn btn-warning fade-in-down rounded"
+                    style="box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);">Go back home
             </button>
         </a>
     </p>

@@ -1,6 +1,7 @@
 package bg.softuni.carsHeaven.service.impl;
 
 import bg.softuni.carsHeaven.model.dtos.cars.ReadModelsDTO;
+import bg.softuni.carsHeaven.model.dtos.users.PasswordDTO;
 import bg.softuni.carsHeaven.model.dtos.users.UserDTO;
 import bg.softuni.carsHeaven.model.dtos.users.UserRegisterDTO;
 import bg.softuni.carsHeaven.model.entity.Model;
@@ -12,6 +13,7 @@ import bg.softuni.carsHeaven.repository.RolesRepository;
 import bg.softuni.carsHeaven.repository.UserRepository;
 import bg.softuni.carsHeaven.service.UserService;
 import org.modelmapper.ModelMapper;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -150,6 +152,24 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserDTO findByName(String name) {
         return this.modelMapper.map(this.userRepository.findByUsername(name), UserDTO.class);
+    }
+
+    @Override
+    public boolean changePassword(PasswordDTO passwordDTO) {
+        String username = SecurityContextHolder.getContext().getAuthentication().getName();
+        User currentUser = this.userRepository.findByUsername(username);
+
+        if (!this.passwordEncoder.matches(passwordDTO.getOldPassword(), currentUser.getPassword())) {
+            return false;
+        }
+
+        if (!passwordDTO.getPassword().equals(passwordDTO.getConfirmPassword())) {
+            return false;
+        }
+
+        currentUser.setPassword(this.passwordEncoder.encode(passwordDTO.getPassword()));
+        this.userRepository.save(currentUser);
+        return true;
     }
 
     private void populateRolesColumn(List<UserDTO> userDTOS) {

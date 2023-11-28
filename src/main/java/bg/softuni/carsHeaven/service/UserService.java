@@ -2,6 +2,7 @@ package bg.softuni.carsHeaven.service;
 
 
 import bg.softuni.carsHeaven.model.dtos.cars.ReadModelsDTO;
+import bg.softuni.carsHeaven.model.dtos.users.PasswordDTO;
 import bg.softuni.carsHeaven.model.dtos.users.UserDTO;
 import bg.softuni.carsHeaven.model.dtos.users.UserRegisterDTO;
 
@@ -23,4 +24,6 @@ public interface UserService {
     void removeAdmin(Long userId);
 
     UserDTO findByName(String name);
+
+    boolean changePassword(PasswordDTO passwordDTO);
 }

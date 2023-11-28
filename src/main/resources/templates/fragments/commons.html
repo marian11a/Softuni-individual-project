@@ -48,6 +48,10 @@
            sec:authorize="isAuthenticated() and hasRole('ADMIN')"
            th:href="@{/users/all-users}">All users</a>
 
+        <a class="nav-link my-text-color active h6 fade-in-down spaced-letters font-weight-light"
+           sec:authorize="isAuthenticated() and hasRole('ADMIN')"
+           th:href="@{/swagger-ui/index.html}">Swagger-ui</a>
+
 
         <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
             <ul class="navbar-nav row">

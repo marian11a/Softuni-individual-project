@@ -105,17 +105,19 @@ public class UserController {
             BindingResult bindingResult) {
 
         if (bindingResult.hasErrors()) {
-            return new ModelAndView("change-password");
+            ModelAndView modelAndView = new ModelAndView("change-password");
+            modelAndView.addObject("hasPasswordError", true);
+            return modelAndView;
         }
 
-//        boolean hasSuccessfulChangeOfPassword = userService.changePassword(passwordDTO);
-//        if (!hasSuccessfulChangeOfPassword) {
-//            ModelAndView modelAndView = new ModelAndView("change-password");
-//            modelAndView.addObject("assErrors", true);
-//            return modelAndView;
-//        }
+        boolean hasSuccessfulChangeOfPassword = userService.changePassword(passwordDTO);
+        if (!hasSuccessfulChangeOfPassword) {
+            ModelAndView modelAndView = new ModelAndView("change-password");
+            modelAndView.addObject("hasPasswordError", true);
+            return modelAndView;
+        }
 
-        return new ModelAndView("/users/profile");
+        return new ModelAndView("redirect:/users/profile");
     }
 
     private Authentication getAuthentication() {
