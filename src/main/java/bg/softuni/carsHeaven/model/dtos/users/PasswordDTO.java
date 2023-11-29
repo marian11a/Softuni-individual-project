@@ -12,6 +12,12 @@ public class PasswordDTO {
 
     private String confirmPassword;
 
+    public PasswordDTO(String oldPassword, String password, String confirmPassword) {
+        this.oldPassword = oldPassword;
+        this.password = password;
+        this.confirmPassword = confirmPassword;
+    }
+
     public String getOldPassword() {
         return oldPassword;
     }

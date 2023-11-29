@@ -16,13 +16,13 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @Component
-public class writeToJsonScheduler {
+public class WriteToJsonScheduler {
 
     private final Gson gson;
     private final UserService userService;
     private final BrandService brandService;
 
-    public writeToJsonScheduler(Gson gson,
+    public WriteToJsonScheduler(Gson gson,
                                 UserService userService,
                                 BrandService brandService) {
         this.gson = gson;

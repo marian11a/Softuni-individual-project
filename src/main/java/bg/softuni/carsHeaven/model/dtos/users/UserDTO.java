@@ -22,6 +22,10 @@ public class UserDTO {
 
     private List<RoleEnum> roles;
 
+    public UserDTO(String username) {
+        this.username = username;
+    }
+
     public Long getId() {
         return id;
     }

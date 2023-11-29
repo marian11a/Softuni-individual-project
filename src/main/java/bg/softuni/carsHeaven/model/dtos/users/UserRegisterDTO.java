@@ -18,6 +18,12 @@ public class UserRegisterDTO {
 
     private String confirmPassword;
 
+    public UserRegisterDTO(String username, String password, String confirmPassword, String email) {
+        this.username = username;
+        this.email = email;
+        this.password = password;
+        this.confirmPassword = confirmPassword;
+    }
 
     public String getUsername() {
         return username;

@@ -130,8 +130,7 @@ public class UserServiceImpl implements UserService {
         if (byId.isPresent()) {
             List<Role> roles = byId.get().getRoles();
             if (roles.size() <= 1) {
-                User user = this.userRepository.findById(userId)
-                        .get();
+                User user = this.userRepository.findById(userId).get();
                 user.setRoles(this.rolesRepository.findAll());
                 this.userRepository.save(user);
             }
