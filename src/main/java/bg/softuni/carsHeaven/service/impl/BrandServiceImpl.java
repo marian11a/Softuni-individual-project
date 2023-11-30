@@ -6,7 +6,11 @@ import bg.softuni.carsHeaven.repository.BrandRepository;
 import bg.softuni.carsHeaven.service.BrandService;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
-import java.util.*;
+
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Optional;
 
 @Service
 public class BrandServiceImpl implements BrandService {

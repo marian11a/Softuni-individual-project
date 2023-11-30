@@ -17,6 +17,10 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.modelmapper.ModelMapper;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContext;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.util.*;
@@ -172,5 +176,58 @@ public class UserServiceImplTest {
         UserDTO result = userService.findByName(username);
         assertNotNull(result);
         assertEquals(username, result.getUsername());
+    }
+
+    @Test
+    public void testChangePassword() {
+        String username = "testUser";
+        String oldPassword = "oldPassword";
+        String newPassword = "newPassword";
+
+        SecurityContext securityContext = mock(SecurityContext.class);
+        SecurityContextHolder.setContext(securityContext);
+
+        Authentication authentication = new UsernamePasswordAuthenticationToken(username, oldPassword);
+        when(securityContext.getAuthentication()).thenReturn(authentication);
+
+        User currentUser = new User();
+        currentUser.setUsername(username);
+        currentUser.setPassword("$2a$10$mockedHashedPassword");
+
+        when(userRepository.findByUsername(username)).thenReturn(currentUser);
+        when(passwordEncoder.matches(oldPassword, currentUser.getPassword())).thenReturn(true);
+        when(passwordEncoder.encode(newPassword)).thenReturn("$2a$10$mockedNewHashedPassword");
+
+        boolean result = userService.changePassword(new PasswordDTO(oldPassword, newPassword, newPassword));
+        assertTrue(result);
+        verify(userRepository, times(1)).save(currentUser);
+        assertEquals("$2a$10$mockedNewHashedPassword", currentUser.getPassword());
+    }
+
+    @Test
+    public void testRemoveFromFavorites() {
+        String username = "testUser";
+        Long modelIdToRemove = 1L;
+
+        User user = new User();
+        user.setUsername(username);
+
+        Model model1 = new Model();
+        model1.setId(1L);
+
+        Model model2 = new Model();
+        model2.setId(2L);
+
+        List<Model> favoriteCars = new ArrayList<>();
+        favoriteCars.add(model1);
+        favoriteCars.add(model2);
+        user.setFavoriteCars(favoriteCars);
+
+        when(userRepository.findByUsername(username)).thenReturn(user);
+        userService.removeFromFavorites(username, modelIdToRemove);
+
+        verify(userRepository, times(1)).save(user);
+        assertEquals(1, user.getFavoriteCars().size());
+        assertTrue(user.getFavoriteCars().stream().noneMatch(model -> Objects.equals(model.getId(), modelIdToRemove)));
     }
 }

@@ -14,9 +14,6 @@ import java.util.List;
 @RequestMapping("/brands")
 public class BrandController {
 
-    //todo change pass
-    //todo alt-enter create test
-
     private final BrandService brandService;
 
     public BrandController(BrandService brandService) {

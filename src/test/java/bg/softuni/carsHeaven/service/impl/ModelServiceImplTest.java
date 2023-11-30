@@ -1,12 +1,13 @@
 package bg.softuni.carsHeaven.service.impl;
 
-import bg.softuni.carsHeaven.model.dtos.cars.ReadCarDataDTO;
 import bg.softuni.carsHeaven.model.dtos.cars.ReadModelsDTO;
 import bg.softuni.carsHeaven.model.entity.Brand;
 import bg.softuni.carsHeaven.model.entity.Model;
 import bg.softuni.carsHeaven.model.entity.User;
 import bg.softuni.carsHeaven.model.enums.CarCategory;
-import bg.softuni.carsHeaven.repository.*;
+import bg.softuni.carsHeaven.repository.BrandRepository;
+import bg.softuni.carsHeaven.repository.ModelRepository;
+import bg.softuni.carsHeaven.repository.UserRepository;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;

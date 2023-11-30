@@ -1,7 +1,6 @@
 package bg.softuni.carsHeaven.model.dtos.cars;
 
 import com.google.gson.annotations.SerializedName;
-import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
 

@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.modelmapper.ModelMapper;
 
 import java.util.Arrays;
 import java.util.List;
@@ -20,6 +21,8 @@ public class BrandServiceImplTest {
     @Mock
     private BrandRepository brandRepository;
 
+    @Mock
+    private ModelMapper modelMapper;
     @InjectMocks
     private BrandServiceImpl brandService;
 
@@ -56,6 +59,21 @@ public class BrandServiceImplTest {
         assertEquals(brand.getId(), readBrandsDTO.getId());
         assertEquals(brand.getName(), readBrandsDTO.getName());
         assertEquals(brand.getImageUrl(), readBrandsDTO.getImageUrl());
+    }
+
+    @Test
+    public void testGetBrandByNonExistingId() {
+        Long brandId = 1L;
+        Brand brand = new Brand();
+        brand.setId(brandId);
+        brand.setName("Brand1");
+        brand.setImageUrl("image1");
+
+        when(brandRepository.findById(brandId)).thenReturn(Optional.of(brand));
+
+        ReadBrandsDTO readBrandsDTO = brandService.getBrandById(2L);
+
+        assertNull(readBrandsDTO);
     }
 
     @Test
@@ -134,5 +152,34 @@ public class BrandServiceImplTest {
 
         boolean result = brandService.add(readBrandsDTO);
         assertFalse(result);
+    }
+
+    @Test
+    public void testGetAll() {
+        Brand brand1 = new Brand();
+        brand1.setId(1L);
+        brand1.setName("Brand1");
+        brand1.setImageUrl("image1");
+
+        Brand brand2 = new Brand();
+        brand2.setId(2L);
+        brand2.setName("Brand2");
+        brand2.setImageUrl("image2");
+
+        List<Brand> allBrands = Arrays.asList(
+                brand1, brand2
+        );
+
+        List<ReadBrandsDTO> expectedBrandsDTO = Arrays.asList(
+                new ReadBrandsDTO(1L, "Brand1", "image1"),
+                new ReadBrandsDTO(2L, "Brand2", "image2")
+        );
+
+        when(brandRepository.findAll()).thenReturn(allBrands);
+        when(modelMapper.map(allBrands, ReadBrandsDTO[].class)).thenReturn(expectedBrandsDTO.toArray(new ReadBrandsDTO[0]));
+        List<ReadBrandsDTO> actualBrandsDTO = brandService.getAll();
+
+        assertEquals(expectedBrandsDTO.size(), actualBrandsDTO.size());
+        assertEquals(expectedBrandsDTO, actualBrandsDTO);
     }
 }

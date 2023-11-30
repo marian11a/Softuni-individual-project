@@ -1,7 +1,10 @@
 package bg.softuni.carsHeaven.model.entity;
 
 import bg.softuni.carsHeaven.model.enums.RoleEnum;
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "roles")

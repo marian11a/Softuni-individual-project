@@ -1,6 +1,7 @@
 package bg.softuni.carsHeaven.service;
 
 import bg.softuni.carsHeaven.model.dtos.cars.ReadBrandsDTO;
+
 import java.util.List;
 
 public interface BrandService {
@@ -15,7 +16,6 @@ public interface BrandService {
     void remove(Long brandId);
 
     boolean add(ReadBrandsDTO readBrandsDTO);
-
 
     List<ReadBrandsDTO> getAll();
 
