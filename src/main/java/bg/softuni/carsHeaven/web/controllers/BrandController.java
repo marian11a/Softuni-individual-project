@@ -67,7 +67,6 @@ public class BrandController {
     @GetMapping("/remove/{brandId}")
     public ModelAndView remove(@PathVariable("brandId") Long brandId) {
 
-
         this.brandService.remove(brandId);
         return new ModelAndView("redirect:/brands/all-brands");
     }
