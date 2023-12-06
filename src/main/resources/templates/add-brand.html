@@ -14,6 +14,10 @@
           th:action="@{/brands/add}"
           th:object="${readBrandsDTO}">
 
+        <div th:if="${hasAddErrors}"
+             th:text="'This brand already exists!'"
+             class="text-danger"></div>
+
         <div class="form-group">
             <label for="name" class="text-white h4">Brand Name:</label>
             <input type="text" class="form-control" id="name" th:field="*{name}" required />

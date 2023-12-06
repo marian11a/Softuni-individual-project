@@ -370,6 +370,13 @@
         "carData": []
       },
       {
+        "name": "Talisman",
+        "id": 40,
+        "brandName": "Renault",
+        "category": "Sedan",
+        "carData": []
+      },
+      {
         "name": "Talisman Grandtour",
         "id": 41,
         "brandName": "Renault",
@@ -1354,15 +1361,23 @@
     "id": 7,
     "models": [
       {
-        "name": "155",
-        "id": 147,
+        "name": "145",
+        "id": 144,
         "brandName": "Alfa Romeo",
-        "category": "Sedan",
+        "category": "SportsCar",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c0/2002_Alfa_Romeo_147_%28MY02%29_Selespeed_Twin_Spark_5-door_hatchback_%282010-11-28%29.jpg",
         "carData": []
       },
       {
-        "name": "156",
-        "id": 148,
+        "name": "146",
+        "id": 145,
+        "brandName": "Alfa Romeo",
+        "category": "Compact",
+        "carData": []
+      },
+      {
+        "name": "155",
+        "id": 147,
         "brandName": "Alfa Romeo",
         "category": "Sedan",
         "carData": []
@@ -1407,6 +1422,7 @@
         "id": 154,
         "brandName": "Alfa Romeo",
         "category": "SportsCar",
+        "imageUrl": "https://cdn.carbuzz.com/gallery-images/2020-alfa-romeo-4c-spider-rear-view-carbuzz-367010-1600.jpg",
         "carData": [
           {
             "id": 24,
@@ -1573,7 +1589,8 @@
         "category": "Sedan",
         "carData": []
       }
-    ]
+    ],
+    "imageUrl": "https://1000logos.net/wp-content/uploads/2018/09/Alfa-Romeo-Logo-2000.jpg"
   },
   {
     "brandName": "Škoda",
@@ -6591,6 +6608,13 @@
         "brandName": "Audi",
         "category": "SportsCar",
         "carData": []
+      },
+      {
+        "name": "softuniModelTest",
+        "id": 882,
+        "brandName": "Audi",
+        "imageUrl": "",
+        "carData": []
       }
     ]
   },
@@ -10161,5 +10185,46 @@
         ]
       }
     ]
+  },
+  {
+    "brandName": "Lamborghini",
+    "id": 40,
+    "models": [
+      {
+        "name": "Murcielago",
+        "id": 881,
+        "brandName": "Lamborghini",
+        "category": "SportsCar",
+        "imageUrl": "https://hips.hearstapps.com/hmg-prod/images/2003-lamborghini-murcie-lago-101-1614632542.jpg",
+        "carData": [
+          {
+            "id": 270,
+            "modelId": 881,
+            "engine": {
+              "cylinders": 12,
+              "size": 6.2,
+              "fuel": "GASOLINE",
+              "horsePower": 560
+            },
+            "performance": {
+              "acceleration": 3.5,
+              "topSpeed": 350
+            },
+            "transmission": {
+              "transmissionType": "MANUAL",
+              "numberOfGears": 6,
+              "driveType": "AWD"
+            }
+          }
+        ]
+      }
+    ],
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q\u003dtbn:ANd9GcSCj36fs2kqahKd-OVBr5pn19SI4j20KNckwWjhpCVDAg\u0026s"
+  },
+  {
+    "brandName": "Ferrari",
+    "id": 41,
+    "models": [],
+    "imageUrl": ""
   }
 ]

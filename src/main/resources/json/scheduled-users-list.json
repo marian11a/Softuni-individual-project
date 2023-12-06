@@ -3,7 +3,7 @@
     "id": 1,
     "username": "Marian11a",
     "email": "marian11a@abv.bg",
-    "password": "$2a$10$VMqjJYPBf9mf0/vtltNhFe0D5Om572NFrRWGcNHBtFlM0l7G/955K",
+    "password": "$2a$10$FbZ.1cWotEK/z14WI2eNouqyk3UEe90cPaxKlOyAdlT/YVk4ztTT.",
     "roles": [
       "ADMIN",
       "USER"
@@ -12,8 +12,36 @@
   {
     "id": 2,
     "username": "test123",
-    "email": "asdf@gmail.com",
-    "password": "$2a$10$dy.UlLlB78iD2K5BlDisouWSWrRgej86FjvUjUSSD3qsznsC2RgVK",
+    "email": "jqmasdi@abv.bg",
+    "password": "$2a$10$s2QfpLN3FYzFqPsNawklYehCeRK3wxtR8QI0vxITRFmqDnld9z22W",
+    "roles": [
+      "USER"
+    ]
+  },
+  {
+    "id": 3,
+    "username": "tediEQka",
+    "email": "asdf@gmail.comas",
+    "password": "$2a$10$6y0uwHztI3IjkzS6HitRFuTDILcCVLNr5JMfjSl3TlnYXP8xy.IH6",
+    "roles": [
+      "ADMIN",
+      "USER"
+    ]
+  },
+  {
+    "id": 4,
+    "username": "marian11aaa",
+    "email": "jqmi@abv.bgh",
+    "password": "$2a$10$C7WMlSaqsXnVF21kK3l74u/Au.bMxC3wIJUqRKGBWPGAG1rcblD2i",
+    "roles": [
+      "USER"
+    ]
+  },
+  {
+    "id": 5,
+    "username": "velizarikos",
+    "email": "driftlinee@abv.bg",
+    "password": "$2a$10$ea7e3nCMEd2kebVXBgJp4.jW8JjX8J3ls141XWv2h22znZIeNTP3.",
     "roles": [
       "USER"
     ]

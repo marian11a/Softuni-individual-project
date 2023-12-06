@@ -83,15 +83,16 @@ public class BrandController {
             @ModelAttribute("readBrandsDTO") @Valid ReadBrandsDTO readBrandsDTO,
             BindingResult bindingResult) {
 
-
         if (bindingResult.hasErrors()) {
-            return new ModelAndView("add-brand");
+            ModelAndView modelAndView = new ModelAndView("add-brand");
+            modelAndView.addObject("hasAddErrors", true);
+            return modelAndView;
         }
 
         boolean addedSuccessfully = brandService.add(readBrandsDTO);
         if (!addedSuccessfully) {
             ModelAndView modelAndView = new ModelAndView("add-brand");
-            modelAndView.addObject("hasEditErrors", true);
+            modelAndView.addObject("hasAddErrors", true);
             return modelAndView;
         }
 
