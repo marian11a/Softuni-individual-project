@@ -65,7 +65,8 @@ async function populateDropdowns() {
             details.forEach(detail => {
                 const option = document.createElement('option');
                 option.value = detail.id;
-                option.text = detail.engine.size;
+//                option.text = detail.engine.size;
+                option.text = `${detail.engine.size} Liters, ${detail.engine.cylinders} Cylinders`;
                 details1Select.appendChild(option);
             });
 
@@ -102,7 +103,8 @@ async function populateDropdowns() {
             details.forEach(detail => {
                 const option = document.createElement('option');
                 option.value = detail.id;
-                option.text = detail.engine.size;
+//                option.text = detail.engine.size;
+                option.text = `${detail.engine.size} Liters, ${detail.engine.cylinders} Cylinders`;
                 details2Select.appendChild(option);
             });
             details2Select.addEventListener('change', () => {
